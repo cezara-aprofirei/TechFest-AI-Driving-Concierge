@@ -1,3 +1,6 @@
 streamlit
 openai 
 python-dotenv
+streamlit-webrtc 
+av 
+pydub
