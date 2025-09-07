@@ -6,7 +6,7 @@ from ai_utils import do_the_action  # custom function for processing audio
 
 # Initialize session state variables with default values if they don't exist
 st.session_state.setdefault("temperature", 0)  # Current temperature setting (starts at 0°C)
-st.session_state.setdefault("fan", 0)  # Current fan speed (starts at 0 RPM)
+st.session_state.setdefault("fan_speed", 50)  # Current fan speed (starts at 50 RPM)
 st.session_state.setdefault("left_window", 'Close')
 st.session_state.setdefault("right_window", 'Close')
 st.session_state.setdefault("audio_bytes", None)  # Stores recorded audio data
@@ -23,11 +23,12 @@ if not st.session_state.processing:
         text="Tune comfort settings", 
         recording_color="#FF0000",  # Red color when recording
         neutral_color="#FFFFFF",  # White color when not recording
-        icon_size="3x"  # Large icon size
+        icon_size="3x",  # Large icon size
+        pause_threshold = 5
     )
 
     st.subheader(f"🌡️ Temp: {st.session_state.temperature} °C")
-    st.subheader(f"🌪️ Fan Speed: {st.session_state.fan} RPM")
+    st.subheader(f"🌪️ Fan Speed: {st.session_state.fan_speed} RPM")
     st.subheader(f"⬅️Left Window: {st.session_state.left_window}")
     st.subheader(f"➡️ Right Window: {st.session_state.right_window}")
 

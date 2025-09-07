@@ -42,99 +42,98 @@ def speech_to_text(audio_bytes: bytes) -> str:
 
 def generate_response(user_message: str) -> str:
     """
-    Sends a user message to OpenAI ChatCompletion with tool support (change_temperature).
-    If LLM chooses to call the tool, it is executed and returns 'success' or 'failure'.
-
-    Parameters:
-        user_message (str): Natural language message from user.
-
-    Returns:
-        str: 'success' if tool executed correctly, 'failure' otherwise.
+    Sends a user message to OpenAI with tool support.
+    Allows multiple tool calls in sequence before final response.
     """
+    messages = [
+        {"role": "system", "content": "You are an assistant that adjusts the car's comfort features like temperature and fan speed based on user voice commands."},
+        {"role": "user", "content": user_message}
+    ]
 
-    # Define available tools/functions that LLM can call
-    tools = [
-    {
-        "type": "function",
-        "function": {
-            "name": "change_temperature",
-            "description": change_temperature.__doc__,
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "delta": {
-                        "type": "integer",
-                        "description": "Amount to change temperature by (positive or negative)"
-                    }
-                },
-                "required": ["delta"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "change_fan_speed",
-            "description": change_fan_speed.__doc__,
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "rpm": {
-                        "type": "integer",
-                        "description": "Target fan speed in RPM"
-                    }
-                },
-                "required": ["rpm"]
-            }
-        }
-    }
-]
-
-
-    # Map tool names to actual Python functions
     tool_functions = {
-    "change_temperature": change_temperature,
-    "change_fan_speed": change_fan_speed
-}
+        "change_temperature": change_temperature,
+        "change_fan_speed": change_fan_speed
+    }
 
+    tools = [
+        {
+            "type": "function",
+            "function": {
+                "name": "change_temperature",
+                "description": change_temperature.__doc__,
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "delta": {
+                            "type": "integer",
+                            "description": "Amount to change temperature by (positive or negative)"
+                        }
+                    },
+                    "required": ["delta"]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "change_fan_speed",
+                "description": change_fan_speed.__doc__,
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "delta": {
+                            "type": "integer",
+                            "description": "Amount to change fan speed by (positive or negative)"
+                        }
+                    },
+                    "required": ["delta"]
+                }
+            }
+        }
+    ]
 
-    # Call OpenAI ChatCompletion API with tool support
-    response = client.chat.completions.create(
-        model="gpt-4o", 
-        messages=[
-            {"role": "system", "content": "You are an assistant that adjusts the car's comfort features like "
-            "                              temperature and fan speed based on user voice commands."},
-            {"role": "user", "content": user_message}
-        ],
-        tools=tools,  # Available tools/functions
-        tool_choice="auto"  # Let LLM decide when to use tools
-    )
+    while True:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages,
+            tools=tools,
+            tool_choice="auto"
+        )
 
-    # Get the assistant's message from the response
-    message = response.choices[0].message
+        msg = response.choices[0].message
 
-    # Check if LLM wants to call any tools/functions
-    if message.tool_calls:
-        # Process each tool call
-        for tool_call in message.tool_calls:
-            name = tool_call.function.name  # Get function name
-            args = json.loads(tool_call.function.arguments)  # Parse arguments
+        # if no tool calls, return final message
+        if not msg.tool_calls:
+            final = msg.content
+            print("Final GPT message:", final)
+            return "success"
 
-            # Get the actual Python function
+        # execute each tool call
+        tool_messages = []
+        for tool_call in msg.tool_calls:
+            name = tool_call.function.name
+            args = json.loads(tool_call.function.arguments)
+
             func = tool_functions.get(name)
             if func:
                 try:
-                    # Execute the function with provided arguments
                     result = func(**args)
-                    # Return success/failure based on function result
-                    return "success" if result else "failure"
+                    output = "success" if result else "failure"
                 except Exception as e:
-                    # Handle any errors during function execution
-                    print(f"Tool {name} failed:", e)
-                    return "failure"
+                    output = f"error: {e}"
 
-    # Return failure if no tools were called or if something went wrong
-    return "failure"
+                # add tool result to messages
+                tool_messages.append({
+                    "role": "tool",
+                    "tool_call_id": tool_call.id,
+                    "name": name,
+                    "content": output
+                })
+
+        # continue the conversation with tool results
+        messages.append(msg)
+        messages.extend(tool_messages)
+
 
 def do_the_action(audio_bytes: bytes):
     """

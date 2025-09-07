@@ -24,22 +24,23 @@ def change_temperature(delta: int):
         return False
     
 
-def change_fan_speed(rpm: int):
+
+def change_fan_speed(delta: int):
     """
-    Sets the fan speed to the specified RPM value.
+    Adjusts the current fan speed in the Streamlit session state.
 
     Parameters:
-        rpm (int): The target fan speed (RPM).
+        delta (int): The amount to change the fan speed by (can be positive or negative).
 
     Returns:
-        bool: True if fan speed was successfully set, False otherwise.
+        bool: True if the adjustment succeeded, False otherwise.
     """
-    if rpm < 0:
-        return False  # RPM can't be negative
+    if "fan_speed" not in st.session_state:
+        return False
 
     try:
-        st.session_state.fan_speed = rpm
+        st.session_state.fan_speed += delta
         return True
     except Exception as e:
-        print("Fan speed change failed:", e)
+        print("Error changing temperature:", e)
         return False
