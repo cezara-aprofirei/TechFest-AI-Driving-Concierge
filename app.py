@@ -7,8 +7,8 @@ from ai_utils import do_the_action  # custom function for processing audio
 # Initialize session state variables with default values if they don't exist
 st.session_state.setdefault("temperature", 0)  # Current temperature setting (starts at 0°C)
 st.session_state.setdefault("fan_speed", 50)  # Current fan speed (starts at 50 RPM)
-st.session_state.setdefault("left_window", 'Close')
-st.session_state.setdefault("right_window", 'Close')
+st.session_state.setdefault("steering_wheel_heating", "Off") # defaults for steering wheel heating feature
+st.session_state.setdefault("seat_heating", {"L": "Off", "R": "Off", "Back": "Off"})  # defaults for seat heating features
 st.session_state.setdefault("audio_bytes", None)  # Stores recorded audio data
 st.session_state.setdefault("last_audio_sent", None)  # Tracks last processed audio to prevent duplicates
 st.session_state.setdefault("processing", False)  # Flag to indicate if audio is being processed
@@ -16,21 +16,84 @@ st.session_state.setdefault("processing", False)  # Flag to indicate if audio is
 # UI Display
 st.title("AI Driving Concierge")
 
-# Audio Recording Logic
 if not st.session_state.processing:
-    # Create audio recorder widget with custom styling
     audio = audio_recorder(
         text="Tune comfort settings", 
-        recording_color="#FF0000",  # Red color when recording
-        neutral_color="#FFFFFF",  # White color when not recording
-        icon_size="3x",  # Large icon size
-        pause_threshold = 5
+        recording_color="#FF0000",
+        neutral_color="#FFFFFF",
+        icon_size="2x",  # smaller icon
+        pause_threshold=5
     )
 
-    st.subheader(f"🌡️ Temp: {st.session_state.temperature} °C")
-    st.subheader(f"🌪️ Fan Speed: {st.session_state.fan_speed} RPM")
-    st.subheader(f"⬅️Left Window: {st.session_state.left_window}")
-    st.subheader(f"➡️ Right Window: {st.session_state.right_window}")
+    st.markdown(
+        "<h4 style='color:#ffffff; margin-bottom: 20px;'>", 
+        unsafe_allow_html=True
+    )
+
+    # First row - 2 columns
+    col1, col2 = st.columns(2)
+
+    # Compact styling
+    compact_style = """
+        border: 1px solid #444;
+        border-radius: 12px;
+        padding: 10px 15px;
+        text-align: center;
+        background-color: #1e1e1e;
+        color: #ffffff;
+        font-size: 14px;
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
+        margin-bottom: 10px;
+    """
+
+    with col1:
+        st.markdown(
+            f"""
+            <div style="{compact_style}">
+                <div style="font-size: 16px;">🌡️ Temperature</div>
+                <div style="font-size: 24px; font-weight: bold;">{st.session_state.temperature} °C</div>
+            </div>
+            """, unsafe_allow_html=True
+        )
+
+    with col2:
+        st.markdown(
+            f"""
+            <div style="{compact_style}">
+                <div style="font-size: 16px;">🌪️ Fan Speed</div>
+                <div style="font-size: 24px; font-weight: bold;">{st.session_state.fan_speed} RPM</div>
+            </div>
+            """, unsafe_allow_html=True
+        )
+
+    # Second row - 2 columns
+    col3, col4 = st.columns(2)
+
+    with col3:
+        st.markdown(
+            f"""
+            <div style="{compact_style}">
+                <div style="font-size: 16px;">🛞 Steering Wheel Heating</div>
+                <div style="font-size: 24px; font-weight: bold;">{st.session_state.steering_wheel_heating}</div>
+            </div>
+            """, unsafe_allow_html=True
+        )
+
+    with col4:
+        st.markdown(
+            f"""
+            <div style="{compact_style}">
+                <div style="font-size: 16px;">♨️ Seat Heating</div>
+                <div style="font-size: 18px; font-weight: bold;">
+                    L: {st.session_state.seat_heating["L"]} | 
+                    R: {st.session_state.seat_heating["R"]} | 
+                    Back: {st.session_state.seat_heating["Back"]}
+                </div>
+            </div>
+            """, unsafe_allow_html=True
+        )
+
+
 
     # Check if new audio was recorded and it's different from last one
     if audio and audio != st.session_state.last_audio_sent:
