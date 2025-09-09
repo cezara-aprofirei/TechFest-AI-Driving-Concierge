@@ -4,7 +4,7 @@ from openai import OpenAI  # OpenAI API client for GPT and Whisper
 import io  # For handling byte streams (audio data)
 import os  # For environment variable access
 import json  # For parsing JSON responses from OpenAI
-from function_tools import change_temperature, change_fan_speed  # Custom function to change car temperature
+from function_tools import change_temperature, change_fan_speed, change_steering_wheel_heating  # Custom function to change car temperature
 import dotenv  # For loading environment variables from .env file
 
 # Load environment variables from .env file
@@ -51,9 +51,10 @@ def generate_response(user_message: str) -> str:
     ]
 
     tool_functions = {
-        "change_temperature": change_temperature,
-        "change_fan_speed": change_fan_speed
-    }
+    "change_temperature": change_temperature,
+    "change_fan_speed": change_fan_speed,
+    "change_steering_wheel_heating": change_steering_wheel_heating
+}
 
     tools = [
         {
@@ -88,8 +89,28 @@ def generate_response(user_message: str) -> str:
                     },
                     "required": ["delta"]
                 }
-            }
+            }         
+        },
+        {
+    "type": "function",
+    "function": {
+        "name": "change_steering_wheel_heating",
+        "description": change_steering_wheel_heating.__doc__,
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "state": {
+                    "type": "string",
+                    "enum": ["On", "Off"],
+                    "description": "Whether to turn the steering wheel heating On or Off"
+                }
+            },
+            "required": ["state"]
         }
+    }
+}
+
+        
     ]
 
     while True:

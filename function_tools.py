@@ -44,3 +44,26 @@ def change_fan_speed(delta: int):
     except Exception as e:
         print("Error changing temperature:", e)
         return False
+
+
+def change_steering_wheel_heating(state: str) -> bool:
+    """
+    Change the state of the steering wheel heating.
+
+    Args:
+        state (str): "On" or "Off"
+
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    import streamlit as st
+
+    if state not in {"On", "Off"}:
+        return False
+
+    try:
+        st.session_state.steering_wheel_heating = state
+        return True
+    except Exception as e:
+        print("Error changing steering wheel heating:", e)
+        return False

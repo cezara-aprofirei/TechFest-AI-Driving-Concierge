@@ -60,3 +60,9 @@ The `do_the_action()` function in `ai_utils.py` should:
 3. Handle error cases and invalid commands
 
 
+## UI Part
+
+The frontend implementation is built with Streamlit, enhanced with custom CSS for styling and it looks like this:
+
+![UI.png](UI.png)  
+
