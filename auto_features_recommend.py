@@ -127,31 +127,35 @@ def recommend_from_profile(pipe: Pipeline, categories, profile: dict, round_to_i
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", default="rf_stop_recommender.joblib", help="Path to saved model pipeline (will train if not found)")
-    ap.add_argument("--driver_id", type=int, required=True, help="Driver ID (used for sanity checks and encoding)")
+    #ap.add_argument("--model", default="rf_stop_recommender.joblib", help="Path to saved model pipeline (will train if not found)")
+    #ap.add_argument("--driver_id", type=int, required=True, help="Driver ID (used for sanity checks and encoding)")
     args = ap.parse_args()
+
+    model = "rf_stop_recommender.joblib"
+    driver_id = 5
+
 
     # Load data
     full_df = pd.read_csv("trip_recommendation_service_dataset.csv")
 
     df = pd.read_csv("trip_recommendation_service_dataset.csv")
-    driver_df = df[df["driver_id"] == args.driver_id]
+    driver_df = df[df["driver_id"] == driver_id]
 
     # Sanity check
-    if driver_df["driver_id"].nunique() != 1 or int(driver_df["driver_id"].iloc[0]) != args.driver_id:
-        print(f"[Warning] driver_csv contains driver_id {driver_df['driver_id'].unique().tolist()} but --driver_id={args.driver_id}")
+    if driver_df["driver_id"].nunique() != 1 or int(driver_df["driver_id"].iloc[0]) != driver_id:
+        print(f"[Warning] driver_csv contains driver_id {driver_df['driver_id'].unique().tolist()} but --driver_id={driver_id}")
 
     # Build training frames / preprocess
     X, Y, preprocess, categories, X_cols_numeric, dataset = build_training_frames(full_df)
 
     # Model: load or train
     pipe = None
-    if os.path.exists(args.model):
+    if os.path.exists(model):
         try:
-            pipe = load(args.model)
+            pipe = load(model)
             # quick shape check by transforming a tiny slice
             _ = pipe.predict(X.iloc[[0]])
-            print(f"[Info] Loaded model from {args.model}")
+            print(f"[Info] Loaded model from {model}")
         except Exception as e:
             print(f"[Warning] Failed to load model ({e}). Retraining...")
             pipe = None
@@ -186,10 +190,16 @@ def main():
     for cat, c in recs.items():
         print(f"{cat}: {c}")
 
-    out_df = pd.DataFrame(list(recs.items()), columns=["Category", "Recommended_Stops"])
-    csv_name = f"driver_recommendations.csv"
-    out_df.to_csv(csv_name, index=False)
-    print(f"\n[Info] Saved recommendations to {csv_name}")
+    # out_df = pd.DataFrame(list(recs.items()), columns=["Category", "Recommended_Stops"])
+    # csv_name = f"driver_recommendations.csv"
+    # out_df.to_csv(csv_name, index=False)
+    # print(f"\n[Info] Saved recommendations to {csv_name}")
+
+    for i, j in recs.items():
+        print(f"{i}: {j}")
+
+    del recs["Gas Station"]
+    return recs
 
 if __name__ == "__main__":
     main()

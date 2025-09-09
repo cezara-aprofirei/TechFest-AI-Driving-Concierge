@@ -25,10 +25,13 @@ GEOLOCATION_URL = "https://maps.googleapis.com/maps/api/geocode/json"
 #--- Marker styles by type ---#
 ICON_MAP: Dict[str, Dict[str, Any]] = {
     "electric_vehicle_charging_station": dict(color="purple", icon="bolt", prefix="fa"),
-    "charging_station": dict(color="purple", icon="bolt", prefix="fa"),
     "gas_station": dict(color="green", icon="tint", prefix="fa"),
     "restaurant": dict(color="red", icon="cutlery", prefix="fa"),
     "tourist_attraction": dict(color="blue", icon="info-sign"),
+    "hotel": dict(color="blue", icon="info-sign"),
+    "rest_stop": dict(color="blue", icon="info-sign"),
+    "shopping_mall": dict(color="blue", icon="info-sign"),
+    "point_of_interest": dict(color="cadetblue", icon="info-sign"),
 }
 
 
@@ -274,6 +277,8 @@ def get_route_info(origin: str, destination: str, vehicle_emission_type: str) ->
 #--- Get route distance ---#
 def get_route_distance_km(route):
     return route.get("distanceMeters") or 0 / 1000.0
+
+
 
 
 #--- Get approximate route duration ---#
@@ -644,7 +649,7 @@ def send_intermediate_distances():
 
 # --------------------------- Public method --------------------------- #
 
-def build_route_map(
+def build_route_maps(
     origin: str,
     destination: str,
     *,
@@ -716,16 +721,16 @@ def build_route_map(
     m.save(output_html)
     return output_html
 
-html_path = build_route_map(
-    origin="Iasi",
-    destination="Paris",
-    vehicle_emission_type="ELECTRIC",
-    requested_recos={"restaurant": 6, "gas_station": 4, "electric_vehicle_charging_station": 3, "tourist_attraction": 4},
-    search_radius=12000,
-    prefer_open_now=True,
-    corridor_width_m=6000,
-    samples_per_chunk=3,
-    min_user_ratings=50,
-    output_html="my_trip_map.html"
-)
-print("Saved:", html_path)
+# html_path = build_route_map(
+#     origin="Iasi",
+#     destination="Paris",
+#     vehicle_emission_type="ELECTRIC",
+#     requested_recos={"restaurant": 6, "gas_station": 4, "electric_vehicle_charging_station": 3, "tourist_attraction": 4},
+#     search_radius=12000,
+#     prefer_open_now=True,
+#     corridor_width_m=6000,
+#     samples_per_chunk=3,
+#     min_user_ratings=50,
+#     output_html="my_trip_map.html"
+# )
+#print("Saved:", html_path)

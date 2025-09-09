@@ -70,16 +70,30 @@ print(f"Model saved to: {MODEL_PATH.resolve()}")
     "stop_category": ["Restaurant", "Shopping", "Hotel"]
 })'''
 
+##iau doar dictionarul cu stop_category si fac mapare
+
+mapping = {
+    "restaurant": "Restaurant",
+    "gas_station": "Gas Station",
+    "shopping_mall": "Shopping",
+    "tourist_attraction": "Tourist Attraction",
+    "hotel": "Hotel",
+    "rest_stop": "Rest Area", 
+    "electric_vehicle_charging_station":"Restaurant"
+}
+
+
 rows = []
-with open("misnea_file.csv", "r") as f:
+with open("poi_consecutive_distances.csv", "r") as f:
     reader = csv.reader(f)
     header = next(reader)  # Skip header
     for row in reader:
         rows.append({
             "kilometers_since_last_stop": float(row[0]),
-            "stop_category": row[1],
+            "stop_category": mapping.get(row[1], row[1]),
             "stop_duration_minutes": None  # or some default if needed
         })
+
 test_data = pd.DataFrame(rows)
 
 for row in test_data.itertuples():

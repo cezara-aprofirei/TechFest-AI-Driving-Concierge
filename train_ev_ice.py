@@ -112,32 +112,18 @@ def predict_consumption(model, avg_speed_kmh: float, kilometers_since_last_stop:
     return float(model.predict(X)[0])
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--data",
-        type=str,
-        required=True,
-        help="Path to the augmented CSV with columns: car_type, avg_speed_kmh, kilometers_since_last_stop, consumption",
-    )
-    parser.add_argument(
-        "--outdir",
-        type=str,
-        default="models",
-        help="Output directory for saved models and metrics",
-    )
-    parser.add_argument("--random_state", type=int, default=42)
-    args = parser.parse_args()
-
-    outdir = Path(args.outdir)
+def main(total_distance=2000):
+    data="trip_recommendation_service_dataset.csv"
+    random_state=42
+    outdir = Path("models")
     outdir.mkdir(parents=True, exist_ok=True)
 
     # Load data
-    df = pd.read_csv(args.data)
+    df = pd.read_csv(data)
 
     # Train per type
-    ev_model, ev_metrics = train_model_for_type(df, "EV", random_state=args.random_state)
-    ice_model, ice_metrics = train_model_for_type(df, "ICE", random_state=args.random_state)
+    ev_model, ev_metrics = train_model_for_type(df, "EV", random_state)
+    ice_model, ice_metrics = train_model_for_type(df, "ICE", random_state)
 
     # Save models
     ev_path = outdir / "ev_consumption_model.pkl"
@@ -157,7 +143,7 @@ def main():
     with open(outdir / "metrics.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
 
-    total_distance = 1500  # De inlocuit de la Misnea AI
+    #total_distance = 1500  # De inlocuit de la Misnea AI
     n = total_distance // 90
     example_ev = 0.0
     example_ice = 0.0
@@ -167,10 +153,20 @@ def main():
         example_ice += predict_consumption(ice_model, avg_speed_kmh=tuple[0], kilometers_since_last_stop=total_distance*tuple[1]/100)
     nr_fuelings = example_ice/50
     nr_chargings = example_ev/80
-    with open("fueling_charging_stops.csv", "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["ICE", "EV"])  # header
-        writer.writerow((int(nr_fuelings),int(nr_chargings)))
+
+    dict = {
+        "gas_station": int(nr_fuelings),
+        "electric_vehicle_charging_station": int(nr_chargings)
+        }
+    
+    for k, v in dict.items():
+        print(f"{k}: {v}")
+    return dict
+
+    # with open("fueling_charging_stops.csv", "w", newline="") as f:
+    #     writer = csv.writer(f)
+    #     writer.writerow(["ICE", "EV"])  # header
+    #     writer.writerow((int(nr_fuelings),int(nr_chargings)))
 
     ''' # Example inference (printed to console)
     example_ev = predict_consumption(ev_model, avg_speed_kmh=90, kilometers_since_last_stop=100)

@@ -5,7 +5,7 @@
     "n_samples_train": 699,
     "n_samples_test": 175,
     "mae": 1.0983327921390829,
-    "r2": 0.9565886385860822,
+    "r2": 0.9565886385860821,
     "feature_importances": {
       "avg_speed_kmh": 0.9725286519621718,
       "kilometers_since_last_stop": 0.027471348037828275
@@ -17,7 +17,7 @@
     "n_samples_train": 660,
     "n_samples_test": 166,
     "mae": 1.4257813970166384,
-    "r2": 0.44037667968140737,
+    "r2": 0.4403766796814075,
     "feature_importances": {
       "avg_speed_kmh": 0.7487911094500953,
       "kilometers_since_last_stop": 0.25120889054990475
