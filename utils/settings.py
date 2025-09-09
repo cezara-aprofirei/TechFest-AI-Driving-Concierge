@@ -32,3 +32,6 @@ load_dotenv()
 #   raise a clear error if it's missing.
 # -------------------------------------------------
 GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+
+# Get OpenAI API key from environment variables
+OPENAI_API_KEY_IS = os.getenv("OPENAI_API_KEY_IS")

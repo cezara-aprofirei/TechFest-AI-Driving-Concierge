@@ -4,3 +4,5 @@ requests
 pydantic
 faster-whisper
 numpy
+audio_recorder_streamlit
+openai
