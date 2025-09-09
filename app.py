@@ -425,3 +425,10 @@ with bottom_row:
     with cD: st.button("Steering wheel", use_container_width=True)
     with cE: st.button("Seat Heating", use_container_width=True)
     st.markdown('</div>', unsafe_allow_html=True)
+
+# Speak once per submission; will NOT re-speak on page refresh
+if st.session_state.speak_queue and st.session_state.speak_nonce:
+    speak_text(st.session_state.speak_queue, st.session_state.speak_nonce)
+    # clear queue so subsequent reruns (and refresh) won’t speak
+    st.session_state.speak_queue = None
+    st.session_state.speak_nonce = None
