@@ -346,7 +346,7 @@ def recommend_stops(
 # ----------------------------
 print("\nRecommended counts per category (auto; sensitive):")
 example_auto = recommend_stops(
-    driver_id=5,
+    driver_id=9,
     # You can tweak these to be more/less sensitive:
     tau=0.7,      # lower -> sharper preference for top categories
     gamma=1.4,    # higher -> more weight on driver's popular categories

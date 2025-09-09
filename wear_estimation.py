@@ -8,6 +8,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 import joblib
+import csv
 
 # ---------- Config ----------
 INPUT_CSV = Path("trip_recommendation_service_dataset.csv")
@@ -63,17 +64,51 @@ joblib.dump(model, MODEL_PATH)
 print(f"Model saved to: {MODEL_PATH.resolve()}")
 
 # ---------- 8) Test with Mock Data ----------
-mock_data = pd.DataFrame({
+'''mock_data = pd.DataFrame({
     "stop_duration_minutes": [5, 45, 120],
     "kilometers_since_last_stop": [50, 80, 150],
     "stop_category": ["Restaurant", "Shopping", "Hotel"]
-})
+})'''
 
-mock_predictions = model.predict(mock_data)
+rows = []
+with open("misnea_file.csv", "r") as f:
+    reader = csv.reader(f)
+    header = next(reader)  # Skip header
+    for row in reader:
+        rows.append({
+            "kilometers_since_last_stop": float(row[0]),
+            "stop_category": row[1],
+            "stop_duration_minutes": None  # or some default if needed
+        })
+test_data = pd.DataFrame(rows)
+
+for row in test_data.itertuples():
+    if pd.isna(row.stop_duration_minutes):
+        if row.stop_category == "Restaurant":
+            test_data.at[row.Index, "stop_duration_minutes"] = 55
+        elif row.stop_category == "Shopping":
+            test_data.at[row.Index, "stop_duration_minutes"] = 120
+        elif row.stop_category == "Hotel":
+            test_data.at[row.Index, "stop_duration_minutes"] = 600
+        else:
+            test_data.at[row.Index, "stop_duration_minutes"] = 30  # Default
+
+predictions = model.predict(test_data)
 print("\n=== Mock Predictions ===")
 print(pd.DataFrame({
-    "stop_duration_minutes": mock_data["stop_duration_minutes"],
-    "kilometers_since_last_stop": mock_data["kilometers_since_last_stop"],
-    "stop_category": mock_data["stop_category"],
-    "predicted_wear": mock_predictions.round(2)
+    "stop_duration_minutes": test_data["stop_duration_minutes"],
+    "kilometers_since_last_stop": test_data["kilometers_since_last_stop"],
+    "stop_category": test_data["stop_category"],
+    "predicted_wear": predictions.round(2)
 }))
+
+sum = 0
+for pred in predictions:
+    sum += pred
+
+def return_wear():
+    print("\n=== Total Wear Prediction ===")
+    print(f"Total predicted wear: {int(sum.round(0))}")
+    return int(sum.round(0))
+
+return_wear()

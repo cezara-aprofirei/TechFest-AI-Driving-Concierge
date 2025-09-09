@@ -3,12 +3,7 @@
 auto_features_recommend.py
 
 Usage:
-  python auto_features_recommend.py \
-      --driver_csv driver5_trip_data.csv \
-      --full_csv trip_recommendation_service_dataset.csv \
-      --model rf_stop_recommender.joblib \
-      --driver_id 5 \
-      --n_stops 6    # optional override; if omitted, inferred from history
+  python auto_features_recommend.py --model rf_stop_recommender.joblib --driver_id 5    
 """
 import argparse
 import os
@@ -129,21 +124,18 @@ def recommend_from_profile(pipe: Pipeline, categories, profile: dict, round_to_i
         preds = np.round(preds).astype(int)
     return dict(sorted(zip(categories, preds), key=lambda kv: kv[1], reverse=True))
 
-# ----------------------------
-# Main
-# ----------------------------
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--driver_csv", required=True, help="Path to CSV with raw stops for ONE driver (e.g., driver5_trip_data.csv)")
-    ap.add_argument("--full_csv", required=True, help="Path to full dataset CSV used for training (e.g., trip_recommendation_service_dataset.csv)")
     ap.add_argument("--model", default="rf_stop_recommender.joblib", help="Path to saved model pipeline (will train if not found)")
     ap.add_argument("--driver_id", type=int, required=True, help="Driver ID (used for sanity checks and encoding)")
-    ap.add_argument("--n_stops", type=int, default=None, help="Optional override for expected stops in the new trip")
     args = ap.parse_args()
 
     # Load data
-    full_df = pd.read_csv(args.full_csv)
-    driver_df = pd.read_csv(args.driver_csv)
+    full_df = pd.read_csv("trip_recommendation_service_dataset.csv")
+
+    df = pd.read_csv("trip_recommendation_service_dataset.csv")
+    driver_df = df[df["driver_id"] == args.driver_id]
 
     # Sanity check
     if driver_df["driver_id"].nunique() != 1 or int(driver_df["driver_id"].iloc[0]) != args.driver_id:
@@ -178,8 +170,7 @@ def main():
     profile = infer_trip_profile_from_history(driver_df)
 
     # Optional override for n_stops (e.g., planning a specific trip length)
-    if args.n_stops is not None:
-        profile["n_stops"] = int(args.n_stops)
+    
 
     # Recommend counts per category
     recs = recommend_from_profile(pipe, categories, profile, round_to_int=True)
@@ -194,6 +185,11 @@ def main():
     print("\n=== Recommended counts per category ===")
     for cat, c in recs.items():
         print(f"{cat}: {c}")
+
+    out_df = pd.DataFrame(list(recs.items()), columns=["Category", "Recommended_Stops"])
+    csv_name = f"driver_recommendations.csv"
+    out_df.to_csv(csv_name, index=False)
+    print(f"\n[Info] Saved recommendations to {csv_name}")
 
 if __name__ == "__main__":
     main()

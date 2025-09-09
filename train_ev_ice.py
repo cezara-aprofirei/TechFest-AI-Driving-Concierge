@@ -18,6 +18,8 @@ Outputs:
   - models/metrics.json  (MAE/R2 and sample counts for both models)
 """
 
+import random
+import csv
 import argparse
 import json
 from pathlib import Path
@@ -29,6 +31,24 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 
+
+def generate_tuples(n):
+    # Generate n random integers between 50 and 130
+    numbers = [random.randint(50, 130) for _ in range(n)]
+
+    # Generate n random probability "weights"
+    weights = [random.random() for _ in range(n)]
+    total = sum(weights)
+    
+    # Normalize weights to sum to 100
+    probabilities = [(w / total) * 100 for w in weights]
+    
+    # Round probabilities while keeping sum = 100
+    rounded = [round(p, 2) for p in probabilities]
+    diff = 100 - sum(rounded)
+    rounded[0] += diff  # adjust first element to fix rounding error
+    
+    return list(zip(numbers, rounded))
 
 def train_model_for_type(df: pd.DataFrame, vehicle_type: str, random_state: int = 42):
     """
@@ -137,7 +157,22 @@ def main():
     with open(outdir / "metrics.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
 
-    # Example inference (printed to console)
+    total_distance = 1500  # De inlocuit de la Misnea AI
+    n = total_distance // 90
+    example_ev = 0.0
+    example_ice = 0.0
+    tuples = generate_tuples(n)
+    for tuple in tuples:
+        example_ev += predict_consumption(ev_model, avg_speed_kmh=tuple[0], kilometers_since_last_stop=total_distance*tuple[1]/100)
+        example_ice += predict_consumption(ice_model, avg_speed_kmh=tuple[0], kilometers_since_last_stop=total_distance*tuple[1]/100)
+    nr_fuelings = example_ice/50
+    nr_chargings = example_ev/80
+    with open("fueling_charging_stops.csv", "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["ICE", "EV"])  # header
+        writer.writerow((int(nr_fuelings),int(nr_chargings)))
+
+    ''' # Example inference (printed to console)
     example_ev = predict_consumption(ev_model, avg_speed_kmh=90, kilometers_since_last_stop=100)
     example_ice = predict_consumption(ice_model, avg_speed_kmh=110, kilometers_since_last_stop=60)
     print("Saved models to:")
@@ -147,7 +182,7 @@ def main():
     print(json.dumps(metrics, indent=2))
     print("\nExample predictions:")
     print(f"  EV  (90 km/h, 100 km):  {example_ev:.2f}")
-    print(f"  ICE (110 km/h, 60 km):  {example_ice:.2f}")
+    print(f"  ICE (110 km/h, 60 km):  {example_ice:.2f}")'''
 
 
 if __name__ == "__main__":
