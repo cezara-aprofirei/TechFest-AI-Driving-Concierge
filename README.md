@@ -38,7 +38,7 @@ OPENAI_API_KEY = "your-api-key-here"
 
 2. **Use voice commands:**
    - Click the "Tune comfort settings" button to start recording
-   - Speak your command (e.g., "Set temperature to 22 degrees", "Turn on left seat heating")
+   - Speak the commands (e.g., "Set temperature to 22 degrees", "Decrease the fan speed by 10", "Turn on the steering wheel heating")
    - The AI will process your command and update the dashboard
 
 ## Configuration

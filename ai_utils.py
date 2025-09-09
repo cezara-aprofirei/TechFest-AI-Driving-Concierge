@@ -90,28 +90,8 @@ def generate_response(user_message: str) -> str:
                     "required": ["delta"]
                 }
             }         
-        },
-        {
-    "type": "function",
-    "function": {
-        "name": "change_steering_wheel_heating",
-        "description": change_steering_wheel_heating.__doc__,
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "state": {
-                    "type": "string",
-                    "enum": ["On", "Off"],
-                    "description": "Whether to turn the steering wheel heating On or Off"
-                }
-            },
-            "required": ["state"]
-        }
     }
-}
-
-        
-    ]
+]
 
     while True:
         response = client.chat.completions.create(
@@ -161,7 +141,7 @@ def do_the_action(audio_bytes: bytes):
     Process voice command and execute car control action.
     
     Converts audio to text using Whisper, then uses GPT to interpret
-    and execute the appropriate car function (e.g., temperature control).
+    and execute the appropriate car function (e.g. temperature, fan speed, steering wheel heating and Seat heating (set_seat_heating, levels 0–3)
     
     Args:
         audio_bytes (bytes): Raw audio data from voice recording.
