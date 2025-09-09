@@ -1,5 +1,4 @@
-# route_pois_map_fn.py
-
+import re
 import os
 import math
 import requests
@@ -33,7 +32,15 @@ ICON_MAP: Dict[str, Dict[str, Any]] = {
 }
 
 
-def _annotate_distances_on_map(m, poi_list, total_route_km):
+def _parse_duration_s(duration_str: str) -> float:
+    """Parses a Google protobuf duration string like '123s' or '1.234s' to seconds."""
+    if not duration_str:
+        return 0.0
+    m = re.fullmatch(r"(-?\d+(?:\.\d+)?)s", duration_str.strip())
+    return float(m.group(1)) if m else 0.0
+
+
+def _annotate_distances_on_map(m, poi_list, total_route_km, total_time, service_message):
     # Unified style for POIs and total badge
     label_style = (
         "display:inline-block;"
@@ -64,12 +71,13 @@ def _annotate_distances_on_map(m, poi_list, total_route_km):
 
     # Center-top total distance badge (unchanged, but included for completeness)
     total_km_str = f"{total_route_km:.1f}"
+    total_time_str = f"{total_time: .1f}"
     total_html = (
         "{% macro html(this, kwargs) %}"
         "<div style=\"position:fixed;top:12px;left:50%;transform:translateX(-50%);"
         "z-index:9999;padding:10px 14px;background:rgba(0,0,0,0.72);color:#fff;"
         "font-weight:600;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.25);\">"
-        "Total distance: " + total_km_str + " km"
+        "Total distance: " + total_km_str + " km in ~ " + total_time_str + " h"
         "</div>"
         "{% endmacro %}"
     )
@@ -77,6 +85,25 @@ def _annotate_distances_on_map(m, poi_list, total_route_km):
     macro._template = Template(total_html)
     m.get_root().add_child(macro)
 
+    # NEW: Top-right “Service” badge (placeholder)
+    service_text = service_message if (service_message and service_message.strip()) else "No service messages"
+    service_html = (
+            "{% macro html(this, kwargs) %}"
+            "<div id=\"service-badge\" "
+            "style=\"position:fixed;top:12px;right:100px;z-index:9999;"
+            "padding:10px 14px;background:rgba(0,0,0,0.72);color:#fff;"
+            "font-weight:600;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.25);"
+            "max-width:320px;line-height:1.2;\">"
+            "<div style=\"font-size:12px;opacity:0.85;margin-bottom:4px;letter-spacing:.02em;\">Service</div>"
+            "<div style=\"font-size:13px;white-space:pre-wrap;\">"
+            + service_text +
+            "</div>"
+            "</div>"
+            "{% endmacro %}"
+    )
+    macro_service = MacroElement()
+    macro_service._template = Template(service_html)
+    m.get_root().add_child(macro_service)
 
 def _cumulative_route_distances_m(path: List[Tuple[float,float]]) -> List[float]:
     if not path:
@@ -85,6 +112,7 @@ def _cumulative_route_distances_m(path: List[Tuple[float,float]]) -> List[float]
     for i in range(1, len(path)):
         c.append(c[-1] + haversine_km(path[i-1], path[i]) * 1000.0)
     return c
+
 
 def _project_point_along_route_m(
     p: Tuple[float,float], path: List[Tuple[float,float]], cum: List[float]
@@ -147,8 +175,8 @@ def summarize_poi_distances_along_route(
           "gap_km": float   # from previous POI (or from start for first)
         }
     """
-    cum = _cumulative_route_distances_m(path)
-    total_route_km = (cum[-1] / 1000.0) if cum else 0.0
+    inter_distance = _cumulative_route_distances_m(path)
+    total_route_km = (inter_distance[-1] / 1000.0) if inter_distance else 0.0
     requested_types_list = list(requested_recos.keys())
 
     ann = []
@@ -160,7 +188,7 @@ def summarize_poi_distances_along_route(
             lat, lng = loc.get("latitude"), loc.get("longitude")
             if lat is None or lng is None:
                 continue
-            along_m, _ = _project_point_along_route_m((lat, lng), path, cum)
+            along_m, _ = _project_point_along_route_m((lat, lng), path, inter_distance)
             name = (p.get("displayName") or {}).get("text", "Place")
             ann.append({
                 "name": name,
@@ -212,14 +240,17 @@ def decode_polyline(encoded: str) -> List[Tuple[float, float]]:
     return out
 
 
-def compute_route(origin: str, destination: str, vehicle_emission_type: str) -> List[Tuple[float,float]]:
+#--- Get encoded route polyline ---#
+def get_route_info(origin: str, destination: str, vehicle_emission_type: str) -> List[Tuple[float,float]]:
     headers = {
         "Content-Type": "application/json",
         "X-Goog-Api-Key": API_KEY,
-        "X-Goog-FieldMask": "routes.polyline.encodedPolyline,routes.legs.polyline.encodedPolyline",
+        "X-Goog-FieldMask": "routes.polyline.encodedPolyline,routes.legs.polyline.encodedPolyline,routes.distanceMeters,routes.duration",
     }
+
     o_lat, o_lng = get_location_coordinates(origin)
     d_lat, d_lng = get_location_coordinates(destination)
+
     payload = {
         "origin": {"location": {"latLng": {"latitude": o_lat, "longitude": o_lng}}},
         "destination": {"location": {"latLng": {"latitude": d_lat, "longitude": d_lng}}},
@@ -230,16 +261,33 @@ def compute_route(origin: str, destination: str, vehicle_emission_type: str) -> 
         "polylineEncoding": "ENCODED_POLYLINE",
         "requestedReferenceRoutes": ["FUEL_EFFICIENT"]
     }
+
     r = requests.post(ROUTES_URL, headers=headers, json=payload, timeout=30)
     r.raise_for_status()
+
     routes = r.json().get("routes", [])
     if not routes:
         raise RuntimeError("No route returned")
-    enc = routes[0].get("polyline", {}).get("encodedPolyline")
+    return routes[0]
+
+
+#--- Get route distance ---#
+def get_route_distance_km(route):
+    return route.get("distanceMeters") or 0 / 1000.0
+
+
+#--- Get approximate route duration ---#
+def get_route_duration(route):
+    return _parse_duration_s(route.get("duration", "")) / 3600.0
+
+
+#--- Decode polyline to generate path ---#
+def compute_path_from_polyline(route):
+    enc = route.get("polyline", {}).get("encodedPolyline")
     if not enc:
         # fallback to legs
         coords: List[Tuple[float,float]] = []
-        for leg in routes[0].get("legs", []):
+        for leg in route.get("legs", []):
             leg_enc = leg.get("polyline", {}).get("encodedPolyline")
             if leg_enc:
                 coords += decode_polyline(leg_enc)
@@ -591,7 +639,10 @@ def _build_map(path: List[Tuple[float,float]],
     return m
 
 
-# --------------------------- Public method ---------------------------
+def send_intermediate_distances():
+    _, poi_ann = summarize_poi_distances_along_route(path, recos, requested_recos)
+
+# --------------------------- Public method --------------------------- #
 
 def build_route_map(
     origin: str,
@@ -616,7 +667,9 @@ def build_route_map(
 
 
     # 1) Route
-    path = compute_route(origin, destination, vehicle_emission_type)
+    route = get_route_info(origin, destination, vehicle_emission_type)
+    path = compute_path_from_polyline(route)
+    total_time = get_route_duration(route)
     if len(path) < 2:
         raise RuntimeError("Route too short to render")
 
@@ -652,11 +705,14 @@ def build_route_map(
     except Exception as e:
         print("CSV write skipped:", e)
 
+
     # 3) Render & save
     origin_ll = get_location_coordinates(origin)
     destination_ll = get_location_coordinates(destination)
+
     m = _build_map(path, origin_ll, destination_ll, recos, requested_recos)
-    _annotate_distances_on_map(m, poi_ann, total_route_km)
+
+    _annotate_distances_on_map(m, poi_ann, total_route_km, total_time, "Errors")
     m.save(output_html)
     return output_html
 
