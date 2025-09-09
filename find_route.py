@@ -12,17 +12,18 @@ from folium.plugins import (
 
 from folium.features import DivIcon
 from branca.element import Template, MacroElement
-from urllib.parse import urlencode
+
 
 API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 OUTPUT_HTML_DEFAULT = "route_pois_map.html"
+
 
 ROUTES_URL = "https://routes.googleapis.com/directions/v2:computeRoutes"
 PLACES_URL = "https://places.googleapis.com/v1/places:searchNearby"
 GEOLOCATION_URL = "https://maps.googleapis.com/maps/api/geocode/json"
 
 
-# Marker styles by type
+#--- Marker styles by type ---#
 ICON_MAP: Dict[str, Dict[str, Any]] = {
     "electric_vehicle_charging_station": dict(color="purple", icon="bolt", prefix="fa"),
     "charging_station": dict(color="purple", icon="bolt", prefix="fa"),
@@ -77,7 +78,6 @@ def _annotate_distances_on_map(m, poi_list, total_route_km):
     m.get_root().add_child(macro)
 
 
-
 def _cumulative_route_distances_m(path: List[Tuple[float,float]]) -> List[float]:
     if not path:
         return []
@@ -119,6 +119,9 @@ def _project_point_along_route_m(
             best_along = along
     return best_along, best_off
 
+
+# --------------------------- Core utils --------------------------- #
+
 def _primary_type_for_place(p: dict, requested_types: List[str]) -> str:
     types = p.get("types") or []
     for t in requested_types:
@@ -127,7 +130,6 @@ def _primary_type_for_place(p: dict, requested_types: List[str]) -> str:
     return types[0] if types else "point_of_interest"
 
 
-# --------------------------- Core utils ---------------------------
 def summarize_poi_distances_along_route(
     path: List[Tuple[float,float]],
     recos: Dict[str, List[dict]],
@@ -188,6 +190,7 @@ def get_location_coordinates(address: str) -> Tuple[float, float]:
     loc = data["results"][0]["geometry"]["location"]
     return loc["lat"], loc["lng"]
 
+
 def decode_polyline(encoded: str) -> List[Tuple[float, float]]:
     idx = 0; lat = 0; lng = 0; out: List[Tuple[float,float]] = []
     while idx < len(encoded):
@@ -207,6 +210,7 @@ def decode_polyline(encoded: str) -> List[Tuple[float, float]]:
 
         out.append((lat/1e5, lng/1e5))
     return out
+
 
 def compute_route(origin: str, destination: str, vehicle_emission_type: str) -> List[Tuple[float,float]]:
     headers = {
@@ -244,36 +248,41 @@ def compute_route(origin: str, destination: str, vehicle_emission_type: str) -> 
         return coords
     return decode_polyline(enc)
 
+
 def split_path(path: List[Tuple[float,float]], n: int) -> List[List[Tuple[float,float]]]:
     if n <= 0:
         return []
-    L = len(path)
-    if L == 0:
+    length = len(path)
+    if length == 0:
         return [[] for _ in range(n)]
-    cuts = [round(i * L / n) for i in range(n+1)]
+    cuts = [round(i * length / n) for i in range(n+1)]
     chunks = [path[cuts[i]:cuts[i+1]] for i in range(n)]
     for i in range(n):
         if not chunks[i]:
-            idx = min(round((i + 0.5) * L / n), L-1)
+            idx = min(round((i + 0.5) * length / n), length-1)
             chunks[i] = [path[idx]]
     return chunks
+
 
 def midpoint_of_chunk(chunk: List[Tuple[float,float]]) -> Tuple[float,float]:
     return chunk[len(chunk)//2] if chunk else (0.0, 0.0)
 
+
 def haversine_km(a: Tuple[float,float], b: Tuple[float,float]) -> float:
-    R = 6371.0
+    radius = 6371.0
     lat1, lon1 = math.radians(a[0]), math.radians(a[1])
     lat2, lon2 = math.radians(b[0]), math.radians(b[1])
     dlat, dlon = lat2-lat1, lon2-lon1
     h = math.sin(dlat/2)**2 + math.cos(lat1)*math.cos(lat2)*math.sin(dlon/2)**2
-    return 2*R*math.asin(math.sqrt(h))
+    return 2*radius*math.asin(math.sqrt(h))
+
 
 def _meters_per_deg(lat_deg: float) -> Tuple[float, float]:
     lat = math.radians(lat_deg)
     m_per_deg_lat = 111132.92 - 559.82*math.cos(2*lat) + 1.175*math.cos(4*lat)
     m_per_deg_lon = 111412.84*math.cos(lat) - 93.5*math.cos(3*lat)
     return m_per_deg_lat, m_per_deg_lon
+
 
 def _point_segment_distance_m(p: Tuple[float,float], a: Tuple[float,float], b: Tuple[float,float]) -> float:
     lat0 = (a[0] + b[0] + p[0]) / 3.0
@@ -290,6 +299,7 @@ def _point_segment_distance_m(p: Tuple[float,float], a: Tuple[float,float], b: T
     cx, cy = (bx + t*bax, by + t*bay)
     return math.hypot(px - cx, py - cy)
 
+
 def _min_distance_to_polyline_m(p: Tuple[float,float], poly: List[Tuple[float,float]]) -> float:
     if not poly:
         return float("inf")
@@ -305,6 +315,7 @@ def _min_distance_to_polyline_m(p: Tuple[float,float], poly: List[Tuple[float,fl
         if d < mind:
             mind = d
     return mind
+
 
 # --------------------------- Places & ranking ---------------------------
 
@@ -334,6 +345,7 @@ def places_nearby(lat: float, lng: float, search_radius_m: float, result_count: 
     r.raise_for_status()
     return r.json().get("places", []) or []
 
+
 def pick_best_place(candidates: List[dict], center: Tuple[float,float],
                     prefer_open_now: bool = True,
                     min_user_ratings: int = 50) -> Optional[dict]:
@@ -349,8 +361,9 @@ def pick_best_place(candidates: List[dict], center: Tuple[float,float],
         rating = p.get("rating") or 0.0
         loc = p.get("location") or {}
         dist_km = haversine_km(center, (loc.get("latitude",0), loc.get("longitude",0)))
-        return (rcnt, rating, -dist_km)  # primary: reviews; secondary: stars; tertiary: proximity
+        return rcnt, rating, -dist_km  # primary: reviews; secondary: stars; tertiary: proximity
     return sorted(candidates, key=key, reverse=True)[0]
+
 
 def _sample_points(poly: List[Tuple[float,float]], k: int) -> List[Tuple[float,float]]:
     if not poly:
@@ -359,6 +372,7 @@ def _sample_points(poly: List[Tuple[float,float]], k: int) -> List[Tuple[float,f
         return [midpoint_of_chunk(poly)]
     idxs = [round((i+1) * (len(poly)-1) / (k+1)) for i in range(k)]
     return [poly[i] for i in idxs]
+
 
 # --------------------------- Selection per type ---------------------------
 
@@ -373,6 +387,7 @@ def _icon_for_place(p: dict, fallback: str = "point_of_interest") -> folium.Icon
     if args.get("prefix"):
         return folium.Icon(**args)
     return folium.Icon(color=args.get("color","cadetblue"), icon=args.get("icon","map-marker"))
+
 
 def collect_recommendations_by_type(
     path: List[Tuple[float,float]],
@@ -469,12 +484,13 @@ def _format_opening_hours_html(place: dict) -> str:
             d, h = s.split(":",1)
             parsed.append((d.strip(), h.strip()))
     def _hours_for(names):
-        vals = [h for d,h in parsed if d in names]
-        return vals[0] if vals and all(h==vals[0] for h in vals) else None
+        vals = [hh for dd,hh in parsed if dd in names]
+        return vals[0] if vals and all(hh==vals[0] for hh in vals) else None
     wk = _hours_for(days[:5]); we = _hours_for(days[5:])
     if wk and we:
         return badge + f"<div>Mon–Fri: {wk}<br>Sat–Sun: {we}</div>"
     return badge + "<div>" + "<br>".join(wd) + "</div>"
+
 
 def _build_map(path: List[Tuple[float,float]],
                origin_ll: Tuple[float,float],
@@ -574,7 +590,8 @@ def _build_map(path: List[Tuple[float,float]],
         m.fit_bounds([[min(lats), min(lngs)], [max(lats), max(lngs)]])
     return m
 
-# --------------------------- Public callable ---------------------------
+
+# --------------------------- Public method ---------------------------
 
 def build_route_map(
     origin: str,
