@@ -20,6 +20,8 @@
 
 import streamlit as st
 import hashlib, uuid
+import streamlit.components.v1 as components
+from pathlib import Path
 from audio_recorder_streamlit import audio_recorder
 from utils.ai_utils import do_the_action
 
@@ -235,7 +237,8 @@ with main_col:
             map_box = st.container()
             with map_box:
                 st.markdown('<span class="map-hook"></span>', unsafe_allow_html=True)
-                st.markdown("**Map**")
+                html = Path("my_trip_map.html").read_text(encoding="utf-8")
+                components.html(html, height=450, scrolling=False)  # width auto-fits the column
                 
         else:
             params_box = st.container()
@@ -323,11 +326,12 @@ with main_col:
             # Action: run the planner + map
             # ------------------------------
             if go:
+                set_route_loading(True)  # disable button until done
+
                 # create a status panel with live updates
                 status = st.status("Starting...", expanded=False)
 
                 try:
-                    st.session_state.is_loading = True  # disable button until done
                     status.update(label="🧠 Understanding your request...", state="running")
                     # 1) Finalize the user request. Prefer the text box; if empty, try transcribing the current clip once more.
                     user_text = (st.session_state.user_query or "").strip()
@@ -421,7 +425,7 @@ with main_col:
                     status.update(label=f"❌ Error: {e}", state="error")
                     st.stop()
                 finally:
-                    st.session_state.is_loading = False  # re-enable button
+                    set_route_loading(False)  # re-enable button
 
 # --- BOTTOM ROW ---
 bottom_row = st.container(border=True)

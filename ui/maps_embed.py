@@ -110,7 +110,12 @@ def render_map(google_api_key: str, polyline: str, places: list[dict]):
     const map = new google.maps.Map(document.getElementById("map"), {{
       zoom: 12,
       center: {{lat: 47.0105, lng: 28.8638}}, // Fallback center (e.g., Chișinău area)
-      mapTypeId: "roadmap"
+      mapTypeId: "roadmap",         // default
+      mapTypeControl: true,         // show control in the corner
+      mapTypeControlOptions: {{
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.TOP_RIGHT
+      }}
     }});
 
     // Decode the route polyline into a list of coordinates
