@@ -1,0 +1,1701 @@
+trip_id,driver_id,stop_number,stop_category,stop_duration_minutes,kilometers_since_last_stop,time_of_day,day_of_week,weather,wear,car_type,avg_speed_kmh,consumption,car_type_encoded
+1001,4,1,Restaurant,36,109,Afternoon,Mon,Rainy,118.0,EV,93,19.3,0
+1001,4,2,Shopping,24,43,Evening,Mon,Rainy,49.0,EV,83,17.5,0
+1001,4,3,Hotel,438,137,Night,Mon,Rainy,157.0,ICE,125,11.8,1
+1001,4,4,Restaurant,75,109,Morning,Mon,Rainy,129.0,ICE,136,12.2,1
+1001,4,5,Restaurant,67,75,Afternoon,Mon,Rainy,95.0,EV,121,23.1,0
+1002,1,6,Hotel,290,103,Night,Sun,Cloudy,123.0,ICE,58,9.2,1
+1002,1,7,Gas Station,8,42,Morning,Sun,Cloudy,42.0,EV,83,14.0,0
+1002,1,8,Restaurant,46,45,Afternoon,Sun,Cloudy,56.5,EV,67,12.0,0
+1002,1,9,Hotel,243,108,Evening,Sun,Cloudy,128.0,ICE,107,5.7,1
+1002,1,10,Gas Station,16,56,Night,Sun,Cloudy,60.0,EV,103,18.7,0
+1002,1,11,Restaurant,32,69,Morning,Sun,Cloudy,77.0,EV,51,10.4,0
+1002,1,12,Restaurant,35,69,Afternoon,Sun,Cloudy,77.75,EV,47,7.9,0
+1002,1,13,Restaurant,47,98,Evening,Sun,Cloudy,109.75,ICE,101,7.5,1
+1003,12,14,Shopping,107,49,Afternoon,Tue,Sunny,69.0,EV,85,17.5,0
+1003,12,15,Shopping,88,71,Evening,Tue,Sunny,91.0,EV,122,22.6,0
+1003,12,16,Gas Station,13,79,Night,Tue,Sunny,82.25,EV,54,10.9,0
+1003,12,17,Restaurant,44,81,Morning,Tue,Sunny,92.0,EV,41,6.5,0
+1003,12,18,Gas Station,6,34,Afternoon,Tue,Sunny,34.0,EV,65,12.4,0
+1003,12,19,Restaurant,50,91,Evening,Tue,Sunny,103.5,EV,62,12.0,0
+1004,3,20,Shopping,70,98,Evening,Tue,Cloudy,118.0,EV,88,17.9,0
+1004,3,21,Hotel,306,131,Night,Tue,Cloudy,151.0,ICE,77,5.7,1
+1004,3,22,Rest Area,28,47,Morning,Tue,Cloudy,54.0,ICE,128,8.9,1
+1004,3,23,Tourist Attraction,76,88,Afternoon,Tue,Cloudy,108.0,EV,46,9.0,0
+1004,3,24,Hotel,226,66,Evening,Tue,Cloudy,86.0,ICE,63,8.1,1
+1005,4,25,Hotel,375,136,Night,Tue,Rainy,156.0,ICE,77,5.7,1
+1005,4,26,Restaurant,65,41,Morning,Tue,Rainy,61.0,EV,64,10.0,0
+1005,4,27,Shopping,107,108,Afternoon,Tue,Rainy,128.0,ICE,48,7.9,1
+1005,4,28,Restaurant,71,83,Evening,Tue,Rainy,103.0,EV,73,15.1,0
+1006,10,29,Shopping,117,62,Morning,Thu,Sunny,82.0,EV,123,21.7,0
+1006,10,30,Rest Area,30,39,Afternoon,Thu,Sunny,46.5,EV,64,11.4,0
+1006,10,31,Shopping,97,65,Evening,Thu,Sunny,85.0,EV,118,24.4,0
+1006,10,32,Hotel,262,129,Night,Thu,Sunny,149.0,EV,132,23.6,0
+1007,17,33,Hotel,365,99,Night,Mon,Sunny,119.0,ICE,129,8.8,1
+1007,17,34,Gas Station,7,25,Morning,Mon,Sunny,25.0,EV,85,15.0,0
+1007,17,35,Tourist Attraction,38,128,Afternoon,Mon,Sunny,137.5,ICE,71,5.4,1
+1008,5,36,Tourist Attraction,107,114,Afternoon,Tue,Rainy,134.0,EV,87,17.4,0
+1008,5,37,Tourist Attraction,126,148,Evening,Tue,Rainy,168.0,EV,62,12.9,0
+1008,5,38,Rest Area,22,62,Night,Tue,Rainy,67.5,EV,124,22.7,0
+1008,5,39,Rest Area,26,48,Morning,Tue,Rainy,54.5,ICE,87,4.3,1
+1008,5,40,Restaurant,34,83,Afternoon,Tue,Rainy,91.5,EV,43,8.7,0
+1008,5,41,Shopping,49,115,Evening,Tue,Rainy,127.25,EV,78,13.6,0
+1008,5,42,Hotel,542,140,Night,Tue,Rainy,160.0,EV,103,18.5,0
+1009,8,43,Hotel,322,145,Evening,Mon,Cloudy,165.0,EV,113,19.7,0
+1009,8,44,Hotel,247,133,Night,Mon,Cloudy,153.0,ICE,43,7.6,1
+1009,8,45,Rest Area,25,71,Morning,Mon,Cloudy,77.25,EV,99,19.6,0
+1009,8,46,Restaurant,36,95,Afternoon,Mon,Cloudy,104.0,ICE,99,8.0,1
+1009,8,47,Hotel,419,66,Evening,Mon,Cloudy,86.0,EV,61,12.2,0
+1009,8,48,Rest Area,30,26,Night,Mon,Cloudy,33.5,ICE,60,5.8,1
+1010,13,49,Gas Station,19,28,Morning,Sat,Sunny,32.75,ICE,82,5.3,1
+1010,13,50,Restaurant,59,71,Afternoon,Sat,Sunny,85.75,EV,79,14.6,0
+1010,13,51,Tourist Attraction,86,130,Evening,Sat,Sunny,150.0,EV,97,19.0,0
+1010,13,52,Hotel,456,61,Night,Sat,Sunny,81.0,ICE,76,3.3,1
+1010,13,53,Shopping,50,61,Morning,Sat,Sunny,73.5,EV,105,21.6,0
+1010,13,54,Tourist Attraction,57,111,Afternoon,Sat,Sunny,125.25,EV,55,11.2,0
+1011,2,55,Restaurant,80,98,Night,Tue,Sunny,118.0,EV,124,23.2,0
+1011,2,56,Rest Area,27,62,Morning,Tue,Sunny,68.75,ICE,124,11.2,1
+1011,2,57,Tourist Attraction,54,97,Afternoon,Tue,Sunny,110.5,EV,52,8.0,0
+1012,2,58,Gas Station,20,52,Morning,Fri,Rainy,57.0,EV,59,12.7,0
+1012,2,59,Rest Area,15,23,Afternoon,Fri,Rainy,26.75,EV,105,21.6,0
+1012,2,60,Restaurant,41,48,Evening,Fri,Rainy,58.25,ICE,53,5.6,1
+1012,2,61,Hotel,300,111,Night,Fri,Rainy,131.0,EV,74,13.1,0
+1012,2,62,Shopping,92,71,Morning,Fri,Rainy,91.0,ICE,63,6.3,1
+1012,2,63,Tourist Attraction,109,70,Afternoon,Fri,Rainy,90.0,EV,136,25.0,0
+1012,2,64,Shopping,92,106,Evening,Fri,Rainy,126.0,ICE,140,13.2,1
+1012,2,65,Restaurant,43,80,Night,Fri,Rainy,90.75,EV,99,17.3,0
+1013,9,66,Restaurant,78,49,Evening,Thu,Sunny,69.0,EV,87,14.7,0
+1013,9,67,Gas Station,8,24,Night,Thu,Sunny,24.0,ICE,60,7.0,1
+1013,9,68,Gas Station,13,28,Morning,Thu,Sunny,31.25,ICE,128,8.6,1
+1013,9,69,Restaurant,34,71,Afternoon,Thu,Sunny,79.5,ICE,55,5.0,1
+1013,9,70,Restaurant,58,109,Evening,Thu,Sunny,123.5,EV,83,16.9,0
+1013,9,71,Hotel,593,143,Night,Thu,Sunny,163.0,EV,128,24.9,0
+1013,9,72,Gas Station,14,79,Morning,Thu,Sunny,82.5,EV,46,9.3,0
+1014,4,73,Gas Station,14,58,Morning,Tue,Sunny,61.5,EV,134,26.3,0
+1014,4,74,Shopping,46,73,Afternoon,Tue,Sunny,84.5,ICE,134,8.7,1
+1014,4,75,Hotel,206,71,Evening,Tue,Sunny,91.0,EV,64,12.4,0
+1014,4,76,Gas Station,13,22,Night,Tue,Sunny,25.25,EV,112,21.5,0
+1015,11,77,Gas Station,18,55,Evening,Sun,Sunny,59.5,EV,46,9.1,0
+1015,11,78,Hotel,533,79,Night,Sun,Sunny,99.0,EV,64,11.6,0
+1015,11,79,Gas Station,16,57,Morning,Sun,Sunny,61.0,EV,75,13.4,0
+1015,11,80,Restaurant,38,45,Afternoon,Sun,Sunny,54.5,EV,70,12.9,0
+1016,12,81,Gas Station,12,62,Morning,Sun,Snowy,65.0,EV,107,19.1,0
+1016,12,82,Tourist Attraction,101,112,Afternoon,Sun,Snowy,132.0,ICE,116,8.0,1
+1016,12,83,Gas Station,12,75,Evening,Sun,Snowy,78.0,EV,118,21.6,0
+1016,12,84,Tourist Attraction,133,82,Night,Sun,Snowy,102.0,EV,84,14.4,0
+1017,14,85,Rest Area,17,37,Evening,Mon,Sunny,41.25,EV,55,9.0,0
+1017,14,86,Rest Area,13,44,Night,Mon,Sunny,47.25,EV,43,9.0,0
+1017,14,87,Gas Station,20,34,Morning,Mon,Sunny,39.0,ICE,129,11.5,1
+1017,14,88,Gas Station,19,42,Afternoon,Mon,Sunny,46.75,ICE,88,5.3,1
+1018,8,89,Restaurant,85,48,Afternoon,Tue,Sunny,68.0,ICE,69,4.4,1
+1018,8,90,Restaurant,71,105,Evening,Tue,Sunny,125.0,ICE,48,8.1,1
+1018,8,91,Rest Area,27,41,Night,Tue,Sunny,47.75,ICE,91,4.4,1
+1018,8,92,Gas Station,13,31,Morning,Tue,Sunny,34.25,ICE,106,8.4,1
+1018,8,93,Tourist Attraction,34,73,Afternoon,Tue,Sunny,81.5,EV,131,24.1,0
+1019,14,94,Shopping,85,54,Evening,Wed,Rainy,74.0,ICE,133,9.6,1
+1019,14,95,Restaurant,42,72,Night,Wed,Rainy,82.5,ICE,84,4.3,1
+1019,14,96,Restaurant,30,106,Morning,Wed,Rainy,113.5,EV,70,12.2,0
+1019,14,97,Gas Station,11,43,Afternoon,Wed,Rainy,45.75,ICE,95,5.6,1
+1019,14,98,Restaurant,72,82,Evening,Wed,Rainy,102.0,EV,138,25.8,0
+1020,11,99,Restaurant,56,81,Evening,Sat,Cloudy,95.0,EV,113,21.8,0
+1020,11,100,Rest Area,27,28,Night,Sat,Cloudy,34.75,ICE,66,7.9,1
+1020,11,101,Rest Area,22,63,Morning,Sat,Cloudy,68.5,EV,125,24.4,0
+1020,11,102,Rest Area,29,56,Afternoon,Sat,Cloudy,63.25,ICE,136,12.2,1
+1021,13,103,Restaurant,80,114,Evening,Fri,Cloudy,134.0,ICE,88,4.6,1
+1021,13,104,Rest Area,24,48,Night,Fri,Cloudy,54.0,EV,132,26.2,0
+1021,13,105,Restaurant,62,100,Morning,Fri,Cloudy,120.0,EV,130,25.7,0
+1021,13,106,Rest Area,15,62,Afternoon,Fri,Cloudy,65.75,ICE,64,7.2,1
+1021,13,107,Restaurant,72,119,Evening,Fri,Cloudy,139.0,EV,98,16.9,0
+1021,13,108,Hotel,564,90,Night,Fri,Cloudy,110.0,EV,67,12.2,0
+1022,10,109,Restaurant,60,118,Afternoon,Tue,Cloudy,133.0,ICE,135,7.8,1
+1022,10,110,Gas Station,19,46,Evening,Tue,Cloudy,50.75,ICE,109,9.8,1
+1022,10,111,Gas Station,11,65,Night,Tue,Cloudy,67.75,EV,99,17.7,0
+1023,13,112,Rest Area,13,69,Afternoon,Thu,Sunny,72.25,ICE,98,5.2,1
+1023,13,113,Restaurant,81,106,Evening,Thu,Sunny,126.0,ICE,119,7.7,1
+1023,13,114,Hotel,307,75,Night,Thu,Sunny,95.0,ICE,119,9.4,1
+1023,13,115,Gas Station,19,62,Morning,Thu,Sunny,66.75,ICE,50,6.2,1
+1024,18,116,Rest Area,26,47,Night,Fri,Sunny,53.5,ICE,42,10.9,1
+1024,18,117,Shopping,77,60,Morning,Fri,Sunny,80.0,ICE,121,10.7,1
+1024,18,118,Rest Area,24,36,Afternoon,Fri,Sunny,42.0,ICE,65,7.1,1
+1024,18,119,Restaurant,70,75,Evening,Fri,Sunny,95.0,EV,68,12.6,0
+1024,18,120,Rest Area,25,60,Night,Fri,Sunny,66.25,ICE,78,5.1,1
+1025,9,121,Restaurant,50,109,Evening,Thu,Sunny,121.5,EV,53,11.3,0
+1025,9,122,Hotel,298,109,Night,Thu,Sunny,129.0,EV,121,23.2,0
+1025,9,123,Gas Station,11,24,Morning,Thu,Sunny,26.75,EV,90,17.1,0
+1025,9,124,Tourist Attraction,99,119,Afternoon,Thu,Sunny,139.0,ICE,121,8.6,1
+1025,9,125,Restaurant,83,93,Evening,Thu,Sunny,113.0,ICE,95,4.3,1
+1026,19,126,Hotel,360,98,Night,Sat,Sunny,118.0,EV,108,18.9,0
+1026,19,127,Rest Area,23,54,Morning,Sat,Sunny,59.75,ICE,132,9.2,1
+1026,19,128,Shopping,97,68,Afternoon,Sat,Sunny,88.0,EV,102,19.3,0
+1026,19,129,Restaurant,57,102,Evening,Sat,Sunny,116.25,ICE,126,7.1,1
+1026,19,130,Hotel,522,146,Night,Sat,Sunny,166.0,ICE,45,8.9,1
+1026,19,131,Rest Area,15,73,Morning,Sat,Sunny,76.75,EV,107,20.3,0
+1027,5,132,Gas Station,5,25,Night,Fri,Sunny,25.0,EV,126,26.0,0
+1027,5,133,Rest Area,24,31,Morning,Fri,Sunny,37.0,EV,54,9.6,0
+1027,5,134,Restaurant,50,67,Afternoon,Fri,Sunny,79.5,ICE,124,8.5,1
+1027,5,135,Restaurant,78,88,Evening,Fri,Sunny,108.0,EV,83,14.5,0
+1028,14,136,Rest Area,11,80,Night,Wed,Cloudy,82.75,ICE,116,5.8,1
+1028,14,137,Gas Station,7,69,Morning,Wed,Cloudy,69.0,ICE,54,9.7,1
+1028,14,138,Restaurant,31,71,Afternoon,Wed,Cloudy,78.75,ICE,82,4.7,1
+1028,14,139,Rest Area,29,29,Evening,Wed,Cloudy,36.25,EV,65,13.1,0
+1028,14,140,Hotel,522,74,Night,Wed,Cloudy,94.0,EV,101,20.1,0
+1029,7,141,Shopping,115,54,Evening,Thu,Rainy,74.0,EV,42,5.5,0
+1029,7,142,Rest Area,19,26,Night,Thu,Rainy,30.75,ICE,134,10.5,1
+1029,7,143,Gas Station,14,56,Morning,Thu,Rainy,59.5,ICE,115,10.9,1
+1029,7,144,Rest Area,22,45,Afternoon,Thu,Rainy,50.5,EV,55,11.8,0
+1029,7,145,Gas Station,7,57,Evening,Thu,Rainy,57.0,ICE,110,7.7,1
+1030,8,146,Rest Area,28,70,Evening,Mon,Rainy,77.0,ICE,67,5.0,1
+1030,8,147,Hotel,399,144,Night,Mon,Rainy,164.0,EV,112,20.7,0
+1030,8,148,Gas Station,15,20,Morning,Mon,Rainy,23.75,EV,84,16.4,0
+1031,14,149,Gas Station,19,65,Night,Sun,Sunny,69.75,EV,76,13.8,0
+1031,14,150,Rest Area,26,61,Morning,Sun,Sunny,67.5,ICE,135,7.3,1
+1031,14,151,Shopping,88,101,Afternoon,Sun,Sunny,121.0,ICE,103,8.6,1
+1031,14,152,Hotel,554,135,Evening,Sun,Sunny,155.0,ICE,102,8.8,1
+1031,14,153,Hotel,305,71,Night,Sun,Sunny,91.0,ICE,116,6.5,1
+1031,14,154,Restaurant,78,99,Morning,Sun,Sunny,119.0,ICE,93,6.2,1
+1032,20,155,Restaurant,61,67,Morning,Sat,Sunny,87.0,EV,95,19.4,0
+1032,20,156,Gas Station,15,37,Afternoon,Sat,Sunny,40.75,ICE,61,7.4,1
+1032,20,157,Shopping,55,111,Evening,Sat,Sunny,124.75,ICE,90,4.8,1
+1032,20,158,Gas Station,11,25,Night,Sat,Sunny,27.75,ICE,50,8.7,1
+1033,14,159,Shopping,82,97,Afternoon,Thu,Sunny,117.0,EV,102,18.4,0
+1033,14,160,Restaurant,48,68,Evening,Thu,Sunny,80.0,EV,56,9.3,0
+1033,14,161,Rest Area,19,62,Night,Thu,Sunny,66.75,EV,131,25.5,0
+1034,12,162,Tourist Attraction,100,102,Evening,Thu,Sunny,122.0,ICE,85,6.5,1
+1034,12,163,Rest Area,18,39,Night,Thu,Sunny,43.5,EV,59,12.8,0
+1034,12,164,Gas Station,11,40,Morning,Thu,Sunny,42.75,EV,58,10.7,0
+1034,12,165,Shopping,117,63,Afternoon,Thu,Sunny,83.0,EV,137,27.0,0
+1034,12,166,Restaurant,60,75,Evening,Thu,Sunny,90.0,ICE,113,7.5,1
+1034,12,167,Gas Station,14,26,Night,Thu,Sunny,29.5,EV,58,12.3,0
+1034,12,168,Gas Station,12,43,Morning,Thu,Sunny,46.0,ICE,132,12.5,1
+1035,10,169,Restaurant,33,110,Afternoon,Mon,Rainy,118.25,ICE,59,6.0,1
+1035,10,170,Shopping,36,102,Evening,Mon,Rainy,111.0,EV,97,19.7,0
+1035,10,171,Restaurant,66,76,Night,Mon,Rainy,96.0,ICE,115,7.3,1
+1035,10,172,Rest Area,20,31,Morning,Mon,Rainy,36.0,EV,96,18.0,0
+1035,10,173,Restaurant,85,101,Afternoon,Mon,Rainy,121.0,ICE,138,9.2,1
+1035,10,174,Rest Area,22,51,Evening,Mon,Rainy,56.5,EV,41,9.1,0
+1035,10,175,Gas Station,6,29,Night,Mon,Rainy,29.0,EV,67,14.0,0
+1035,10,176,Tourist Attraction,68,70,Morning,Mon,Rainy,90.0,EV,70,14.2,0
+1036,4,177,Tourist Attraction,146,116,Afternoon,Fri,Cloudy,136.0,ICE,65,5.9,1
+1036,4,178,Rest Area,23,39,Evening,Fri,Cloudy,44.75,EV,108,19.9,0
+1036,4,179,Gas Station,8,80,Night,Fri,Cloudy,80.0,ICE,44,10.8,1
+1036,4,180,Gas Station,11,36,Morning,Fri,Cloudy,38.75,EV,91,17.4,0
+1036,4,181,Restaurant,45,62,Afternoon,Fri,Cloudy,73.25,ICE,98,8.2,1
+1036,4,182,Restaurant,30,92,Evening,Fri,Cloudy,99.5,ICE,59,8.7,1
+1036,4,183,Rest Area,25,38,Night,Fri,Cloudy,44.25,EV,79,14.4,0
+1037,8,184,Rest Area,18,70,Night,Wed,Rainy,74.5,EV,84,16.8,0
+1037,8,185,Restaurant,72,65,Morning,Wed,Rainy,85.0,EV,40,6.3,0
+1037,8,186,Restaurant,44,59,Afternoon,Wed,Rainy,70.0,EV,88,15.9,0
+1037,8,187,Restaurant,39,49,Evening,Wed,Rainy,58.75,EV,112,19.9,0
+1038,6,188,Restaurant,74,78,Evening,Sun,Sunny,98.0,ICE,127,7.1,1
+1038,6,189,Gas Station,13,52,Night,Sun,Sunny,55.25,EV,94,19.2,0
+1038,6,190,Rest Area,12,58,Morning,Sun,Sunny,61.0,EV,109,20.6,0
+1039,14,191,Restaurant,73,113,Evening,Sat,Sunny,133.0,ICE,97,8.3,1
+1039,14,192,Tourist Attraction,127,146,Night,Sat,Sunny,166.0,EV,61,12.2,0
+1039,14,193,Rest Area,11,68,Morning,Sat,Sunny,70.75,EV,120,23.2,0
+1039,14,194,Restaurant,63,96,Afternoon,Sat,Sunny,116.0,ICE,121,11.1,1
+1039,14,195,Restaurant,67,95,Evening,Sat,Sunny,115.0,EV,43,6.9,0
+1039,14,196,Rest Area,12,50,Night,Sat,Sunny,53.0,EV,64,10.5,0
+1040,14,197,Rest Area,25,38,Morning,Wed,Sunny,44.25,EV,115,22.6,0
+1040,14,198,Rest Area,27,22,Afternoon,Wed,Sunny,28.75,ICE,129,12.5,1
+1040,14,199,Restaurant,46,81,Evening,Wed,Sunny,92.5,EV,118,20.9,0
+1040,14,200,Tourist Attraction,81,125,Night,Wed,Sunny,145.0,ICE,80,3.9,1
+1040,14,201,Shopping,104,109,Morning,Wed,Sunny,129.0,EV,123,23.9,0
+1041,14,202,Gas Station,19,68,Evening,Mon,Sunny,72.75,ICE,84,6.5,1
+1041,14,203,Hotel,461,76,Night,Mon,Sunny,96.0,EV,101,20.6,0
+1041,14,204,Rest Area,25,27,Morning,Mon,Sunny,33.25,ICE,41,6.8,1
+1042,20,205,Tourist Attraction,100,112,Afternoon,Sun,Sunny,132.0,ICE,63,4.3,1
+1042,20,206,Restaurant,83,54,Evening,Sun,Sunny,74.0,ICE,90,4.6,1
+1042,20,207,Restaurant,71,59,Night,Sun,Sunny,79.0,ICE,135,8.1,1
+1042,20,208,Shopping,57,105,Morning,Sun,Sunny,119.25,ICE,52,8.6,1
+1042,20,209,Restaurant,83,101,Afternoon,Sun,Sunny,121.0,ICE,138,8.2,1
+1043,8,210,Restaurant,62,57,Night,Thu,Sunny,77.0,EV,93,19.2,0
+1043,8,211,Gas Station,18,41,Morning,Thu,Sunny,45.5,EV,108,18.6,0
+1043,8,212,Gas Station,13,72,Afternoon,Thu,Sunny,75.25,ICE,74,5.5,1
+1044,10,213,Gas Station,20,42,Night,Sat,Sunny,47.0,ICE,126,7.7,1
+1044,10,214,Restaurant,64,88,Morning,Sat,Sunny,108.0,ICE,48,9.7,1
+1044,10,215,Rest Area,16,64,Afternoon,Sat,Sunny,68.0,ICE,56,8.2,1
+1044,10,216,Shopping,49,92,Evening,Sat,Sunny,104.25,EV,44,6.6,0
+1044,10,217,Hotel,422,150,Night,Sat,Sunny,170.0,ICE,63,4.8,1
+1044,10,218,Tourist Attraction,79,144,Morning,Sat,Sunny,164.0,EV,78,15.5,0
+1044,10,219,Gas Station,9,51,Afternoon,Sat,Sunny,51.0,EV,114,22.2,0
+1045,5,220,Rest Area,24,26,Evening,Fri,Cloudy,32.0,ICE,90,5.2,1
+1045,5,221,Restaurant,30,58,Night,Fri,Cloudy,65.5,ICE,100,5.9,1
+1045,5,222,Restaurant,34,100,Morning,Fri,Cloudy,108.5,EV,127,23.6,0
+1045,5,223,Tourist Attraction,109,148,Afternoon,Fri,Cloudy,168.0,EV,118,22.5,0
+1046,3,224,Gas Station,20,75,Night,Sun,Sunny,80.0,ICE,123,12.2,1
+1046,3,225,Gas Station,7,35,Morning,Sun,Sunny,35.0,ICE,86,4.4,1
+1046,3,226,Shopping,56,69,Afternoon,Sun,Sunny,83.0,ICE,101,8.8,1
+1046,3,227,Restaurant,36,52,Evening,Sun,Sunny,61.0,EV,82,14.8,0
+1046,3,228,Hotel,333,63,Night,Sun,Sunny,83.0,EV,96,19.0,0
+1046,3,229,Rest Area,11,38,Morning,Sun,Sunny,40.75,ICE,115,9.2,1
+1047,12,230,Rest Area,15,30,Night,Thu,Sunny,33.75,EV,113,21.4,0
+1047,12,231,Gas Station,17,59,Morning,Thu,Sunny,63.25,EV,49,9.4,0
+1047,12,232,Restaurant,88,114,Afternoon,Thu,Sunny,134.0,ICE,72,5.1,1
+1047,12,233,Restaurant,70,72,Evening,Thu,Sunny,92.0,ICE,55,9.6,1
+1048,9,234,Rest Area,15,24,Night,Sat,Sunny,27.75,EV,81,16.4,0
+1048,9,235,Shopping,95,78,Morning,Sat,Sunny,98.0,EV,117,23.2,0
+1048,9,236,Rest Area,18,49,Afternoon,Sat,Sunny,53.5,ICE,138,13.3,1
+1048,9,237,Restaurant,54,101,Evening,Sat,Sunny,114.5,ICE,69,5.6,1
+1048,9,238,Hotel,472,105,Night,Sat,Sunny,125.0,ICE,94,7.2,1
+1049,10,239,Hotel,531,66,Night,Sat,Sunny,86.0,ICE,109,5.3,1
+1049,10,240,Restaurant,61,76,Morning,Sat,Sunny,96.0,ICE,87,3.9,1
+1049,10,241,Gas Station,16,34,Afternoon,Sat,Sunny,38.0,EV,109,19.7,0
+1049,10,242,Restaurant,46,57,Evening,Sat,Sunny,68.5,EV,70,12.8,0
+1049,10,243,Hotel,501,142,Night,Sat,Sunny,162.0,EV,53,9.3,0
+1050,10,244,Restaurant,48,81,Evening,Sun,Sunny,93.0,EV,69,11.5,0
+1050,10,245,Gas Station,11,28,Night,Sun,Sunny,30.75,ICE,76,5.3,1
+1050,10,246,Restaurant,53,107,Morning,Sun,Sunny,120.25,ICE,57,8.8,1
+1050,10,247,Rest Area,15,36,Afternoon,Sun,Sunny,39.75,ICE,86,5.5,1
+1051,16,248,Hotel,218,78,Evening,Sun,Sunny,98.0,EV,127,26.1,0
+1051,16,249,Tourist Attraction,140,146,Night,Sun,Sunny,166.0,EV,90,15.1,0
+1051,16,250,Restaurant,55,111,Morning,Sun,Sunny,124.75,EV,54,11.5,0
+1051,16,251,Restaurant,55,41,Afternoon,Sun,Sunny,54.75,ICE,53,8.3,1
+1051,16,252,Hotel,412,107,Evening,Sun,Sunny,127.0,EV,119,20.8,0
+1051,16,253,Rest Area,18,57,Night,Sun,Sunny,61.5,ICE,140,10.9,1
+1051,16,254,Tourist Attraction,150,107,Morning,Sun,Sunny,127.0,ICE,135,8.9,1
+1051,16,255,Shopping,80,43,Afternoon,Sun,Sunny,63.0,ICE,59,5.7,1
+1052,18,256,Shopping,79,78,Afternoon,Wed,Cloudy,98.0,ICE,89,6.4,1
+1052,18,257,Hotel,251,65,Evening,Wed,Cloudy,85.0,ICE,106,9.0,1
+1052,18,258,Hotel,432,74,Night,Wed,Cloudy,94.0,ICE,66,4.5,1
+1052,18,259,Gas Station,9,44,Morning,Wed,Cloudy,44.0,EV,127,25.8,0
+1052,18,260,Tourist Attraction,125,149,Afternoon,Wed,Cloudy,169.0,ICE,125,10.2,1
+1052,18,261,Hotel,560,79,Evening,Wed,Cloudy,99.0,ICE,76,3.8,1
+1053,14,262,Gas Station,13,22,Night,Sat,Sunny,25.25,EV,120,22.7,0
+1053,14,263,Rest Area,24,48,Morning,Sat,Sunny,54.0,ICE,48,7.1,1
+1053,14,264,Rest Area,13,63,Afternoon,Sat,Sunny,66.25,EV,85,14.6,0
+1053,14,265,Hotel,510,105,Evening,Sat,Sunny,125.0,EV,78,15.6,0
+1053,14,266,Hotel,277,75,Night,Sat,Sunny,95.0,EV,92,15.7,0
+1053,14,267,Tourist Attraction,41,144,Morning,Sat,Sunny,154.25,ICE,83,4.1,1
+1053,14,268,Shopping,96,42,Afternoon,Sat,Sunny,62.0,ICE,134,8.1,1
+1054,11,269,Gas Station,11,57,Afternoon,Tue,Snowy,59.75,EV,119,22.7,0
+1054,11,270,Rest Area,17,41,Evening,Tue,Snowy,45.25,ICE,130,6.9,1
+1054,11,271,Hotel,485,60,Night,Tue,Snowy,80.0,ICE,80,3.2,1
+1054,11,272,Restaurant,38,109,Morning,Tue,Snowy,118.5,EV,75,15.9,0
+1054,11,273,Gas Station,8,62,Afternoon,Tue,Snowy,62.0,EV,49,9.7,0
+1054,11,274,Restaurant,30,85,Evening,Tue,Snowy,92.5,ICE,87,5.6,1
+1054,11,275,Rest Area,28,40,Night,Tue,Snowy,47.0,EV,119,21.5,0
+1055,6,276,Hotel,212,120,Night,Wed,Sunny,140.0,EV,54,8.7,0
+1055,6,277,Tourist Attraction,95,135,Morning,Wed,Sunny,155.0,EV,67,12.3,0
+1055,6,278,Tourist Attraction,58,138,Afternoon,Wed,Sunny,152.5,ICE,72,5.4,1
+1055,6,279,Gas Station,14,49,Evening,Wed,Sunny,52.5,ICE,78,5.9,1
+1055,6,280,Tourist Attraction,37,121,Night,Wed,Sunny,130.25,ICE,82,5.8,1
+1056,13,281,Hotel,221,101,Night,Thu,Rainy,121.0,EV,108,22.0,0
+1056,13,282,Gas Station,9,37,Morning,Thu,Rainy,37.0,ICE,122,7.3,1
+1056,13,283,Shopping,90,81,Afternoon,Thu,Rainy,101.0,EV,87,17.8,0
+1056,13,284,Tourist Attraction,97,97,Evening,Thu,Rainy,117.0,ICE,133,8.7,1
+1056,13,285,Gas Station,18,26,Night,Thu,Rainy,30.5,ICE,133,11.0,1
+1056,13,286,Restaurant,84,110,Morning,Thu,Rainy,130.0,EV,104,21.5,0
+1056,13,287,Rest Area,23,48,Afternoon,Thu,Rainy,53.75,ICE,117,6.1,1
+1057,8,288,Gas Station,8,40,Night,Thu,Sunny,40.0,EV,86,17.0,0
+1057,8,289,Rest Area,18,43,Morning,Thu,Sunny,47.5,ICE,42,8.9,1
+1057,8,290,Shopping,80,48,Afternoon,Thu,Sunny,68.0,ICE,49,5.9,1
+1058,3,291,Shopping,95,111,Evening,Mon,Sunny,131.0,EV,123,22.0,0
+1058,3,292,Hotel,242,112,Night,Mon,Sunny,132.0,EV,44,8.5,0
+1058,3,293,Tourist Attraction,141,66,Morning,Mon,Sunny,86.0,EV,97,17.8,0
+1058,3,294,Shopping,65,53,Afternoon,Mon,Sunny,73.0,ICE,134,7.7,1
+1059,17,295,Rest Area,21,74,Night,Tue,Sunny,79.25,ICE,103,8.7,1
+1059,17,296,Rest Area,18,56,Morning,Tue,Sunny,60.5,ICE,53,9.6,1
+1059,17,297,Gas Station,5,58,Afternoon,Tue,Sunny,58.0,EV,137,25.5,0
+1060,9,298,Hotel,272,78,Evening,Mon,Sunny,98.0,EV,104,19.1,0
+1060,9,299,Rest Area,12,29,Night,Mon,Sunny,32.0,EV,46,9.6,0
+1060,9,300,Restaurant,31,51,Morning,Mon,Sunny,58.75,ICE,46,9.1,1
+1060,9,301,Tourist Attraction,78,113,Afternoon,Mon,Sunny,133.0,ICE,43,10.3,1
+1061,11,302,Shopping,26,59,Evening,Tue,Sunny,65.5,EV,100,18.8,0
+1061,11,303,Rest Area,11,63,Night,Tue,Sunny,65.75,ICE,59,7.0,1
+1061,11,304,Rest Area,23,51,Morning,Tue,Sunny,56.75,EV,99,19.4,0
+1061,11,305,Tourist Attraction,64,87,Afternoon,Tue,Sunny,107.0,ICE,65,7.7,1
+1061,11,306,Hotel,356,115,Evening,Tue,Sunny,135.0,ICE,110,7.7,1
+1062,10,307,Rest Area,11,34,Night,Sat,Rainy,36.75,EV,139,26.8,0
+1062,10,308,Shopping,27,40,Morning,Sat,Rainy,46.75,ICE,59,7.5,1
+1062,10,309,Restaurant,43,57,Afternoon,Sat,Rainy,67.75,ICE,69,4.8,1
+1062,10,310,Restaurant,50,55,Evening,Sat,Rainy,67.5,EV,104,20.6,0
+1063,16,311,Tourist Attraction,59,124,Afternoon,Sat,Sunny,138.75,EV,79,13.0,0
+1063,16,312,Rest Area,21,24,Evening,Sat,Sunny,29.25,ICE,87,5.0,1
+1063,16,313,Restaurant,32,95,Night,Sat,Sunny,103.0,EV,72,12.0,0
+1063,16,314,Rest Area,12,75,Morning,Sat,Sunny,78.0,ICE,55,6.7,1
+1063,16,315,Tourist Attraction,103,111,Afternoon,Sat,Sunny,131.0,EV,57,10.1,0
+1063,16,316,Shopping,57,54,Evening,Sat,Sunny,68.25,ICE,92,5.2,1
+1063,16,317,Hotel,346,81,Night,Sat,Sunny,101.0,ICE,115,7.8,1
+1064,20,318,Hotel,234,91,Evening,Thu,Cloudy,111.0,EV,122,21.5,0
+1064,20,319,Gas Station,7,45,Night,Thu,Cloudy,45.0,ICE,104,6.2,1
+1064,20,320,Rest Area,20,34,Morning,Thu,Cloudy,39.0,ICE,52,9.9,1
+1064,20,321,Gas Station,7,52,Afternoon,Thu,Cloudy,52.0,EV,133,26.2,0
+1064,20,322,Restaurant,62,64,Evening,Thu,Cloudy,84.0,EV,125,22.4,0
+1065,12,323,Restaurant,46,65,Afternoon,Wed,Rainy,76.5,ICE,78,4.2,1
+1065,12,324,Shopping,117,49,Evening,Wed,Rainy,69.0,EV,89,15.8,0
+1065,12,325,Tourist Attraction,110,123,Night,Wed,Rainy,143.0,EV,61,11.0,0
+1065,12,326,Tourist Attraction,127,134,Morning,Wed,Rainy,154.0,ICE,106,8.2,1
+1066,19,327,Restaurant,58,48,Evening,Sat,Rainy,62.5,ICE,129,12.0,1
+1066,19,328,Gas Station,14,70,Night,Sat,Rainy,73.5,EV,100,18.5,0
+1066,19,329,Restaurant,52,104,Morning,Sat,Rainy,117.0,EV,86,16.3,0
+1066,19,330,Restaurant,58,44,Afternoon,Sat,Rainy,58.5,EV,107,20.8,0
+1066,19,331,Hotel,326,69,Evening,Sat,Rainy,89.0,ICE,96,7.3,1
+1067,3,332,Gas Station,6,48,Night,Fri,Sunny,48.0,ICE,60,5.4,1
+1067,3,333,Tourist Attraction,113,84,Morning,Fri,Sunny,104.0,ICE,130,11.4,1
+1067,3,334,Shopping,84,59,Afternoon,Fri,Sunny,79.0,ICE,132,12.8,1
+1068,15,335,Hotel,268,65,Evening,Mon,Cloudy,85.0,ICE,69,4.3,1
+1068,15,336,Rest Area,24,53,Night,Mon,Cloudy,59.0,ICE,77,5.2,1
+1068,15,337,Restaurant,53,87,Morning,Mon,Cloudy,100.25,ICE,49,5.8,1
+1068,15,338,Restaurant,56,83,Afternoon,Mon,Cloudy,97.0,EV,74,11.9,0
+1068,15,339,Shopping,100,82,Evening,Mon,Cloudy,102.0,EV,42,7.8,0
+1068,15,340,Hotel,465,146,Night,Mon,Cloudy,166.0,ICE,81,6.0,1
+1068,15,341,Rest Area,29,75,Morning,Mon,Cloudy,82.25,ICE,112,6.1,1
+1069,11,342,Restaurant,71,90,Afternoon,Mon,Sunny,110.0,ICE,71,7.2,1
+1069,11,343,Shopping,30,79,Evening,Mon,Sunny,86.5,EV,68,13.1,0
+1069,11,344,Hotel,585,102,Night,Mon,Sunny,122.0,ICE,126,10.3,1
+1070,5,345,Restaurant,31,86,Morning,Sat,Rainy,93.75,EV,81,17.1,0
+1070,5,346,Restaurant,43,83,Afternoon,Sat,Rainy,93.75,EV,115,20.2,0
+1070,5,347,Hotel,295,77,Evening,Sat,Rainy,97.0,EV,46,8.0,0
+1070,5,348,Hotel,583,72,Night,Sat,Rainy,92.0,EV,99,19.0,0
+1070,5,349,Tourist Attraction,136,127,Morning,Sat,Rainy,147.0,EV,131,23.8,0
+1070,5,350,Shopping,118,119,Afternoon,Sat,Rainy,139.0,ICE,128,7.2,1
+1070,5,351,Shopping,39,60,Evening,Sat,Rainy,69.75,ICE,111,8.6,1
+1070,5,352,Rest Area,29,71,Night,Sat,Rainy,78.25,EV,41,5.3,0
+1071,6,353,Rest Area,17,48,Night,Sat,Sunny,52.25,ICE,103,7.4,1
+1071,6,354,Rest Area,24,34,Morning,Sat,Sunny,40.0,EV,90,18.4,0
+1071,6,355,Restaurant,81,100,Afternoon,Sat,Sunny,120.0,EV,58,9.9,0
+1071,6,356,Rest Area,21,63,Evening,Sat,Sunny,68.25,ICE,127,9.9,1
+1071,6,357,Shopping,79,76,Night,Sat,Sunny,96.0,ICE,66,7.1,1
+1071,6,358,Rest Area,26,46,Morning,Sat,Sunny,52.5,ICE,117,10.4,1
+1072,7,359,Shopping,67,110,Evening,Sun,Rainy,130.0,ICE,135,10.6,1
+1072,7,360,Hotel,444,75,Night,Sun,Rainy,95.0,ICE,109,8.3,1
+1072,7,361,Gas Station,10,37,Morning,Sun,Rainy,39.5,EV,78,16.4,0
+1072,7,362,Rest Area,14,73,Afternoon,Sun,Rainy,76.5,ICE,107,5.6,1
+1073,3,363,Hotel,382,124,Evening,Tue,Cloudy,144.0,ICE,140,8.4,1
+1073,3,364,Hotel,221,107,Night,Tue,Cloudy,127.0,ICE,52,5.5,1
+1073,3,365,Gas Station,8,73,Morning,Tue,Cloudy,73.0,EV,90,16.7,0
+1074,11,366,Shopping,80,57,Morning,Sun,Sunny,77.0,ICE,113,7.8,1
+1074,11,367,Shopping,77,118,Afternoon,Sun,Sunny,138.0,EV,51,9.2,0
+1074,11,368,Tourist Attraction,32,92,Evening,Sun,Sunny,100.0,ICE,61,7.4,1
+1074,11,369,Rest Area,27,80,Night,Sun,Sunny,86.75,ICE,128,8.8,1
+1074,11,370,Restaurant,57,54,Morning,Sun,Sunny,68.25,EV,116,22.2,0
+1074,11,371,Restaurant,49,55,Afternoon,Sun,Sunny,67.25,ICE,139,13.1,1
+1074,11,372,Restaurant,70,119,Evening,Sun,Sunny,139.0,ICE,123,7.9,1
+1075,3,373,Gas Station,12,65,Night,Mon,Cloudy,68.0,EV,110,20.1,0
+1075,3,374,Rest Area,10,59,Morning,Mon,Cloudy,61.5,ICE,126,8.5,1
+1075,3,375,Restaurant,56,63,Afternoon,Mon,Cloudy,77.0,EV,135,25.6,0
+1075,3,376,Shopping,87,86,Evening,Mon,Cloudy,106.0,EV,133,25.7,0
+1075,3,377,Tourist Attraction,99,124,Night,Mon,Cloudy,144.0,EV,115,23.9,0
+1075,3,378,Shopping,90,42,Morning,Mon,Cloudy,62.0,EV,53,8.3,0
+1076,16,379,Gas Station,16,70,Evening,Mon,Rainy,74.0,EV,63,10.8,0
+1076,16,380,Hotel,555,144,Night,Mon,Rainy,164.0,ICE,103,8.2,1
+1076,16,381,Gas Station,15,28,Morning,Mon,Rainy,31.75,ICE,83,5.0,1
+1076,16,382,Tourist Attraction,73,142,Afternoon,Mon,Rainy,162.0,ICE,109,10.0,1
+1076,16,383,Rest Area,24,64,Evening,Mon,Rainy,70.0,EV,67,13.1,0
+1076,16,384,Gas Station,9,24,Night,Mon,Rainy,24.0,EV,87,15.1,0
+1077,15,385,Tourist Attraction,149,99,Morning,Mon,Sunny,119.0,EV,131,25.9,0
+1077,15,386,Tourist Attraction,134,129,Afternoon,Mon,Sunny,149.0,EV,52,8.5,0
+1077,15,387,Restaurant,78,64,Evening,Mon,Sunny,84.0,ICE,130,11.6,1
+1077,15,388,Hotel,579,66,Night,Mon,Sunny,86.0,ICE,56,9.4,1
+1077,15,389,Restaurant,47,55,Morning,Mon,Sunny,66.75,EV,133,26.5,0
+1077,15,390,Tourist Attraction,143,111,Afternoon,Mon,Sunny,131.0,EV,78,14.5,0
+1078,15,391,Shopping,67,106,Afternoon,Thu,Sunny,126.0,ICE,124,10.3,1
+1078,15,392,Rest Area,23,25,Evening,Thu,Sunny,30.75,EV,123,25.0,0
+1078,15,393,Gas Station,10,54,Night,Thu,Sunny,56.5,EV,106,20.5,0
+1079,11,394,Hotel,547,114,Evening,Mon,Sunny,134.0,EV,115,20.9,0
+1079,11,395,Rest Area,21,48,Night,Mon,Sunny,53.25,ICE,101,4.6,1
+1079,11,396,Restaurant,88,85,Morning,Mon,Sunny,105.0,ICE,130,9.8,1
+1079,11,397,Tourist Attraction,111,67,Afternoon,Mon,Sunny,87.0,EV,95,16.2,0
+1079,11,398,Shopping,71,86,Evening,Mon,Sunny,106.0,ICE,136,9.3,1
+1080,6,399,Hotel,300,142,Night,Mon,Sunny,162.0,EV,68,11.1,0
+1080,6,400,Rest Area,28,22,Morning,Mon,Sunny,29.0,EV,117,21.4,0
+1080,6,401,Restaurant,58,87,Afternoon,Mon,Sunny,101.5,ICE,75,4.4,1
+1081,15,402,Tourist Attraction,70,143,Afternoon,Sun,Sunny,163.0,EV,113,20.1,0
+1081,15,403,Restaurant,37,43,Evening,Sun,Sunny,52.25,EV,63,12.8,0
+1081,15,404,Hotel,445,109,Night,Sun,Sunny,129.0,ICE,138,8.2,1
+1081,15,405,Restaurant,46,73,Morning,Sun,Sunny,84.5,EV,55,10.4,0
+1081,15,406,Tourist Attraction,108,96,Afternoon,Sun,Sunny,116.0,EV,46,9.0,0
+1081,15,407,Tourist Attraction,92,85,Evening,Sun,Sunny,105.0,EV,137,27.3,0
+1081,15,408,Hotel,217,117,Night,Sun,Sunny,137.0,ICE,77,5.9,1
+1082,15,409,Gas Station,14,77,Evening,Mon,Cloudy,80.5,EV,122,22.8,0
+1082,15,410,Restaurant,75,62,Night,Mon,Cloudy,82.0,ICE,57,9.4,1
+1082,15,411,Rest Area,17,27,Morning,Mon,Cloudy,31.25,EV,42,7.5,0
+1082,15,412,Gas Station,12,70,Afternoon,Mon,Cloudy,73.0,EV,121,23.3,0
+1082,15,413,Restaurant,65,113,Evening,Mon,Cloudy,133.0,EV,110,19.7,0
+1082,15,414,Gas Station,9,59,Night,Mon,Cloudy,59.0,EV,132,25.9,0
+1083,3,415,Gas Station,18,72,Night,Mon,Sunny,76.5,ICE,48,5.6,1
+1083,3,416,Gas Station,15,61,Morning,Mon,Sunny,64.75,ICE,117,7.2,1
+1083,3,417,Tourist Attraction,117,126,Afternoon,Mon,Sunny,146.0,EV,91,16.3,0
+1083,3,418,Restaurant,83,110,Evening,Mon,Sunny,130.0,EV,49,7.0,0
+1084,19,419,Tourist Attraction,141,67,Afternoon,Tue,Cloudy,87.0,EV,103,18.0,0
+1084,19,420,Restaurant,39,78,Evening,Tue,Cloudy,87.75,EV,105,19.0,0
+1084,19,421,Hotel,543,88,Night,Tue,Cloudy,108.0,EV,100,18.1,0
+1085,17,422,Shopping,90,75,Evening,Wed,Cloudy,95.0,EV,128,22.7,0
+1085,17,423,Gas Station,7,52,Night,Wed,Cloudy,52.0,EV,68,11.7,0
+1085,17,424,Gas Station,9,30,Morning,Wed,Cloudy,30.0,EV,67,11.2,0
+1085,17,425,Shopping,97,83,Afternoon,Wed,Cloudy,103.0,ICE,126,10.4,1
+1086,19,426,Gas Station,13,61,Morning,Mon,Cloudy,64.25,ICE,128,11.9,1
+1086,19,427,Gas Station,18,59,Afternoon,Mon,Cloudy,63.5,ICE,92,4.8,1
+1086,19,428,Restaurant,86,120,Evening,Mon,Cloudy,140.0,EV,102,18.7,0
+1086,19,429,Hotel,334,121,Night,Mon,Cloudy,141.0,EV,96,16.6,0
+1087,13,430,Rest Area,25,49,Morning,Wed,Sunny,55.25,EV,94,15.9,0
+1087,13,431,Restaurant,39,80,Afternoon,Wed,Sunny,89.75,ICE,129,12.9,1
+1087,13,432,Gas Station,16,45,Evening,Wed,Sunny,49.0,EV,42,8.4,0
+1087,13,433,Rest Area,26,55,Night,Wed,Sunny,61.5,ICE,98,7.4,1
+1087,13,434,Rest Area,24,27,Morning,Wed,Sunny,33.0,EV,89,18.5,0
+1087,13,435,Tourist Attraction,48,72,Afternoon,Wed,Sunny,84.0,ICE,104,5.0,1
+1088,10,436,Tourist Attraction,145,80,Night,Thu,Cloudy,100.0,ICE,69,4.6,1
+1088,10,437,Rest Area,28,66,Morning,Thu,Cloudy,73.0,ICE,95,4.6,1
+1088,10,438,Restaurant,40,103,Afternoon,Thu,Cloudy,113.0,EV,110,22.1,0
+1088,10,439,Hotel,337,123,Evening,Thu,Cloudy,143.0,ICE,84,5.8,1
+1088,10,440,Hotel,381,124,Night,Thu,Cloudy,144.0,EV,68,14.0,0
+1088,10,441,Shopping,47,114,Morning,Thu,Cloudy,125.75,EV,136,27.8,0
+1089,2,442,Gas Station,8,47,Night,Mon,Sunny,47.0,EV,47,8.1,0
+1089,2,443,Rest Area,21,68,Morning,Mon,Sunny,73.25,EV,61,12.3,0
+1089,2,444,Tourist Attraction,81,66,Afternoon,Mon,Sunny,86.0,EV,41,8.4,0
+1089,2,445,Shopping,66,110,Evening,Mon,Sunny,130.0,ICE,63,5.4,1
+1089,2,446,Hotel,438,117,Night,Mon,Sunny,137.0,EV,82,17.1,0
+1089,2,447,Restaurant,82,119,Morning,Mon,Sunny,139.0,EV,54,8.2,0
+1089,2,448,Shopping,36,52,Afternoon,Mon,Sunny,61.0,EV,130,27.0,0
+1090,12,449,Restaurant,62,91,Evening,Sun,Snowy,111.0,EV,74,14.9,0
+1090,12,450,Hotel,199,77,Night,Sun,Snowy,97.0,EV,81,13.6,0
+1090,12,451,Rest Area,25,53,Morning,Sun,Snowy,59.25,ICE,43,6.0,1
+1090,12,452,Restaurant,87,105,Afternoon,Sun,Snowy,125.0,ICE,136,13.6,1
+1090,12,453,Restaurant,69,80,Evening,Sun,Snowy,100.0,EV,115,23.1,0
+1091,13,454,Restaurant,83,105,Evening,Fri,Rainy,125.0,ICE,42,6.9,1
+1091,13,455,Gas Station,14,50,Night,Fri,Rainy,53.5,ICE,131,7.5,1
+1091,13,456,Gas Station,15,63,Morning,Fri,Rainy,66.75,EV,135,27.4,0
+1092,14,457,Rest Area,30,70,Morning,Fri,Sunny,77.5,ICE,65,8.2,1
+1092,14,458,Tourist Attraction,59,66,Afternoon,Fri,Sunny,80.75,EV,127,23.5,0
+1092,14,459,Hotel,448,140,Evening,Fri,Sunny,160.0,ICE,40,10.7,1
+1092,14,460,Gas Station,17,29,Night,Fri,Sunny,33.25,ICE,96,6.9,1
+1092,14,461,Restaurant,32,113,Morning,Fri,Sunny,121.0,ICE,134,11.1,1
+1092,14,462,Restaurant,31,96,Afternoon,Fri,Sunny,103.75,EV,85,15.1,0
+1093,14,463,Tourist Attraction,108,120,Afternoon,Tue,Sunny,140.0,ICE,113,10.7,1
+1093,14,464,Rest Area,11,65,Evening,Tue,Sunny,67.75,ICE,89,4.8,1
+1093,14,465,Gas Station,15,62,Night,Tue,Sunny,65.75,EV,91,18.7,0
+1093,14,466,Restaurant,50,62,Morning,Tue,Sunny,74.5,EV,44,6.9,0
+1093,14,467,Rest Area,20,54,Afternoon,Tue,Sunny,59.0,ICE,52,8.4,1
+1093,14,468,Shopping,112,73,Evening,Tue,Sunny,93.0,EV,80,14.7,0
+1094,16,469,Restaurant,90,78,Evening,Tue,Cloudy,98.0,ICE,105,5.6,1
+1094,16,470,Hotel,286,148,Night,Tue,Cloudy,168.0,ICE,70,5.7,1
+1094,16,471,Rest Area,25,42,Morning,Tue,Cloudy,48.25,EV,64,11.5,0
+1094,16,472,Rest Area,18,38,Afternoon,Tue,Cloudy,42.5,EV,60,10.0,0
+1094,16,473,Shopping,89,88,Evening,Tue,Cloudy,108.0,EV,42,7.4,0
+1095,13,474,Restaurant,75,50,Afternoon,Sun,Sunny,70.0,ICE,48,6.1,1
+1095,13,475,Tourist Attraction,113,92,Evening,Sun,Sunny,112.0,EV,67,11.8,0
+1095,13,476,Gas Station,11,72,Night,Sun,Sunny,74.75,ICE,86,4.5,1
+1095,13,477,Rest Area,27,64,Morning,Sun,Sunny,70.75,EV,115,21.7,0
+1095,13,478,Restaurant,69,115,Afternoon,Sun,Sunny,135.0,ICE,109,8.3,1
+1095,13,479,Restaurant,72,107,Evening,Sun,Sunny,127.0,EV,49,7.8,0
+1096,8,480,Restaurant,79,57,Evening,Mon,Sunny,77.0,ICE,77,4.6,1
+1096,8,481,Tourist Attraction,148,80,Night,Mon,Sunny,100.0,EV,72,14.5,0
+1096,8,482,Restaurant,86,100,Morning,Mon,Sunny,120.0,ICE,129,8.1,1
+1096,8,483,Shopping,116,76,Afternoon,Mon,Sunny,96.0,EV,66,13.6,0
+1096,8,484,Restaurant,33,51,Evening,Mon,Sunny,59.25,EV,136,24.8,0
+1097,19,485,Rest Area,15,79,Morning,Tue,Sunny,82.75,ICE,102,4.8,1
+1097,19,486,Restaurant,83,90,Afternoon,Tue,Sunny,110.0,EV,131,23.9,0
+1097,19,487,Hotel,563,97,Evening,Tue,Sunny,117.0,ICE,115,8.3,1
+1097,19,488,Hotel,332,132,Night,Tue,Sunny,152.0,ICE,43,7.1,1
+1097,19,489,Gas Station,15,38,Morning,Tue,Sunny,41.75,EV,61,10.3,0
+1098,18,490,Tourist Attraction,54,74,Afternoon,Fri,Sunny,87.5,ICE,51,8.1,1
+1098,18,491,Restaurant,59,72,Evening,Fri,Sunny,86.75,EV,108,19.1,0
+1098,18,492,Hotel,557,103,Night,Fri,Sunny,123.0,EV,84,16.1,0
+1098,18,493,Rest Area,16,31,Morning,Fri,Sunny,35.0,ICE,58,7.7,1
+1098,18,494,Rest Area,22,72,Afternoon,Fri,Sunny,77.5,EV,132,23.6,0
+1099,17,495,Shopping,81,81,Morning,Wed,Sunny,101.0,ICE,119,10.6,1
+1099,17,496,Restaurant,46,89,Afternoon,Wed,Sunny,100.5,ICE,47,8.5,1
+1099,17,497,Hotel,316,102,Evening,Wed,Sunny,122.0,EV,111,19.5,0
+1100,19,498,Shopping,27,55,Evening,Sat,Sunny,61.75,EV,100,19.0,0
+1100,19,499,Hotel,387,147,Night,Sat,Sunny,167.0,ICE,60,6.1,1
+1100,19,500,Shopping,110,79,Morning,Sat,Sunny,99.0,ICE,62,6.6,1
+1101,4,501,Shopping,48,57,Evening,Sat,Cloudy,69.0,EV,85,14.5,0
+1101,4,502,Hotel,562,137,Night,Sat,Cloudy,157.0,EV,51,10.9,0
+1101,4,503,Rest Area,27,78,Morning,Sat,Cloudy,84.75,EV,128,26.2,0
+1102,18,504,Shopping,96,50,Afternoon,Sun,Rainy,70.0,EV,95,16.7,0
+1102,18,505,Hotel,540,106,Evening,Sun,Rainy,126.0,ICE,129,10.1,1
+1102,18,506,Restaurant,37,47,Night,Sun,Rainy,56.25,EV,117,22.8,0
+1102,18,507,Restaurant,62,65,Morning,Sun,Rainy,85.0,ICE,111,7.0,1
+1102,18,508,Tourist Attraction,51,101,Afternoon,Sun,Rainy,113.75,ICE,93,7.3,1
+1102,18,509,Hotel,239,147,Evening,Sun,Rainy,167.0,EV,137,25.0,0
+1103,19,510,Gas Station,18,49,Night,Thu,Sunny,53.5,ICE,103,5.3,1
+1103,19,511,Gas Station,19,63,Morning,Thu,Sunny,67.75,EV,114,23.8,0
+1103,19,512,Restaurant,31,90,Afternoon,Thu,Sunny,97.75,ICE,80,5.5,1
+1103,19,513,Rest Area,16,57,Evening,Thu,Sunny,61.0,EV,70,14.5,0
+1104,2,514,Shopping,28,100,Morning,Thu,Sunny,107.0,ICE,45,7.2,1
+1104,2,515,Restaurant,41,57,Afternoon,Thu,Sunny,67.25,ICE,108,6.8,1
+1104,2,516,Shopping,113,93,Evening,Thu,Sunny,113.0,EV,90,15.4,0
+1104,2,517,Shopping,68,97,Night,Thu,Sunny,117.0,EV,113,20.1,0
+1104,2,518,Shopping,68,88,Morning,Thu,Sunny,108.0,ICE,122,10.7,1
+1105,18,519,Restaurant,64,90,Evening,Tue,Rainy,110.0,ICE,134,7.2,1
+1105,18,520,Hotel,294,60,Night,Tue,Rainy,80.0,EV,54,9.1,0
+1105,18,521,Gas Station,14,49,Morning,Tue,Rainy,52.5,ICE,82,5.8,1
+1105,18,522,Shopping,74,108,Afternoon,Tue,Rainy,128.0,EV,137,26.2,0
+1105,18,523,Rest Area,17,49,Evening,Tue,Rainy,53.25,ICE,86,4.0,1
+1105,18,524,Hotel,276,74,Night,Tue,Rainy,94.0,EV,109,19.6,0
+1105,18,525,Tourist Attraction,83,138,Morning,Tue,Rainy,158.0,ICE,120,6.7,1
+1106,1,526,Gas Station,6,35,Morning,Tue,Sunny,35.0,EV,110,20.0,0
+1106,1,527,Restaurant,58,69,Afternoon,Tue,Sunny,83.5,EV,95,18.8,0
+1106,1,528,Restaurant,85,47,Evening,Tue,Sunny,67.0,ICE,108,10.2,1
+1106,1,529,Gas Station,14,34,Night,Tue,Sunny,37.5,EV,49,7.0,0
+1107,19,530,Restaurant,39,106,Evening,Wed,Sunny,115.75,ICE,116,7.5,1
+1107,19,531,Gas Station,13,23,Night,Wed,Sunny,26.25,EV,82,14.8,0
+1107,19,532,Shopping,114,62,Morning,Wed,Sunny,82.0,EV,77,15.0,0
+1107,19,533,Shopping,91,103,Afternoon,Wed,Sunny,123.0,EV,50,7.4,0
+1107,19,534,Tourist Attraction,150,142,Evening,Wed,Sunny,162.0,ICE,84,5.4,1
+1108,13,535,Hotel,372,83,Night,Sun,Sunny,103.0,EV,80,16.0,0
+1108,13,536,Restaurant,45,68,Morning,Sun,Sunny,79.25,ICE,50,6.3,1
+1108,13,537,Rest Area,14,71,Afternoon,Sun,Sunny,74.5,EV,110,19.5,0
+1108,13,538,Tourist Attraction,101,112,Evening,Sun,Sunny,132.0,ICE,103,5.5,1
+1108,13,539,Gas Station,9,44,Night,Sun,Sunny,44.0,ICE,75,3.9,1
+1108,13,540,Rest Area,20,61,Morning,Sun,Sunny,66.0,ICE,137,13.4,1
+1109,15,541,Restaurant,73,117,Afternoon,Sun,Sunny,137.0,EV,52,8.6,0
+1109,15,542,Restaurant,34,64,Evening,Sun,Sunny,72.5,ICE,134,11.0,1
+1109,15,543,Rest Area,27,33,Night,Sun,Sunny,39.75,EV,100,18.5,0
+1109,15,544,Gas Station,15,39,Morning,Sun,Sunny,42.75,ICE,120,11.9,1
+1110,1,545,Shopping,109,117,Morning,Tue,Cloudy,137.0,ICE,107,5.7,1
+1110,1,546,Restaurant,88,70,Afternoon,Tue,Cloudy,90.0,ICE,98,6.3,1
+1110,1,547,Restaurant,48,88,Evening,Tue,Cloudy,100.0,ICE,91,5.3,1
+1111,18,548,Hotel,434,119,Evening,Sat,Sunny,139.0,EV,44,8.3,0
+1111,18,549,Rest Area,25,68,Night,Sat,Sunny,74.25,ICE,70,6.6,1
+1111,18,550,Rest Area,16,43,Morning,Sat,Sunny,47.0,ICE,79,4.4,1
+1111,18,551,Tourist Attraction,102,88,Afternoon,Sat,Sunny,108.0,EV,74,13.9,0
+1112,5,552,Hotel,348,89,Night,Mon,Sunny,109.0,ICE,140,8.6,1
+1112,5,553,Restaurant,45,103,Morning,Mon,Sunny,114.25,ICE,137,8.6,1
+1112,5,554,Shopping,107,83,Afternoon,Mon,Sunny,103.0,ICE,118,11.2,1
+1112,5,555,Gas Station,20,66,Evening,Mon,Sunny,71.0,ICE,56,5.0,1
+1113,16,556,Restaurant,64,102,Evening,Thu,Sunny,122.0,EV,40,7.1,0
+1113,16,557,Restaurant,64,47,Night,Thu,Sunny,67.0,EV,63,13.2,0
+1113,16,558,Gas Station,7,80,Morning,Thu,Sunny,80.0,ICE,84,4.9,1
+1113,16,559,Shopping,117,40,Afternoon,Thu,Sunny,60.0,EV,73,11.8,0
+1113,16,560,Restaurant,70,69,Evening,Thu,Sunny,89.0,EV,85,15.7,0
+1113,16,561,Rest Area,10,33,Night,Thu,Sunny,35.5,ICE,75,3.7,1
+1113,16,562,Rest Area,11,59,Morning,Thu,Sunny,61.75,EV,63,13.5,0
+1114,20,563,Restaurant,56,41,Morning,Thu,Rainy,55.0,ICE,62,8.0,1
+1114,20,564,Tourist Attraction,65,128,Afternoon,Thu,Rainy,148.0,EV,116,20.6,0
+1114,20,565,Restaurant,82,95,Evening,Thu,Rainy,115.0,EV,113,21.8,0
+1114,20,566,Restaurant,41,53,Night,Thu,Rainy,63.25,EV,93,16.1,0
+1114,20,567,Gas Station,9,35,Morning,Thu,Rainy,35.0,ICE,46,9.8,1
+1114,20,568,Shopping,52,85,Afternoon,Thu,Rainy,98.0,EV,73,13.6,0
+1114,20,569,Gas Station,7,43,Evening,Thu,Rainy,43.0,ICE,100,6.1,1
+1115,15,570,Shopping,30,44,Afternoon,Fri,Sunny,51.5,ICE,72,5.5,1
+1115,15,571,Hotel,373,130,Evening,Fri,Sunny,150.0,EV,51,9.7,0
+1115,15,572,Hotel,184,149,Night,Fri,Sunny,169.0,ICE,82,5.8,1
+1115,15,573,Gas Station,18,61,Morning,Fri,Sunny,65.5,EV,79,15.8,0
+1115,15,574,Restaurant,84,52,Afternoon,Fri,Sunny,72.0,ICE,44,10.1,1
+1115,15,575,Hotel,201,89,Evening,Fri,Sunny,109.0,ICE,73,6.5,1
+1116,19,576,Rest Area,11,31,Morning,Thu,Sunny,33.75,EV,135,24.1,0
+1116,19,577,Rest Area,10,33,Afternoon,Thu,Sunny,35.5,EV,61,11.4,0
+1116,19,578,Restaurant,82,90,Evening,Thu,Sunny,110.0,EV,80,13.9,0
+1116,19,579,Hotel,263,132,Night,Thu,Sunny,152.0,EV,68,14.0,0
+1116,19,580,Restaurant,84,89,Morning,Thu,Sunny,109.0,ICE,85,4.5,1
+1116,19,581,Rest Area,20,44,Afternoon,Thu,Sunny,49.0,ICE,46,8.3,1
+1116,19,582,Gas Station,7,52,Evening,Thu,Sunny,52.0,ICE,58,7.1,1
+1117,12,583,Restaurant,79,118,Afternoon,Mon,Sunny,138.0,EV,101,18.6,0
+1117,12,584,Hotel,576,101,Evening,Mon,Sunny,121.0,ICE,99,6.2,1
+1117,12,585,Gas Station,19,51,Night,Mon,Sunny,55.75,EV,108,19.4,0
+1117,12,586,Rest Area,22,47,Morning,Mon,Sunny,52.5,ICE,61,7.2,1
+1117,12,587,Shopping,104,88,Afternoon,Mon,Sunny,108.0,EV,55,11.6,0
+1117,12,588,Gas Station,14,71,Evening,Mon,Sunny,74.5,ICE,88,4.8,1
+1117,12,589,Rest Area,12,37,Night,Mon,Sunny,40.0,ICE,58,5.5,1
+1118,13,590,Restaurant,36,51,Afternoon,Sat,Cloudy,60.0,EV,64,11.0,0
+1118,13,591,Tourist Attraction,86,106,Evening,Sat,Cloudy,126.0,ICE,118,11.3,1
+1118,13,592,Hotel,247,71,Night,Sat,Cloudy,91.0,EV,111,22.0,0
+1118,13,593,Rest Area,27,55,Morning,Sat,Cloudy,61.75,ICE,125,8.3,1
+1119,14,594,Restaurant,68,81,Evening,Mon,Sunny,101.0,ICE,94,6.5,1
+1119,14,595,Hotel,329,112,Night,Mon,Sunny,132.0,EV,103,18.8,0
+1119,14,596,Tourist Attraction,122,131,Morning,Mon,Sunny,151.0,EV,103,17.8,0
+1119,14,597,Restaurant,66,106,Afternoon,Mon,Sunny,126.0,ICE,93,6.8,1
+1119,14,598,Shopping,41,57,Evening,Mon,Sunny,67.25,ICE,128,10.8,1
+1119,14,599,Hotel,432,78,Night,Mon,Sunny,98.0,ICE,124,12.5,1
+1119,14,600,Gas Station,13,46,Morning,Mon,Sunny,49.25,ICE,116,9.2,1
+1120,16,601,Gas Station,20,58,Evening,Sun,Sunny,63.0,ICE,97,6.3,1
+1120,16,602,Hotel,234,77,Night,Sun,Sunny,97.0,ICE,126,11.4,1
+1120,16,603,Gas Station,17,41,Morning,Sun,Sunny,45.25,EV,65,11.9,0
+1120,16,604,Shopping,62,96,Afternoon,Sun,Sunny,116.0,EV,41,7.1,0
+1120,16,605,Hotel,513,136,Evening,Sun,Sunny,156.0,EV,41,6.9,0
+20001,11,1,Tourist Attraction,42,106,Morning,Tue,Sunny,116.5,ICE,74,6.1,1
+20001,11,2,Rest Area,16,19,Afternoon,Tue,Sunny,23.0,ICE,114,10.4,1
+20001,11,3,Hotel,215,90,Evening,Tue,Sunny,110.0,ICE,77,3.6,1
+20002,18,1,Restaurant,67,47,Morning,Thu,Sunny,67.0,EV,94,18.2,0
+20002,18,2,Restaurant,44,45,Afternoon,Thu,Sunny,56.0,EV,64,13.4,0
+20002,18,3,Restaurant,39,109,Evening,Thu,Sunny,118.75,ICE,42,9.1,1
+20002,18,4,Gas Station,10,28,Night,Thu,Sunny,30.5,ICE,61,7.3,1
+20002,18,5,Rest Area,27,23,Morning,Thu,Sunny,29.75,EV,50,8.5,0
+20002,18,6,Shopping,83,127,Afternoon,Thu,Sunny,147.0,EV,99,17.5,0
+20002,18,7,Hotel,340,119,Evening,Thu,Sunny,139.0,EV,85,15.4,0
+20003,12,1,Gas Station,7,53,Afternoon,Wed,Sunny,53.0,ICE,125,11.1,1
+20003,12,2,Hotel,355,153,Evening,Wed,Sunny,173.0,ICE,92,6.8,1
+20003,12,3,Hotel,217,75,Night,Wed,Sunny,95.0,ICE,70,5.0,1
+20003,12,4,Rest Area,20,34,Morning,Wed,Sunny,39.0,EV,85,16.0,0
+20003,12,5,Tourist Attraction,115,69,Afternoon,Wed,Sunny,89.0,EV,116,23.9,0
+20004,11,1,Rest Area,12,26,Night,Sat,Sunny,29.0,ICE,59,8.1,1
+20004,11,2,Rest Area,12,22,Morning,Sat,Sunny,25.0,ICE,51,7.7,1
+20004,11,3,Shopping,107,97,Afternoon,Sat,Sunny,117.0,EV,90,16.6,0
+20004,11,4,Gas Station,16,17,Evening,Sat,Sunny,21.0,ICE,49,7.8,1
+20004,11,5,Hotel,492,74,Night,Sat,Sunny,94.0,EV,41,6.3,0
+20004,11,6,Gas Station,14,31,Morning,Sat,Sunny,34.5,EV,52,11.3,0
+20004,11,7,Tourist Attraction,147,123,Afternoon,Sat,Sunny,143.0,ICE,79,5.5,1
+20005,6,1,Rest Area,27,50,Evening,Thu,Sunny,56.75,EV,112,20.2,0
+20005,6,2,Shopping,107,88,Night,Thu,Sunny,108.0,ICE,91,5.9,1
+20005,6,3,Gas Station,10,34,Morning,Thu,Sunny,36.5,EV,104,19.8,0
+20005,6,4,Shopping,21,102,Afternoon,Thu,Sunny,107.25,EV,139,27.1,0
+20005,6,5,Restaurant,30,58,Evening,Thu,Sunny,65.5,ICE,102,8.5,1
+20005,6,6,Gas Station,15,31,Night,Thu,Sunny,34.75,EV,105,21.3,0
+20005,6,7,Shopping,103,126,Morning,Thu,Sunny,146.0,ICE,95,5.7,1
+20005,6,8,Tourist Attraction,141,159,Afternoon,Thu,Sunny,179.0,ICE,55,5.1,1
+20005,6,9,Hotel,381,73,Evening,Thu,Sunny,93.0,EV,55,10.8,0
+20006,13,1,Restaurant,51,116,Afternoon,Mon,Sunny,128.75,ICE,116,9.5,1
+20006,13,2,Restaurant,66,59,Evening,Mon,Sunny,79.0,ICE,111,9.1,1
+20006,13,3,Hotel,366,138,Night,Mon,Sunny,158.0,ICE,55,8.6,1
+20006,13,4,Gas Station,11,63,Morning,Mon,Sunny,65.75,ICE,89,6.9,1
+20006,13,5,Shopping,64,117,Afternoon,Mon,Sunny,137.0,ICE,100,7.8,1
+20006,13,6,Hotel,239,122,Evening,Mon,Sunny,142.0,ICE,51,9.3,1
+20007,16,1,Shopping,114,73,Afternoon,Thu,Sunny,93.0,EV,64,12.7,0
+20007,16,2,Rest Area,15,81,Evening,Thu,Sunny,84.75,ICE,126,8.0,1
+20007,16,3,Hotel,450,106,Night,Thu,Sunny,126.0,EV,40,7.9,0
+20007,16,4,Restaurant,88,43,Morning,Thu,Sunny,63.0,EV,83,13.9,0
+20007,16,5,Restaurant,71,51,Afternoon,Thu,Sunny,71.0,ICE,80,3.0,1
+20008,17,1,Hotel,578,124,Evening,Wed,Cloudy,144.0,EV,80,16.3,0
+20008,17,2,Gas Station,11,45,Night,Wed,Cloudy,47.75,EV,105,18.4,0
+20008,17,3,Restaurant,44,65,Morning,Wed,Cloudy,76.0,ICE,119,6.1,1
+20009,16,1,Rest Area,16,59,Morning,Wed,Rainy,63.0,ICE,113,7.7,1
+20009,16,2,Gas Station,16,61,Afternoon,Wed,Rainy,65.0,ICE,111,10.1,1
+20009,16,3,Restaurant,44,100,Evening,Wed,Rainy,111.0,EV,56,9.1,0
+20009,16,4,Hotel,427,139,Night,Wed,Rainy,159.0,EV,56,10.4,0
+20010,16,1,Gas Station,17,40,Morning,Sat,Sunny,44.25,ICE,52,9.4,1
+20010,16,2,Rest Area,23,57,Afternoon,Sat,Sunny,62.75,ICE,42,7.9,1
+20010,16,3,Rest Area,22,74,Evening,Sat,Sunny,79.5,EV,75,14.0,0
+20010,16,4,Rest Area,12,35,Night,Sat,Sunny,38.0,EV,123,23.6,0
+20010,16,5,Shopping,23,59,Morning,Sat,Sunny,64.75,EV,109,22.8,0
+20011,5,1,Restaurant,39,110,Night,Fri,Cloudy,119.75,EV,50,7.6,0
+20011,5,2,Gas Station,5,28,Morning,Fri,Cloudy,28.0,ICE,53,6.4,1
+20011,5,3,Shopping,37,95,Afternoon,Fri,Cloudy,104.25,EV,51,7.4,0
+20011,5,4,Rest Area,16,18,Evening,Fri,Cloudy,22.0,EV,51,9.1,0
+20011,5,5,Hotel,436,90,Night,Fri,Cloudy,110.0,EV,48,10.1,0
+20011,5,6,Rest Area,23,31,Morning,Fri,Cloudy,36.75,EV,95,18.7,0
+20012,12,1,Hotel,257,127,Night,Thu,Rainy,147.0,ICE,92,6.7,1
+20012,12,2,Gas Station,19,38,Morning,Thu,Rainy,42.75,ICE,96,7.6,1
+20012,12,3,Gas Station,9,37,Afternoon,Thu,Rainy,37.0,EV,84,15.5,0
+20012,12,4,Hotel,551,75,Evening,Thu,Rainy,95.0,EV,125,23.5,0
+20012,12,5,Hotel,445,127,Night,Thu,Rainy,147.0,ICE,74,4.9,1
+20012,12,6,Tourist Attraction,43,131,Morning,Thu,Rainy,141.75,ICE,45,6.4,1
+20012,12,7,Restaurant,47,45,Afternoon,Thu,Rainy,56.75,EV,77,13.7,0
+20013,17,1,Rest Area,26,80,Morning,Thu,Sunny,86.5,EV,106,19.4,0
+20013,17,2,Shopping,77,105,Afternoon,Thu,Sunny,125.0,ICE,134,12.0,1
+20013,17,3,Rest Area,26,46,Evening,Thu,Sunny,52.5,ICE,90,6.0,1
+20013,17,4,Restaurant,90,73,Night,Thu,Sunny,93.0,ICE,101,6.4,1
+20013,17,5,Tourist Attraction,47,113,Morning,Thu,Sunny,124.75,ICE,139,14.2,1
+20014,13,1,Restaurant,72,78,Afternoon,Thu,Sunny,98.0,ICE,128,9.9,1
+20014,13,2,Rest Area,14,61,Evening,Thu,Sunny,64.5,ICE,55,5.5,1
+20014,13,3,Hotel,250,119,Night,Thu,Sunny,139.0,EV,52,10.2,0
+20015,4,1,Gas Station,10,70,Afternoon,Thu,Cloudy,72.5,ICE,57,5.0,1
+20015,4,2,Hotel,395,85,Evening,Thu,Cloudy,105.0,ICE,80,3.6,1
+20015,4,3,Hotel,549,106,Night,Thu,Cloudy,126.0,ICE,67,4.0,1
+20015,4,4,Rest Area,24,71,Morning,Thu,Cloudy,77.0,ICE,74,5.0,1
+20015,4,5,Tourist Attraction,96,139,Afternoon,Thu,Cloudy,159.0,EV,83,13.8,0
+20016,17,1,Restaurant,47,45,Afternoon,Mon,Sunny,56.75,EV,128,25.6,0
+20016,17,2,Restaurant,38,94,Evening,Mon,Sunny,103.5,ICE,119,8.4,1
+20016,17,3,Gas Station,20,56,Night,Mon,Sunny,61.0,EV,132,23.6,0
+20016,17,4,Rest Area,15,69,Morning,Mon,Sunny,72.75,EV,114,22.8,0
+20016,17,5,Restaurant,31,121,Afternoon,Mon,Sunny,128.75,EV,41,5.5,0
+20016,17,6,Rest Area,12,43,Evening,Mon,Sunny,46.0,EV,72,13.8,0
+20016,17,7,Hotel,242,118,Night,Mon,Sunny,138.0,EV,88,17.6,0
+20016,17,8,Rest Area,27,68,Morning,Mon,Sunny,74.75,EV,46,7.6,0
+20017,20,1,Tourist Attraction,36,83,Afternoon,Tue,Sunny,92.0,ICE,98,5.8,1
+20017,20,2,Tourist Attraction,110,99,Evening,Tue,Sunny,119.0,ICE,116,10.9,1
+20017,20,3,Rest Area,19,72,Night,Tue,Sunny,76.75,ICE,57,7.2,1
+20017,20,4,Restaurant,47,84,Morning,Tue,Sunny,95.75,ICE,125,11.1,1
+20018,9,1,Tourist Attraction,149,117,Afternoon,Mon,Sunny,137.0,ICE,108,8.1,1
+20018,9,2,Shopping,103,95,Evening,Mon,Sunny,115.0,EV,87,14.9,0
+20018,9,3,Gas Station,17,79,Night,Mon,Sunny,83.25,ICE,42,7.6,1
+20018,9,4,Restaurant,44,83,Morning,Mon,Sunny,94.0,ICE,62,5.4,1
+20018,9,5,Gas Station,9,66,Afternoon,Mon,Sunny,66.0,EV,43,8.8,0
+20019,2,1,Restaurant,46,95,Morning,Sun,Sunny,106.5,EV,44,8.8,0
+20019,2,2,Restaurant,72,88,Afternoon,Sun,Sunny,108.0,ICE,138,13.8,1
+20019,2,3,Shopping,56,116,Evening,Sun,Sunny,130.0,EV,99,20.0,0
+20019,2,4,Rest Area,11,73,Night,Sun,Sunny,75.75,EV,117,21.4,0
+20019,2,5,Gas Station,19,15,Morning,Sun,Sunny,19.75,EV,133,25.8,0
+20019,2,6,Tourist Attraction,72,130,Afternoon,Sun,Sunny,150.0,EV,82,14.6,0
+20019,2,7,Restaurant,86,79,Evening,Sun,Sunny,99.0,ICE,54,7.1,1
+20019,2,8,Hotel,180,102,Night,Sun,Sunny,122.0,EV,111,22.9,0
+20020,3,1,Tourist Attraction,30,71,Afternoon,Thu,Sunny,78.5,ICE,85,6.7,1
+20020,3,2,Rest Area,14,66,Evening,Thu,Sunny,69.5,ICE,63,7.2,1
+20020,3,3,Hotel,333,98,Night,Thu,Sunny,118.0,EV,87,16.1,0
+20021,3,1,Rest Area,29,64,Afternoon,Fri,Cloudy,71.25,EV,66,12.3,0
+20021,3,2,Gas Station,20,34,Evening,Fri,Cloudy,39.0,EV,62,11.3,0
+20021,3,3,Rest Area,30,33,Night,Fri,Cloudy,40.5,ICE,115,6.7,1
+20021,3,4,Tourist Attraction,121,125,Morning,Fri,Cloudy,145.0,EV,45,6.9,0
+20021,3,5,Shopping,84,57,Afternoon,Fri,Cloudy,77.0,EV,89,16.9,0
+20021,3,6,Gas Station,5,44,Evening,Fri,Cloudy,44.0,EV,81,13.5,0
+20022,1,1,Hotel,411,131,Evening,Mon,Sunny,151.0,EV,94,19.5,0
+20022,1,2,Gas Station,12,77,Night,Mon,Sunny,80.0,EV,131,23.7,0
+20022,1,3,Gas Station,7,79,Morning,Mon,Sunny,79.0,ICE,95,5.9,1
+20022,1,4,Restaurant,63,48,Afternoon,Mon,Sunny,68.0,EV,131,26.3,0
+20022,1,5,Restaurant,34,73,Evening,Mon,Sunny,81.5,EV,93,16.0,0
+20022,1,6,Rest Area,16,44,Night,Mon,Sunny,48.0,EV,48,10.2,0
+20022,1,7,Rest Area,22,24,Morning,Mon,Sunny,29.5,ICE,110,5.5,1
+20022,1,8,Rest Area,19,20,Afternoon,Mon,Sunny,24.75,EV,41,5.5,0
+20023,3,1,Gas Station,14,32,Evening,Fri,Sunny,35.5,ICE,80,3.2,1
+20023,3,2,Gas Station,20,49,Night,Fri,Sunny,54.0,ICE,68,5.7,1
+20023,3,3,Restaurant,73,102,Morning,Fri,Sunny,122.0,EV,112,22.4,0
+20023,3,4,Shopping,56,99,Afternoon,Fri,Sunny,113.0,EV,131,26.5,0
+20024,15,1,Tourist Attraction,32,97,Afternoon,Sun,Sunny,105.0,EV,91,18.1,0
+20024,15,2,Restaurant,62,97,Evening,Sun,Sunny,117.0,ICE,117,6.4,1
+20024,15,3,Hotel,287,69,Night,Sun,Sunny,89.0,ICE,86,4.8,1
+20024,15,4,Gas Station,13,61,Morning,Sun,Sunny,64.25,ICE,132,7.3,1
+20024,15,5,Shopping,100,105,Afternoon,Sun,Sunny,125.0,ICE,67,6.8,1
+20024,15,6,Rest Area,21,44,Evening,Sun,Sunny,49.25,ICE,68,4.7,1
+20025,16,1,Restaurant,55,78,Morning,Thu,Sunny,91.75,ICE,40,7.8,1
+20025,16,2,Tourist Attraction,78,100,Afternoon,Thu,Sunny,120.0,EV,110,20.7,0
+20025,16,3,Rest Area,10,56,Evening,Thu,Sunny,58.5,EV,52,10.4,0
+20025,16,4,Rest Area,13,40,Night,Thu,Sunny,43.25,ICE,68,3.9,1
+20025,16,5,Shopping,57,72,Morning,Thu,Sunny,86.25,EV,123,22.2,0
+20025,16,6,Restaurant,54,115,Afternoon,Thu,Sunny,128.5,EV,83,14.4,0
+20025,16,7,Hotel,399,156,Evening,Thu,Sunny,176.0,ICE,58,4.7,1
+20025,16,8,Restaurant,47,53,Night,Thu,Sunny,64.75,ICE,77,4.9,1
+20026,10,1,Tourist Attraction,70,84,Afternoon,Sat,Cloudy,104.0,EV,78,14.9,0
+20026,10,2,Gas Station,18,18,Evening,Sat,Cloudy,22.5,ICE,139,9.9,1
+20026,10,3,Restaurant,90,110,Night,Sat,Cloudy,130.0,ICE,108,7.3,1
+20026,10,4,Gas Station,7,21,Morning,Sat,Cloudy,21.0,EV,86,16.5,0
+20027,15,1,Restaurant,89,110,Evening,Fri,Cloudy,130.0,ICE,66,7.5,1
+20027,15,2,Hotel,392,103,Night,Fri,Cloudy,123.0,EV,102,20.0,0
+20027,15,3,Rest Area,30,48,Morning,Fri,Cloudy,55.5,EV,121,24.1,0
+20027,15,4,Shopping,58,101,Afternoon,Fri,Cloudy,115.5,EV,58,11.2,0
+20027,15,5,Restaurant,71,60,Evening,Fri,Cloudy,80.0,EV,77,15.6,0
+20027,15,6,Hotel,595,123,Night,Fri,Cloudy,143.0,EV,113,22.1,0
+20028,8,1,Hotel,278,91,Night,Thu,Cloudy,111.0,ICE,59,5.6,1
+20028,8,2,Gas Station,7,55,Morning,Thu,Cloudy,55.0,ICE,45,7.5,1
+20028,8,3,Tourist Attraction,133,132,Afternoon,Thu,Cloudy,152.0,ICE,137,14.0,1
+20028,8,4,Rest Area,23,64,Evening,Thu,Cloudy,69.75,ICE,78,3.3,1
+20028,8,5,Rest Area,16,63,Night,Thu,Cloudy,67.0,EV,88,16.7,0
+20028,8,6,Rest Area,11,78,Morning,Thu,Cloudy,80.75,EV,121,24.7,0
+20028,8,7,Tourist Attraction,76,76,Afternoon,Thu,Cloudy,96.0,ICE,136,8.3,1
+20029,17,1,Restaurant,45,89,Afternoon,Sat,Cloudy,100.25,EV,92,15.8,0
+20029,17,2,Shopping,75,79,Evening,Sat,Cloudy,99.0,ICE,130,7.7,1
+20029,17,3,Hotel,397,150,Night,Sat,Cloudy,170.0,ICE,130,13.0,1
+20029,17,4,Shopping,82,40,Morning,Sat,Cloudy,60.0,ICE,122,6.2,1
+20029,17,5,Tourist Attraction,148,127,Afternoon,Sat,Cloudy,147.0,EV,63,12.9,0
+20029,17,6,Tourist Attraction,61,160,Evening,Sat,Cloudy,180.0,EV,124,24.2,0
+20030,8,1,Restaurant,78,98,Morning,Tue,Sunny,118.0,EV,97,18.8,0
+20030,8,2,Tourist Attraction,35,60,Afternoon,Tue,Sunny,68.75,EV,99,18.2,0
+20030,8,3,Restaurant,88,44,Evening,Tue,Sunny,64.0,ICE,112,6.7,1
+20030,8,4,Tourist Attraction,110,92,Night,Tue,Sunny,112.0,EV,71,14.7,0
+20030,8,5,Restaurant,74,54,Morning,Tue,Sunny,74.0,EV,102,20.3,0
+20031,3,1,Restaurant,80,116,Afternoon,Wed,Sunny,136.0,EV,132,25.5,0
+20031,3,2,Restaurant,49,98,Evening,Wed,Sunny,110.25,ICE,95,4.1,1
+20031,3,3,Tourist Attraction,112,91,Night,Wed,Sunny,111.0,ICE,47,10.1,1
+20031,3,4,Restaurant,65,71,Morning,Wed,Sunny,91.0,EV,61,9.8,0
+20032,14,1,Gas Station,18,25,Morning,Sat,Rainy,29.5,EV,104,18.6,0
+20032,14,2,Restaurant,57,87,Afternoon,Sat,Rainy,101.25,EV,140,26.5,0
+20032,14,3,Hotel,536,103,Evening,Sat,Rainy,123.0,EV,97,20.2,0
+20032,14,4,Hotel,382,85,Night,Sat,Rainy,105.0,ICE,112,6.8,1
+20032,14,5,Tourist Attraction,124,124,Morning,Sat,Rainy,144.0,EV,71,12.1,0
+20033,7,1,Restaurant,44,73,Evening,Thu,Cloudy,84.0,EV,77,12.8,0
+20033,7,2,Hotel,499,123,Night,Thu,Cloudy,143.0,EV,72,12.8,0
+20033,7,3,Tourist Attraction,83,145,Morning,Thu,Cloudy,165.0,ICE,130,13.4,1
+20033,7,4,Rest Area,14,65,Afternoon,Thu,Cloudy,68.5,ICE,76,4.5,1
+20033,7,5,Restaurant,68,58,Evening,Thu,Cloudy,78.0,EV,65,13.1,0
+20034,2,1,Restaurant,86,80,Night,Sat,Sunny,100.0,EV,122,24.6,0
+20034,2,2,Shopping,41,82,Morning,Sat,Sunny,92.25,EV,49,7.2,0
+20034,2,3,Restaurant,89,107,Afternoon,Sat,Sunny,127.0,EV,64,12.2,0
+20034,2,4,Restaurant,72,88,Evening,Sat,Sunny,108.0,EV,119,24.6,0
+20034,2,5,Shopping,76,61,Night,Sat,Sunny,81.0,ICE,97,6.0,1
+20035,1,1,Tourist Attraction,45,131,Evening,Mon,Sunny,142.25,ICE,45,7.4,1
+20035,1,2,Hotel,573,99,Night,Mon,Sunny,119.0,ICE,110,5.7,1
+20035,1,3,Gas Station,20,40,Morning,Mon,Sunny,45.0,EV,127,25.9,0
+20035,1,4,Tourist Attraction,87,84,Afternoon,Mon,Sunny,104.0,ICE,138,9.9,1
+20035,1,5,Hotel,422,63,Evening,Mon,Sunny,83.0,ICE,57,4.8,1
+20036,8,1,Hotel,417,68,Night,Sun,Rainy,88.0,ICE,117,6.7,1
+20036,8,2,Rest Area,12,58,Morning,Sun,Rainy,61.0,EV,103,20.9,0
+20036,8,3,Restaurant,69,45,Afternoon,Sun,Rainy,65.0,EV,74,13.8,0
+20036,8,4,Gas Station,15,50,Evening,Sun,Rainy,53.75,ICE,62,7.6,1
+20036,8,5,Hotel,566,136,Night,Sun,Rainy,156.0,EV,114,22.5,0
+20036,8,6,Gas Station,12,28,Morning,Sun,Rainy,31.0,ICE,89,6.9,1
+20036,8,7,Shopping,79,89,Afternoon,Sun,Rainy,109.0,ICE,124,10.0,1
+20037,14,1,Hotel,558,98,Night,Sun,Sunny,118.0,ICE,71,4.1,1
+20037,14,2,Restaurant,50,80,Morning,Sun,Sunny,92.5,ICE,44,6.5,1
+20037,14,3,Tourist Attraction,130,136,Afternoon,Sun,Sunny,156.0,EV,66,14.0,0
+20037,14,4,Hotel,380,156,Evening,Sun,Sunny,176.0,EV,78,16.3,0
+20037,14,5,Hotel,213,143,Night,Sun,Sunny,163.0,EV,61,11.3,0
+20037,14,6,Rest Area,27,56,Morning,Sun,Sunny,62.75,EV,76,14.8,0
+20037,14,7,Restaurant,34,73,Afternoon,Sun,Sunny,81.5,ICE,73,3.5,1
+20038,7,1,Hotel,393,118,Night,Mon,Sunny,138.0,EV,133,25.3,0
+20038,7,2,Restaurant,84,125,Morning,Mon,Sunny,145.0,ICE,45,11.2,1
+20038,7,3,Gas Station,14,52,Afternoon,Mon,Sunny,55.5,EV,85,14.4,0
+20038,7,4,Shopping,67,72,Evening,Mon,Sunny,92.0,EV,41,6.1,0
+20038,7,5,Hotel,306,83,Night,Mon,Sunny,103.0,EV,73,14.9,0
+20039,8,1,Restaurant,46,71,Afternoon,Tue,Sunny,82.5,ICE,129,12.6,1
+20039,8,2,Hotel,512,72,Evening,Tue,Sunny,92.0,ICE,127,10.0,1
+20039,8,3,Shopping,33,40,Night,Tue,Sunny,48.25,ICE,43,9.4,1
+20039,8,4,Restaurant,83,97,Morning,Tue,Sunny,117.0,ICE,62,5.5,1
+20039,8,5,Restaurant,48,69,Afternoon,Tue,Sunny,81.0,EV,83,14.3,0
+20039,8,6,Restaurant,68,114,Evening,Tue,Sunny,134.0,ICE,54,7.9,1
+20040,3,1,Shopping,119,125,Afternoon,Wed,Sunny,145.0,ICE,140,9.7,1
+20040,3,2,Restaurant,68,130,Evening,Wed,Sunny,150.0,EV,51,9.7,0
+20040,3,3,Hotel,368,103,Night,Wed,Sunny,123.0,EV,71,14.8,0
+20040,3,4,Gas Station,13,19,Morning,Wed,Sunny,22.25,ICE,41,6.0,1
+20041,1,1,Shopping,29,66,Evening,Sun,Sunny,73.25,EV,56,11.9,0
+20041,1,2,Rest Area,27,76,Night,Sun,Sunny,82.75,ICE,61,5.4,1
+20041,1,3,Rest Area,22,85,Morning,Sun,Sunny,90.5,EV,51,10.5,0
+20041,1,4,Shopping,31,123,Afternoon,Sun,Sunny,130.75,ICE,93,5.0,1
+20041,1,5,Hotel,318,112,Evening,Sun,Sunny,132.0,ICE,54,8.0,1
+20042,10,1,Rest Area,23,68,Evening,Thu,Cloudy,73.75,ICE,70,5.8,1
+20042,10,2,Restaurant,81,86,Night,Thu,Cloudy,106.0,ICE,120,8.4,1
+20042,10,3,Rest Area,22,41,Morning,Thu,Cloudy,46.5,ICE,111,8.9,1
+20042,10,4,Tourist Attraction,50,114,Afternoon,Thu,Cloudy,126.5,EV,60,12.8,0
+20042,10,5,Rest Area,22,61,Evening,Thu,Cloudy,66.5,ICE,86,5.4,1
+20043,6,1,Gas Station,17,26,Afternoon,Tue,Sunny,30.25,ICE,117,10.2,1
+20043,6,2,Gas Station,10,33,Evening,Tue,Sunny,35.5,ICE,130,13.4,1
+20043,6,3,Hotel,446,81,Night,Tue,Sunny,101.0,ICE,70,5.3,1
+20043,6,4,Gas Station,20,40,Morning,Tue,Sunny,45.0,ICE,59,6.9,1
+20043,6,5,Restaurant,90,45,Afternoon,Tue,Sunny,65.0,EV,87,16.4,0
+20043,6,6,Restaurant,68,121,Evening,Tue,Sunny,141.0,EV,56,9.9,0
+20044,3,1,Gas Station,12,66,Afternoon,Sat,Rainy,69.0,ICE,119,9.0,1
+20044,3,2,Rest Area,15,42,Evening,Sat,Rainy,45.75,EV,73,12.6,0
+20044,3,3,Hotel,445,80,Night,Sat,Rainy,100.0,ICE,132,7.5,1
+20044,3,4,Rest Area,14,46,Morning,Sat,Rainy,49.5,EV,56,9.7,0
+20044,3,5,Restaurant,65,126,Afternoon,Sat,Rainy,146.0,EV,75,15.9,0
+20045,11,1,Rest Area,19,68,Night,Mon,Sunny,72.75,ICE,99,7.4,1
+20045,11,2,Restaurant,57,89,Morning,Mon,Sunny,103.25,EV,62,10.7,0
+20045,11,3,Tourist Attraction,86,82,Afternoon,Mon,Sunny,102.0,EV,58,9.8,0
+20045,11,4,Restaurant,61,99,Evening,Mon,Sunny,119.0,ICE,55,5.7,1
+20045,11,5,Gas Station,19,37,Night,Mon,Sunny,41.75,ICE,99,5.3,1
+20046,13,1,Hotel,590,116,Evening,Mon,Sunny,136.0,EV,122,24.0,0
+20046,13,2,Gas Station,6,20,Night,Mon,Sunny,20.0,EV,101,21.0,0
+20046,13,3,Gas Station,15,80,Morning,Mon,Sunny,83.75,EV,96,17.3,0
+20046,13,4,Restaurant,62,88,Afternoon,Mon,Sunny,108.0,ICE,45,8.3,1
+20046,13,5,Restaurant,34,118,Evening,Mon,Sunny,126.5,EV,67,10.5,0
+20046,13,6,Hotel,431,96,Night,Mon,Sunny,116.0,EV,84,14.8,0
+20047,8,1,Restaurant,69,75,Evening,Mon,Cloudy,95.0,EV,74,13.7,0
+20047,8,2,Hotel,437,121,Night,Mon,Cloudy,141.0,ICE,88,5.5,1
+20047,8,3,Restaurant,69,104,Morning,Mon,Cloudy,124.0,ICE,100,7.8,1
+20047,8,4,Restaurant,32,65,Afternoon,Mon,Cloudy,73.0,ICE,57,8.2,1
+20047,8,5,Hotel,505,95,Evening,Mon,Cloudy,115.0,ICE,121,10.8,1
+20048,13,1,Gas Station,6,61,Evening,Tue,Cloudy,61.0,EV,120,23.1,0
+20048,13,2,Gas Station,8,47,Night,Tue,Cloudy,47.0,ICE,99,4.9,1
+20048,13,3,Restaurant,55,87,Morning,Tue,Cloudy,100.75,EV,105,19.6,0
+20048,13,4,Tourist Attraction,77,133,Afternoon,Tue,Cloudy,153.0,EV,114,20.0,0
+20048,13,5,Hotel,571,70,Evening,Tue,Cloudy,90.0,EV,73,12.0,0
+20048,13,6,Hotel,495,155,Night,Tue,Cloudy,175.0,EV,83,16.2,0
+20048,13,7,Rest Area,26,47,Morning,Tue,Cloudy,53.5,ICE,48,6.5,1
+20048,13,8,Shopping,94,124,Afternoon,Tue,Cloudy,144.0,ICE,93,6.9,1
+20049,1,1,Shopping,75,93,Afternoon,Sat,Sunny,113.0,ICE,117,5.9,1
+20049,1,2,Hotel,204,76,Evening,Sat,Sunny,96.0,ICE,96,8.3,1
+20049,1,3,Hotel,514,65,Night,Sat,Sunny,85.0,ICE,106,6.8,1
+20049,1,4,Gas Station,16,53,Morning,Sat,Sunny,57.0,EV,70,13.2,0
+20050,17,1,Hotel,248,86,Night,Wed,Sunny,106.0,ICE,107,9.5,1
+20050,17,2,Restaurant,60,60,Morning,Wed,Sunny,75.0,ICE,113,7.6,1
+20050,17,3,Restaurant,81,71,Afternoon,Wed,Sunny,91.0,ICE,44,7.5,1
+20050,17,4,Hotel,212,141,Evening,Wed,Sunny,161.0,ICE,66,6.5,1
+20050,17,5,Restaurant,80,74,Night,Wed,Sunny,94.0,EV,116,23.9,0
+20050,17,6,Tourist Attraction,31,67,Morning,Wed,Sunny,74.75,EV,103,17.7,0
+20050,17,7,Tourist Attraction,104,116,Afternoon,Wed,Sunny,136.0,EV,58,11.9,0
+20051,16,1,Gas Station,5,66,Morning,Tue,Sunny,66.0,EV,47,6.7,0
+20051,16,2,Restaurant,33,53,Afternoon,Tue,Sunny,61.25,EV,96,17.0,0
+20051,16,3,Shopping,104,65,Evening,Tue,Sunny,85.0,ICE,117,6.9,1
+20051,16,4,Gas Station,18,37,Night,Tue,Sunny,41.5,EV,122,23.2,0
+20051,16,5,Rest Area,19,21,Morning,Tue,Sunny,25.75,EV,134,25.1,0
+20052,18,1,Hotel,515,117,Night,Mon,Sunny,137.0,EV,45,6.7,0
+20052,18,2,Gas Station,8,48,Morning,Mon,Sunny,48.0,ICE,94,4.7,1
+20052,18,3,Shopping,35,82,Afternoon,Mon,Sunny,90.75,ICE,88,6.1,1
+20052,18,4,Gas Station,13,85,Evening,Mon,Sunny,88.25,EV,127,25.5,0
+20052,18,5,Rest Area,26,48,Night,Mon,Sunny,54.5,ICE,133,13.6,1
+20053,7,1,Rest Area,17,40,Morning,Mon,Cloudy,44.25,ICE,124,7.8,1
+20053,7,2,Shopping,61,64,Afternoon,Mon,Cloudy,84.0,EV,60,9.5,0
+20053,7,3,Restaurant,45,88,Evening,Mon,Cloudy,99.25,ICE,134,12.4,1
+20053,7,4,Gas Station,5,18,Night,Mon,Cloudy,18.0,ICE,118,11.0,1
+20053,7,5,Shopping,49,113,Morning,Mon,Cloudy,125.25,ICE,91,4.9,1
+20053,7,6,Gas Station,17,24,Afternoon,Mon,Cloudy,28.25,EV,69,12.4,0
+20054,5,1,Shopping,64,58,Morning,Mon,Sunny,78.0,EV,116,24.0,0
+20054,5,2,Restaurant,38,128,Afternoon,Mon,Sunny,137.5,EV,52,11.2,0
+20054,5,3,Shopping,114,45,Evening,Mon,Sunny,65.0,ICE,112,7.9,1
+20054,5,4,Restaurant,78,86,Night,Mon,Sunny,106.0,EV,120,23.7,0
+20054,5,5,Tourist Attraction,134,128,Morning,Mon,Sunny,148.0,ICE,134,7.4,1
+20054,5,6,Rest Area,22,28,Afternoon,Mon,Sunny,33.5,ICE,47,8.1,1
+20055,7,1,Gas Station,14,76,Morning,Tue,Sunny,79.5,ICE,137,14.3,1
+20055,7,2,Restaurant,80,122,Afternoon,Tue,Sunny,142.0,EV,131,23.8,0
+20055,7,3,Restaurant,51,94,Evening,Tue,Sunny,106.75,EV,73,14.1,0
+20055,7,4,Hotel,311,96,Night,Tue,Sunny,116.0,EV,104,18.7,0
+20055,7,5,Restaurant,53,81,Morning,Tue,Sunny,94.25,EV,89,17.5,0
+20056,16,1,Gas Station,8,59,Morning,Sun,Sunny,59.0,ICE,88,4.7,1
+20056,16,2,Shopping,88,112,Afternoon,Sun,Sunny,132.0,EV,133,27.1,0
+20056,16,3,Gas Station,7,51,Evening,Sun,Sunny,51.0,ICE,64,7.9,1
+20057,14,1,Restaurant,61,52,Evening,Mon,Sunny,72.0,EV,94,17.8,0
+20057,14,2,Rest Area,15,78,Night,Mon,Sunny,81.75,EV,94,18.9,0
+20057,14,3,Shopping,85,73,Morning,Mon,Sunny,93.0,EV,58,9.7,0
+20058,10,1,Restaurant,90,121,Afternoon,Sun,Sunny,141.0,ICE,43,11.3,1
+20058,10,2,Hotel,536,131,Evening,Sun,Sunny,151.0,ICE,86,3.7,1
+20058,10,3,Gas Station,16,27,Night,Sun,Sunny,31.0,ICE,77,3.7,1
+20058,10,4,Shopping,115,51,Morning,Sun,Sunny,71.0,ICE,92,5.1,1
+20058,10,5,Rest Area,10,62,Afternoon,Sun,Sunny,64.5,ICE,91,5.9,1
+20058,10,6,Restaurant,57,109,Evening,Sun,Sunny,123.25,EV,123,25.1,0
+20059,6,1,Restaurant,68,128,Afternoon,Thu,Snowy,148.0,ICE,82,5.8,1
+20059,6,2,Restaurant,50,106,Evening,Thu,Snowy,118.5,ICE,61,7.2,1
+20059,6,3,Restaurant,58,124,Night,Thu,Snowy,138.5,ICE,79,4.7,1
+20059,6,4,Gas Station,19,47,Morning,Thu,Snowy,51.75,ICE,115,6.6,1
+20059,6,5,Restaurant,59,122,Afternoon,Thu,Snowy,136.75,EV,43,7.3,0
+20059,6,6,Hotel,316,98,Evening,Thu,Snowy,118.0,ICE,91,4.4,1
+20060,5,1,Restaurant,42,73,Evening,Tue,Rainy,83.5,EV,78,14.0,0
+20060,5,2,Hotel,516,73,Night,Tue,Rainy,93.0,EV,89,16.0,0
+20060,5,3,Rest Area,14,53,Morning,Tue,Rainy,56.5,EV,81,14.2,0
+20060,5,4,Tourist Attraction,55,73,Afternoon,Tue,Rainy,86.75,ICE,50,6.8,1
+20060,5,5,Restaurant,86,89,Evening,Tue,Rainy,109.0,EV,134,25.8,0
+20060,5,6,Hotel,384,115,Night,Tue,Rainy,135.0,ICE,95,5.8,1
+20061,17,1,Rest Area,22,15,Morning,Sat,Sunny,20.5,ICE,99,7.8,1
+20061,17,2,Rest Area,23,68,Afternoon,Sat,Sunny,73.75,ICE,86,6.1,1
+20061,17,3,Shopping,103,122,Evening,Sat,Sunny,142.0,ICE,88,4.3,1
+20061,17,4,Rest Area,30,30,Night,Sat,Sunny,37.5,ICE,66,7.9,1
+20061,17,5,Rest Area,18,27,Morning,Sat,Sunny,31.5,EV,48,7.4,0
+20061,17,6,Restaurant,55,120,Afternoon,Sat,Sunny,133.75,EV,105,21.3,0
+20061,17,7,Restaurant,57,101,Evening,Sat,Sunny,115.25,ICE,68,4.3,1
+20061,17,8,Hotel,389,126,Night,Sat,Sunny,146.0,EV,97,19.3,0
+20062,11,1,Hotel,458,87,Night,Sun,Sunny,107.0,ICE,97,7.9,1
+20062,11,2,Restaurant,90,65,Morning,Sun,Sunny,85.0,EV,45,8.3,0
+20062,11,3,Restaurant,84,113,Afternoon,Sun,Sunny,133.0,EV,118,24.1,0
+20062,11,4,Hotel,547,120,Evening,Sun,Sunny,140.0,EV,96,17.4,0
+20062,11,5,Hotel,585,107,Night,Sun,Sunny,127.0,EV,136,27.7,0
+20062,11,6,Rest Area,24,41,Morning,Sun,Sunny,47.0,EV,83,16.5,0
+20063,13,1,Rest Area,11,47,Morning,Fri,Cloudy,49.75,ICE,105,9.0,1
+20063,13,2,Tourist Attraction,37,61,Afternoon,Fri,Cloudy,70.25,ICE,96,7.9,1
+20063,13,3,Hotel,395,140,Evening,Fri,Cloudy,160.0,EV,90,18.4,0
+20064,19,1,Tourist Attraction,97,88,Evening,Wed,Sunny,108.0,ICE,71,5.6,1
+20064,19,2,Gas Station,10,31,Night,Wed,Sunny,33.5,EV,114,21.5,0
+20064,19,3,Tourist Attraction,111,84,Morning,Wed,Sunny,104.0,ICE,86,4.3,1
+20064,19,4,Shopping,112,68,Afternoon,Wed,Sunny,88.0,EV,49,9.8,0
+20064,19,5,Hotel,507,112,Evening,Wed,Sunny,132.0,EV,102,19.2,0
+20065,10,1,Tourist Attraction,138,89,Afternoon,Sun,Sunny,109.0,EV,52,11.1,0
+20065,10,2,Gas Station,13,69,Evening,Sun,Sunny,72.25,ICE,117,10.3,1
+20065,10,3,Gas Station,13,60,Night,Sun,Sunny,63.25,ICE,76,5.0,1
+20065,10,4,Restaurant,50,101,Morning,Sun,Sunny,113.5,EV,46,6.6,0
+20065,10,5,Tourist Attraction,111,70,Afternoon,Sun,Sunny,90.0,EV,114,20.7,0
+20065,10,6,Restaurant,49,89,Evening,Sun,Sunny,101.25,ICE,92,6.0,1
+20066,3,1,Hotel,356,141,Evening,Sun,Sunny,161.0,ICE,122,8.8,1
+20066,3,2,Rest Area,16,24,Night,Sun,Sunny,28.0,ICE,64,4.8,1
+20066,3,3,Rest Area,13,33,Morning,Sun,Sunny,36.25,ICE,60,5.1,1
+20066,3,4,Restaurant,58,84,Afternoon,Sun,Sunny,98.5,ICE,48,10.5,1
+20067,7,1,Rest Area,29,26,Afternoon,Thu,Cloudy,33.25,EV,121,24.4,0
+20067,7,2,Gas Station,14,40,Evening,Thu,Cloudy,43.5,ICE,111,10.4,1
+20067,7,3,Rest Area,26,25,Night,Thu,Cloudy,31.5,EV,65,10.3,0
+20067,7,4,Restaurant,37,111,Morning,Thu,Cloudy,120.25,EV,113,21.9,0
+20067,7,5,Restaurant,44,57,Afternoon,Thu,Cloudy,68.0,ICE,122,7.4,1
+20067,7,6,Hotel,209,121,Evening,Thu,Cloudy,141.0,ICE,71,4.6,1
+20067,7,7,Restaurant,74,102,Night,Thu,Cloudy,122.0,EV,45,7.8,0
+20067,7,8,Rest Area,27,15,Morning,Thu,Cloudy,21.75,ICE,133,7.8,1
+20067,7,9,Gas Station,19,78,Afternoon,Thu,Cloudy,82.75,EV,100,18.9,0
+20068,15,1,Restaurant,70,122,Morning,Wed,Sunny,142.0,ICE,83,4.3,1
+20068,15,2,Restaurant,32,127,Afternoon,Wed,Sunny,135.0,ICE,69,6.2,1
+20068,15,3,Rest Area,13,80,Evening,Wed,Sunny,83.25,ICE,107,7.4,1
+20068,15,4,Gas Station,9,19,Night,Wed,Sunny,19.0,EV,125,25.3,0
+20068,15,5,Restaurant,70,56,Morning,Wed,Sunny,76.0,ICE,94,6.2,1
+20068,15,6,Restaurant,72,86,Afternoon,Wed,Sunny,106.0,EV,92,16.8,0
+20068,15,7,Hotel,449,130,Evening,Wed,Sunny,150.0,ICE,105,9.7,1
+20068,15,8,Hotel,355,114,Night,Wed,Sunny,134.0,EV,49,10.2,0
+20069,18,1,Rest Area,22,57,Evening,Mon,Cloudy,62.5,ICE,140,13.1,1
+20069,18,2,Shopping,84,84,Night,Mon,Cloudy,104.0,EV,81,15.5,0
+20069,18,3,Restaurant,80,55,Morning,Mon,Cloudy,75.0,EV,118,21.7,0
+20069,18,4,Restaurant,75,78,Afternoon,Mon,Cloudy,98.0,EV,79,15.8,0
+20069,18,5,Shopping,101,51,Evening,Mon,Cloudy,71.0,EV,60,10.0,0
+20069,18,6,Hotel,463,111,Night,Mon,Cloudy,131.0,EV,100,19.7,0
+20069,18,7,Restaurant,55,78,Morning,Mon,Cloudy,91.75,EV,96,17.2,0
+20070,1,1,Rest Area,11,79,Night,Mon,Sunny,81.75,ICE,50,9.4,1
+20070,1,2,Restaurant,69,58,Morning,Mon,Sunny,78.0,EV,45,9.8,0
+20070,1,3,Restaurant,72,121,Afternoon,Mon,Sunny,141.0,EV,62,10.9,0
+20070,1,4,Shopping,42,52,Evening,Mon,Sunny,62.5,EV,88,18.1,0
+20070,1,5,Restaurant,56,52,Night,Mon,Sunny,66.0,ICE,100,5.5,1
+20071,12,1,Gas Station,14,38,Evening,Sun,Cloudy,41.5,ICE,106,9.5,1
+20071,12,2,Hotel,190,115,Night,Sun,Cloudy,135.0,ICE,60,6.5,1
+20071,12,3,Rest Area,26,20,Morning,Sun,Cloudy,26.5,EV,89,18.1,0
+20071,12,4,Gas Station,18,66,Afternoon,Sun,Cloudy,70.5,ICE,128,6.6,1
+20071,12,5,Restaurant,73,89,Evening,Sun,Cloudy,109.0,ICE,114,11.1,1
+20071,12,6,Gas Station,18,85,Night,Sun,Cloudy,89.5,EV,110,22.5,0
+20071,12,7,Gas Station,20,42,Morning,Sun,Cloudy,47.0,EV,113,22.4,0
+20072,1,1,Gas Station,8,31,Morning,Thu,Sunny,31.0,ICE,114,8.1,1
+20072,1,2,Restaurant,76,112,Afternoon,Thu,Sunny,132.0,EV,101,18.8,0
+20072,1,3,Hotel,561,83,Evening,Thu,Sunny,103.0,EV,88,17.8,0
+20072,1,4,Hotel,562,151,Night,Thu,Sunny,171.0,EV,109,21.6,0
+20073,3,1,Rest Area,18,21,Night,Wed,Rainy,25.5,EV,83,15.5,0
+20073,3,2,Gas Station,5,25,Morning,Wed,Rainy,25.0,ICE,79,5.9,1
+20073,3,3,Restaurant,76,116,Afternoon,Wed,Rainy,136.0,EV,76,13.1,0
+20073,3,4,Tourist Attraction,136,122,Evening,Wed,Rainy,142.0,ICE,47,9.5,1
+20073,3,5,Hotel,474,153,Night,Wed,Rainy,173.0,ICE,61,6.5,1
+20074,16,1,Shopping,40,120,Morning,Sat,Sunny,130.0,ICE,65,6.8,1
+20074,16,2,Tourist Attraction,129,160,Afternoon,Sat,Sunny,180.0,ICE,127,10.4,1
+20074,16,3,Tourist Attraction,130,156,Evening,Sat,Sunny,176.0,EV,126,23.2,0
+20074,16,4,Hotel,211,139,Night,Sat,Sunny,159.0,EV,42,6.0,0
+20074,16,5,Rest Area,10,34,Morning,Sat,Sunny,36.5,EV,50,10.4,0
+20075,19,1,Tourist Attraction,78,137,Afternoon,Thu,Snowy,157.0,ICE,47,6.4,1
+20075,19,2,Rest Area,19,15,Evening,Thu,Snowy,19.75,ICE,65,6.9,1
+20075,19,3,Hotel,396,80,Night,Thu,Snowy,100.0,ICE,50,9.7,1
+20075,19,4,Rest Area,14,33,Morning,Thu,Snowy,36.5,EV,128,22.6,0
+20075,19,5,Rest Area,25,59,Afternoon,Thu,Snowy,65.25,ICE,72,5.2,1
+20075,19,6,Restaurant,65,102,Evening,Thu,Snowy,122.0,EV,104,19.8,0
+20075,19,7,Hotel,564,152,Night,Thu,Snowy,172.0,EV,82,16.6,0
+20076,10,1,Rest Area,18,16,Night,Fri,Sunny,20.5,EV,98,18.0,0
+20076,10,2,Rest Area,12,83,Morning,Fri,Sunny,86.0,EV,98,18.2,0
+20076,10,3,Gas Station,12,65,Afternoon,Fri,Sunny,68.0,ICE,140,12.4,1
+20076,10,4,Rest Area,26,56,Evening,Fri,Sunny,62.5,EV,135,27.0,0
+20076,10,5,Gas Station,11,39,Night,Fri,Sunny,41.75,ICE,118,11.4,1
+20077,7,1,Shopping,65,91,Evening,Mon,Sunny,111.0,EV,47,6.9,0
+20077,7,2,Restaurant,45,45,Night,Mon,Sunny,56.25,ICE,78,5.5,1
+20077,7,3,Rest Area,13,62,Morning,Mon,Sunny,65.25,ICE,112,7.6,1
+20077,7,4,Gas Station,9,55,Afternoon,Mon,Sunny,55.0,EV,69,10.8,0
+20078,12,1,Gas Station,20,42,Morning,Wed,Sunny,47.0,EV,51,8.4,0
+20078,12,2,Rest Area,18,69,Afternoon,Wed,Sunny,73.5,EV,111,21.4,0
+20078,12,3,Tourist Attraction,128,135,Evening,Wed,Sunny,155.0,ICE,79,5.9,1
+20078,12,4,Hotel,199,103,Night,Wed,Sunny,123.0,EV,107,19.5,0
+20078,12,5,Shopping,68,50,Morning,Wed,Sunny,70.0,EV,102,19.2,0
+20079,2,1,Restaurant,88,48,Night,Mon,Sunny,68.0,ICE,72,4.8,1
+20079,2,2,Shopping,110,51,Morning,Mon,Sunny,71.0,EV,82,15.5,0
+20079,2,3,Restaurant,44,122,Afternoon,Mon,Sunny,133.0,ICE,43,8.3,1
+20079,2,4,Tourist Attraction,115,124,Evening,Mon,Sunny,144.0,EV,44,8.1,0
+20079,2,5,Hotel,261,107,Night,Mon,Sunny,127.0,ICE,120,6.6,1
+20080,8,1,Restaurant,65,43,Evening,Tue,Sunny,63.0,ICE,107,8.4,1
+20080,8,2,Hotel,442,150,Night,Tue,Sunny,170.0,EV,118,21.3,0
+20080,8,3,Gas Station,9,55,Morning,Tue,Sunny,55.0,ICE,79,5.1,1
+20080,8,4,Rest Area,19,71,Afternoon,Tue,Sunny,75.75,EV,138,26.0,0
+20080,8,5,Hotel,370,92,Evening,Tue,Sunny,112.0,EV,102,20.5,0
+20081,4,1,Restaurant,39,126,Afternoon,Wed,Sunny,135.75,ICE,139,8.9,1
+20081,4,2,Hotel,279,64,Evening,Wed,Sunny,84.0,EV,118,21.3,0
+20081,4,3,Restaurant,44,49,Night,Wed,Sunny,60.0,ICE,119,11.0,1
+20081,4,4,Restaurant,79,97,Morning,Wed,Sunny,117.0,ICE,114,6.9,1
+20082,13,1,Shopping,61,69,Morning,Sun,Sunny,89.0,ICE,123,10.4,1
+20082,13,2,Restaurant,53,58,Afternoon,Sun,Sunny,71.25,ICE,120,6.8,1
+20082,13,3,Restaurant,33,63,Evening,Sun,Sunny,71.25,ICE,125,8.1,1
+20082,13,4,Gas Station,9,71,Night,Sun,Sunny,71.0,ICE,42,6.7,1
+20082,13,5,Rest Area,23,46,Morning,Sun,Sunny,51.75,ICE,70,4.8,1
+20083,1,1,Rest Area,18,77,Evening,Wed,Sunny,81.5,ICE,74,5.8,1
+20083,1,2,Hotel,427,74,Night,Wed,Sunny,94.0,EV,80,16.5,0
+20083,1,3,Shopping,27,120,Morning,Wed,Sunny,126.75,EV,50,9.8,0
+20083,1,4,Tourist Attraction,136,96,Afternoon,Wed,Sunny,116.0,ICE,114,8.6,1
+20083,1,5,Restaurant,42,86,Evening,Wed,Sunny,96.5,EV,64,11.9,0
+20084,9,1,Rest Area,15,22,Morning,Tue,Cloudy,25.75,EV,74,14.4,0
+20084,9,2,Restaurant,70,42,Afternoon,Tue,Cloudy,62.0,EV,114,23.5,0
+20084,9,3,Rest Area,20,80,Evening,Tue,Cloudy,85.0,EV,87,14.8,0
+20084,9,4,Gas Station,14,38,Night,Tue,Cloudy,41.5,EV,75,13.3,0
+20084,9,5,Rest Area,23,42,Morning,Tue,Cloudy,47.75,EV,105,18.3,0
+20084,9,6,Tourist Attraction,47,83,Afternoon,Tue,Cloudy,94.75,ICE,51,10.2,1
+20084,9,7,Gas Station,10,40,Evening,Tue,Cloudy,42.5,EV,81,15.0,0
+20085,3,1,Restaurant,69,125,Evening,Fri,Rainy,145.0,EV,73,14.3,0
+20085,3,2,Gas Station,11,16,Night,Fri,Rainy,18.75,EV,124,25.2,0
+20085,3,3,Restaurant,63,92,Morning,Fri,Rainy,112.0,EV,118,24.6,0
+20085,3,4,Tourist Attraction,74,102,Afternoon,Fri,Rainy,122.0,ICE,139,13.9,1
+20085,3,5,Rest Area,25,26,Evening,Fri,Rainy,32.25,ICE,130,10.9,1
+20085,3,6,Gas Station,20,32,Night,Fri,Rainy,37.0,ICE,42,8.4,1
+20085,3,7,Gas Station,16,19,Morning,Fri,Rainy,23.0,ICE,103,9.1,1
+20086,12,1,Restaurant,58,106,Morning,Fri,Rainy,120.5,EV,63,12.6,0
+20086,12,2,Restaurant,75,71,Afternoon,Fri,Rainy,91.0,ICE,67,5.3,1
+20086,12,3,Gas Station,17,22,Evening,Fri,Rainy,26.25,ICE,136,11.1,1
+20086,12,4,Restaurant,76,103,Night,Fri,Rainy,123.0,ICE,138,11.0,1
+20086,12,5,Restaurant,63,108,Morning,Fri,Rainy,128.0,ICE,127,10.7,1
+20086,12,6,Restaurant,35,68,Afternoon,Fri,Rainy,76.75,EV,52,7.9,0
+20087,6,1,Gas Station,11,48,Morning,Mon,Sunny,50.75,ICE,69,4.8,1
+20087,6,2,Gas Station,19,81,Afternoon,Mon,Sunny,85.75,EV,84,14.2,0
+20087,6,3,Gas Station,8,59,Evening,Mon,Sunny,59.0,ICE,66,7.8,1
+20087,6,4,Rest Area,11,49,Night,Mon,Sunny,51.75,EV,48,8.0,0
+20087,6,5,Rest Area,28,79,Morning,Mon,Sunny,86.0,EV,125,22.9,0
+20088,4,1,Tourist Attraction,140,89,Afternoon,Mon,Sunny,109.0,ICE,87,6.2,1
+20088,4,2,Shopping,79,90,Evening,Mon,Sunny,110.0,ICE,78,5.6,1
+20088,4,3,Restaurant,31,121,Night,Mon,Sunny,128.75,ICE,122,10.8,1
+20088,4,4,Restaurant,68,117,Morning,Mon,Sunny,137.0,ICE,110,7.8,1
+20088,4,5,Restaurant,90,46,Afternoon,Mon,Sunny,66.0,EV,65,11.5,0
+20088,4,6,Restaurant,45,82,Evening,Mon,Sunny,93.25,EV,125,25.3,0
+20088,4,7,Rest Area,28,56,Night,Mon,Sunny,63.0,ICE,40,9.9,1
+20089,18,1,Rest Area,17,69,Afternoon,Mon,Sunny,73.25,ICE,79,4.0,1
+20089,18,2,Hotel,451,83,Evening,Mon,Sunny,103.0,EV,76,16.2,0
+20089,18,3,Hotel,282,124,Night,Mon,Sunny,144.0,ICE,111,8.4,1
+20089,18,4,Gas Station,18,65,Morning,Mon,Sunny,69.5,EV,138,26.9,0
+20089,18,5,Shopping,25,44,Afternoon,Mon,Sunny,50.25,ICE,75,4.1,1
+20089,18,6,Tourist Attraction,109,94,Evening,Mon,Sunny,114.0,EV,67,11.8,0
+20089,18,7,Rest Area,11,27,Night,Mon,Sunny,29.75,EV,99,19.5,0
+20089,18,8,Gas Station,5,70,Morning,Mon,Sunny,70.0,EV,135,27.1,0
+20090,2,1,Restaurant,33,116,Evening,Wed,Sunny,124.25,EV,46,10.2,0
+20090,2,2,Restaurant,35,99,Night,Wed,Sunny,107.75,EV,81,15.2,0
+20090,2,3,Shopping,76,55,Morning,Wed,Sunny,75.0,ICE,71,6.6,1
+20090,2,4,Restaurant,48,92,Afternoon,Wed,Sunny,104.0,EV,109,21.2,0
+20090,2,5,Restaurant,77,51,Evening,Wed,Sunny,71.0,ICE,74,3.9,1
+20090,2,6,Hotel,412,138,Night,Wed,Sunny,158.0,EV,130,24.0,0
+20091,13,1,Rest Area,19,76,Evening,Tue,Sunny,80.75,EV,98,17.9,0
+20091,13,2,Rest Area,10,46,Night,Tue,Sunny,48.5,ICE,112,7.5,1
+20091,13,3,Gas Station,17,65,Morning,Tue,Sunny,69.25,ICE,133,13.9,1
+20091,13,4,Rest Area,15,45,Afternoon,Tue,Sunny,48.75,ICE,103,5.6,1
+20091,13,5,Shopping,82,74,Evening,Tue,Sunny,94.0,ICE,44,6.6,1
+20091,13,6,Restaurant,43,77,Night,Tue,Sunny,87.75,EV,69,14.3,0
+20091,13,7,Tourist Attraction,50,130,Morning,Tue,Sunny,142.5,ICE,86,5.6,1
+20092,20,1,Rest Area,24,60,Morning,Sun,Sunny,66.0,EV,53,7.8,0
+20092,20,2,Tourist Attraction,116,154,Afternoon,Sun,Sunny,174.0,ICE,106,9.8,1
+20092,20,3,Hotel,522,105,Evening,Sun,Sunny,125.0,ICE,117,6.2,1
+20092,20,4,Rest Area,29,50,Night,Sun,Sunny,57.25,EV,59,9.9,0
+20092,20,5,Gas Station,20,49,Morning,Sun,Sunny,54.0,EV,82,15.8,0
+20092,20,6,Tourist Attraction,43,60,Afternoon,Sun,Sunny,70.75,ICE,90,4.8,1
+20092,20,7,Gas Station,8,78,Evening,Sun,Sunny,78.0,EV,88,18.3,0
+20092,20,8,Tourist Attraction,103,79,Night,Sun,Sunny,99.0,EV,93,16.8,0
+20093,9,1,Rest Area,24,51,Morning,Sun,Rainy,57.0,EV,73,14.3,0
+20093,9,2,Restaurant,55,107,Afternoon,Sun,Rainy,120.75,EV,98,16.8,0
+20093,9,3,Shopping,20,103,Evening,Sun,Rainy,108.0,EV,68,14.4,0
+20094,15,1,Hotel,373,134,Evening,Wed,Sunny,154.0,EV,63,13.5,0
+20094,15,2,Hotel,349,101,Night,Wed,Sunny,121.0,EV,56,11.2,0
+20094,15,3,Shopping,46,94,Morning,Wed,Sunny,105.5,EV,139,26.7,0
+20094,15,4,Restaurant,46,112,Afternoon,Wed,Sunny,123.5,ICE,64,7.1,1
+20094,15,5,Restaurant,64,79,Evening,Wed,Sunny,99.0,EV,128,25.9,0
+20094,15,6,Gas Station,18,81,Night,Wed,Sunny,85.5,ICE,76,6.6,1
+20094,15,7,Restaurant,57,89,Morning,Wed,Sunny,103.25,EV,73,12.5,0
+20094,15,8,Tourist Attraction,106,146,Afternoon,Wed,Sunny,166.0,EV,65,11.8,0
+20095,15,1,Tourist Attraction,94,111,Afternoon,Mon,Rainy,131.0,EV,47,8.3,0
+20095,15,2,Rest Area,23,77,Evening,Mon,Rainy,82.75,EV,67,13.7,0
+20095,15,3,Gas Station,15,82,Night,Mon,Rainy,85.75,ICE,98,8.6,1
+20095,15,4,Gas Station,15,61,Morning,Mon,Rainy,64.75,ICE,57,6.2,1
+20096,10,1,Restaurant,89,105,Evening,Fri,Sunny,125.0,EV,74,14.4,0
+20096,10,2,Gas Station,14,80,Night,Fri,Sunny,83.5,ICE,115,8.0,1
+20096,10,3,Restaurant,42,92,Morning,Fri,Sunny,102.5,EV,119,22.3,0
+20096,10,4,Restaurant,66,117,Afternoon,Fri,Sunny,137.0,EV,98,16.8,0
+20096,10,5,Hotel,503,141,Evening,Fri,Sunny,161.0,ICE,45,7.6,1
+20097,14,1,Shopping,20,78,Evening,Mon,Cloudy,83.0,ICE,71,6.6,1
+20097,14,2,Rest Area,28,16,Night,Mon,Cloudy,23.0,EV,54,9.6,0
+20097,14,3,Gas Station,20,85,Morning,Mon,Cloudy,90.0,EV,104,18.8,0
+20097,14,4,Rest Area,27,80,Afternoon,Mon,Cloudy,86.75,ICE,131,9.7,1
+20097,14,5,Shopping,72,117,Evening,Mon,Cloudy,137.0,EV,71,13.6,0
+20097,14,6,Hotel,445,157,Night,Mon,Cloudy,177.0,ICE,81,5.4,1
+20097,14,7,Gas Station,8,24,Morning,Mon,Cloudy,24.0,EV,123,21.9,0
+20098,17,1,Rest Area,28,56,Night,Thu,Cloudy,63.0,EV,68,13.7,0
+20098,17,2,Restaurant,52,75,Morning,Thu,Cloudy,88.0,ICE,94,7.7,1
+20098,17,3,Restaurant,70,52,Afternoon,Thu,Cloudy,72.0,ICE,61,5.1,1
+20098,17,4,Restaurant,58,119,Evening,Thu,Cloudy,133.5,ICE,92,7.3,1
+20098,17,5,Hotel,292,110,Night,Thu,Cloudy,130.0,EV,43,8.9,0
+20098,17,6,Rest Area,29,45,Morning,Thu,Cloudy,52.25,EV,69,12.1,0
+20099,8,1,Restaurant,85,98,Afternoon,Mon,Sunny,118.0,EV,135,27.0,0
+20099,8,2,Hotel,309,123,Evening,Mon,Sunny,143.0,EV,51,11.0,0
+20099,8,3,Hotel,379,146,Night,Mon,Sunny,166.0,ICE,68,4.1,1
+20099,8,4,Rest Area,22,77,Morning,Mon,Sunny,82.5,EV,74,13.5,0
+20100,8,1,Restaurant,86,77,Evening,Mon,Sunny,97.0,EV,127,25.4,0
+20100,8,2,Gas Station,8,57,Night,Mon,Sunny,57.0,EV,55,9.8,0
+20100,8,3,Tourist Attraction,81,143,Morning,Mon,Sunny,163.0,ICE,44,5.9,1
+20100,8,4,Tourist Attraction,135,104,Afternoon,Mon,Sunny,124.0,EV,89,16.9,0
+20100,8,5,Hotel,419,96,Evening,Mon,Sunny,116.0,EV,91,16.5,0
+20100,8,6,Hotel,197,95,Night,Mon,Sunny,115.0,ICE,85,3.9,1
+20101,11,1,Restaurant,64,56,Afternoon,Sun,Sunny,76.0,EV,69,12.5,0
+20101,11,2,Hotel,587,90,Evening,Sun,Sunny,110.0,EV,137,24.9,0
+20101,11,3,Hotel,290,152,Night,Sun,Sunny,172.0,ICE,136,13.1,1
+20102,13,1,Rest Area,16,44,Afternoon,Sat,Cloudy,48.0,EV,115,22.2,0
+20102,13,2,Shopping,110,73,Evening,Sat,Cloudy,93.0,EV,97,20.1,0
+20102,13,3,Gas Station,16,83,Night,Sat,Cloudy,87.0,EV,65,10.1,0
+20102,13,4,Rest Area,26,42,Morning,Sat,Cloudy,48.5,ICE,51,7.2,1
+20102,13,5,Rest Area,13,80,Afternoon,Sat,Cloudy,83.25,EV,57,10.2,0
+20103,18,1,Rest Area,28,33,Night,Sun,Sunny,40.0,EV,136,24.3,0
+20103,18,2,Gas Station,7,37,Morning,Sun,Sunny,37.0,ICE,53,8.8,1
+20103,18,3,Restaurant,72,53,Afternoon,Sun,Sunny,73.0,ICE,137,10.9,1
+20103,18,4,Shopping,66,104,Evening,Sun,Sunny,124.0,EV,114,20.7,0
+20103,18,5,Hotel,547,99,Night,Sun,Sunny,119.0,EV,81,14.3,0
+20103,18,6,Gas Station,9,66,Morning,Sun,Sunny,66.0,EV,101,18.8,0
+20103,18,7,Tourist Attraction,138,119,Afternoon,Sun,Sunny,139.0,EV,41,7.3,0
+20104,9,1,Restaurant,75,129,Evening,Tue,Sunny,149.0,ICE,112,6.5,1
+20104,9,2,Hotel,385,105,Night,Tue,Sunny,125.0,EV,135,24.6,0
+20104,9,3,Gas Station,8,49,Morning,Tue,Sunny,49.0,ICE,68,4.4,1
+20104,9,4,Shopping,25,91,Afternoon,Tue,Sunny,97.25,ICE,91,4.2,1
+20104,9,5,Shopping,75,65,Evening,Tue,Sunny,85.0,EV,87,15.7,0
+20105,5,1,Shopping,42,112,Evening,Thu,Rainy,122.5,EV,59,11.0,0
+20105,5,2,Gas Station,13,70,Night,Thu,Rainy,73.25,ICE,53,9.2,1
+20105,5,3,Shopping,34,123,Morning,Thu,Rainy,131.5,ICE,106,6.9,1
+20105,5,4,Rest Area,28,21,Afternoon,Thu,Rainy,28.0,EV,46,10.0,0
+20105,5,5,Shopping,24,80,Evening,Thu,Rainy,86.0,ICE,57,5.4,1
+20105,5,6,Rest Area,21,26,Night,Thu,Rainy,31.25,EV,49,7.3,0
+20106,13,1,Tourist Attraction,74,114,Afternoon,Sat,Rainy,134.0,EV,43,6.2,0
+20106,13,2,Tourist Attraction,118,124,Evening,Sat,Rainy,144.0,ICE,114,7.7,1
+20106,13,3,Gas Station,11,69,Night,Sat,Rainy,71.75,ICE,47,10.3,1
+20106,13,4,Tourist Attraction,129,76,Morning,Sat,Rainy,96.0,EV,138,27.0,0
+20106,13,5,Gas Station,6,48,Afternoon,Sat,Rainy,48.0,ICE,128,12.4,1
+20106,13,6,Hotel,579,141,Evening,Sat,Rainy,161.0,EV,70,11.4,0
+20106,13,7,Gas Station,12,22,Night,Sat,Rainy,25.0,EV,46,10.1,0
+20107,12,1,Restaurant,38,127,Afternoon,Wed,Sunny,136.5,EV,93,16.4,0
+20107,12,2,Shopping,50,130,Evening,Wed,Sunny,142.5,ICE,97,5.5,1
+20107,12,3,Hotel,534,116,Night,Wed,Sunny,136.0,EV,138,26.3,0
+20107,12,4,Shopping,64,129,Morning,Wed,Sunny,149.0,EV,71,12.7,0
+20107,12,5,Restaurant,75,58,Afternoon,Wed,Sunny,78.0,EV,92,19.1,0
+20107,12,6,Restaurant,82,55,Evening,Wed,Sunny,75.0,EV,55,8.6,0
+20107,12,7,Gas Station,10,34,Night,Wed,Sunny,36.5,EV,49,10.8,0
+20108,13,1,Hotel,285,65,Evening,Sun,Sunny,85.0,EV,80,14.5,0
+20108,13,2,Restaurant,49,65,Night,Sun,Sunny,77.25,EV,89,17.4,0
+20108,13,3,Restaurant,58,54,Morning,Sun,Sunny,68.5,EV,76,16.1,0
+20108,13,4,Restaurant,59,112,Afternoon,Sun,Sunny,126.75,EV,56,8.4,0
+20108,13,5,Restaurant,65,49,Evening,Sun,Sunny,69.0,EV,82,17.1,0
+20108,13,6,Hotel,564,122,Night,Sun,Sunny,142.0,EV,110,21.3,0
+20108,13,7,Restaurant,51,112,Morning,Sun,Sunny,124.75,ICE,88,6.3,1
+20109,4,1,Hotel,458,101,Night,Sat,Sunny,121.0,EV,66,10.8,0
+20109,4,2,Rest Area,12,51,Morning,Sat,Sunny,54.0,EV,124,23.9,0
+20109,4,3,Shopping,30,57,Afternoon,Sat,Sunny,64.5,EV,120,23.7,0
+20110,1,1,Tourist Attraction,111,127,Afternoon,Sun,Sunny,147.0,ICE,133,8.9,1
+20110,1,2,Restaurant,76,79,Evening,Sun,Sunny,99.0,EV,75,12.6,0
+20110,1,3,Hotel,511,105,Night,Sun,Sunny,125.0,ICE,91,5.0,1
+20110,1,4,Gas Station,9,85,Morning,Sun,Sunny,85.0,EV,137,27.8,0
+20110,1,5,Gas Station,13,45,Afternoon,Sun,Sunny,48.25,EV,108,18.7,0
+20111,2,1,Restaurant,61,94,Night,Mon,Sunny,114.0,ICE,48,5.8,1
+20111,2,2,Restaurant,49,117,Morning,Mon,Sunny,129.25,EV,70,15.0,0
+20111,2,3,Restaurant,44,60,Afternoon,Mon,Sunny,71.0,ICE,66,4.9,1
+20111,2,4,Hotel,385,71,Evening,Mon,Sunny,91.0,ICE,90,7.1,1
+20111,2,5,Restaurant,60,64,Night,Mon,Sunny,79.0,EV,130,25.7,0
+20112,12,1,Hotel,518,67,Night,Mon,Sunny,87.0,EV,77,12.6,0
+20112,12,2,Restaurant,86,83,Morning,Mon,Sunny,103.0,EV,108,21.0,0
+20112,12,3,Tourist Attraction,115,82,Afternoon,Mon,Sunny,102.0,EV,77,15.1,0
+20113,13,1,Restaurant,35,109,Evening,Wed,Sunny,117.75,ICE,137,10.7,1
+20113,13,2,Gas Station,18,83,Night,Wed,Sunny,87.5,ICE,57,9.1,1
+20113,13,3,Shopping,97,119,Morning,Wed,Sunny,139.0,EV,102,20.2,0
+20113,13,4,Gas Station,6,57,Afternoon,Wed,Sunny,57.0,ICE,84,4.0,1
+20113,13,5,Shopping,73,87,Evening,Wed,Sunny,107.0,ICE,139,11.8,1
+20113,13,6,Rest Area,14,53,Night,Wed,Sunny,56.5,EV,129,25.1,0
+20114,17,1,Shopping,77,128,Afternoon,Sat,Sunny,148.0,ICE,106,8.3,1
+20114,17,2,Restaurant,67,87,Evening,Sat,Sunny,107.0,ICE,106,6.0,1
+20114,17,3,Hotel,303,132,Night,Sat,Sunny,152.0,EV,97,18.3,0
+20114,17,4,Rest Area,13,44,Morning,Sat,Sunny,47.25,ICE,124,7.6,1
+20114,17,5,Restaurant,65,54,Afternoon,Sat,Sunny,74.0,EV,63,9.9,0
+20114,17,6,Rest Area,18,27,Evening,Sat,Sunny,31.5,ICE,131,8.0,1
+20115,17,1,Gas Station,12,84,Night,Sat,Sunny,87.0,EV,63,9.6,0
+20115,17,2,Restaurant,88,115,Morning,Sat,Sunny,135.0,ICE,41,11.0,1
+20115,17,3,Rest Area,12,71,Afternoon,Sat,Sunny,74.0,ICE,127,8.6,1
+20115,17,4,Rest Area,27,79,Evening,Sat,Sunny,85.75,EV,94,19.1,0
+20115,17,5,Gas Station,8,73,Night,Sat,Sunny,73.0,EV,85,14.7,0
+20115,17,6,Restaurant,42,112,Morning,Sat,Sunny,122.5,EV,69,11.9,0
+20115,17,7,Gas Station,9,62,Afternoon,Sat,Sunny,62.0,EV,105,19.7,0
+20116,13,1,Restaurant,43,98,Morning,Tue,Sunny,108.75,ICE,106,8.0,1
+20116,13,2,Restaurant,38,94,Afternoon,Tue,Sunny,103.5,ICE,136,8.7,1
+20116,13,3,Shopping,45,112,Evening,Tue,Sunny,123.25,ICE,138,13.9,1
+20116,13,4,Restaurant,85,85,Night,Tue,Sunny,105.0,EV,123,25.1,0
+20116,13,5,Rest Area,20,16,Morning,Tue,Sunny,21.0,ICE,133,7.7,1
+20116,13,6,Restaurant,53,105,Afternoon,Tue,Sunny,118.25,ICE,100,5.0,1
+20116,13,7,Tourist Attraction,122,122,Evening,Tue,Sunny,142.0,EV,86,14.8,0
+20116,13,8,Rest Area,21,27,Night,Tue,Sunny,32.25,EV,84,17.5,0
+20117,18,1,Shopping,106,71,Morning,Wed,Cloudy,91.0,ICE,117,6.5,1
+20117,18,2,Tourist Attraction,118,117,Afternoon,Wed,Cloudy,137.0,EV,61,10.5,0
+20117,18,3,Rest Area,28,71,Evening,Wed,Cloudy,78.0,ICE,98,7.6,1
+20117,18,4,Rest Area,25,29,Night,Wed,Cloudy,35.25,ICE,119,10.8,1
+20118,9,1,Shopping,38,115,Evening,Tue,Sunny,124.5,EV,73,12.6,0
+20118,9,2,Gas Station,13,71,Night,Tue,Sunny,74.25,ICE,126,12.9,1
+20118,9,3,Gas Station,9,77,Morning,Tue,Sunny,77.0,EV,119,24.0,0
+20118,9,4,Tourist Attraction,34,64,Afternoon,Tue,Sunny,72.5,EV,139,28.7,0
+20119,6,1,Tourist Attraction,118,117,Night,Fri,Cloudy,137.0,ICE,87,4.7,1
+20119,6,2,Gas Station,7,61,Morning,Fri,Cloudy,61.0,ICE,73,6.9,1
+20119,6,3,Tourist Attraction,69,76,Afternoon,Fri,Cloudy,96.0,ICE,56,7.6,1
+20119,6,4,Restaurant,82,86,Evening,Fri,Cloudy,106.0,EV,102,19.6,0
+20119,6,5,Hotel,419,109,Night,Fri,Cloudy,129.0,ICE,105,5.7,1
+20119,6,6,Rest Area,20,76,Morning,Fri,Cloudy,81.0,EV,82,14.5,0
+20120,8,1,Gas Station,9,49,Morning,Mon,Sunny,49.0,EV,129,25.1,0
+20120,8,2,Restaurant,62,73,Afternoon,Mon,Sunny,93.0,ICE,130,10.1,1
+20120,8,3,Shopping,87,114,Evening,Mon,Sunny,134.0,EV,102,19.3,0
+20120,8,4,Shopping,24,111,Night,Mon,Sunny,117.0,ICE,92,5.4,1
+20121,7,1,Tourist Attraction,131,90,Morning,Sun,Sunny,110.0,ICE,123,8.7,1
+20121,7,2,Shopping,58,83,Afternoon,Sun,Sunny,97.5,ICE,64,6.7,1
+20121,7,3,Hotel,505,91,Evening,Sun,Sunny,111.0,ICE,66,4.6,1
+20121,7,4,Restaurant,75,91,Night,Sun,Sunny,111.0,ICE,47,7.2,1
+20122,2,1,Hotel,304,90,Evening,Sat,Sunny,110.0,ICE,76,3.9,1
+20122,2,2,Hotel,285,60,Night,Sat,Sunny,80.0,ICE,62,4.8,1
+20122,2,3,Rest Area,22,53,Morning,Sat,Sunny,58.5,EV,40,7.9,0
+20122,2,4,Tourist Attraction,48,98,Afternoon,Sat,Sunny,110.0,ICE,53,8.0,1
+20122,2,5,Restaurant,66,110,Evening,Sat,Sunny,130.0,EV,121,23.7,0
+20122,2,6,Hotel,277,134,Night,Sat,Sunny,154.0,EV,62,10.5,0
+20123,19,1,Hotel,576,148,Evening,Tue,Sunny,168.0,EV,50,7.4,0
+20123,19,2,Rest Area,12,77,Night,Tue,Sunny,80.0,ICE,74,5.6,1
+20123,19,3,Tourist Attraction,144,92,Morning,Tue,Sunny,112.0,EV,81,13.5,0
+20123,19,4,Restaurant,40,120,Afternoon,Tue,Sunny,130.0,EV,90,16.0,0
+20124,8,1,Rest Area,29,51,Morning,Sat,Sunny,58.25,ICE,107,7.0,1
+20124,8,2,Shopping,45,70,Afternoon,Sat,Sunny,81.25,ICE,105,6.5,1
+20124,8,3,Tourist Attraction,106,66,Evening,Sat,Sunny,86.0,EV,50,7.6,0
+20124,8,4,Hotel,597,133,Night,Sat,Sunny,153.0,ICE,97,6.7,1
+20124,8,5,Restaurant,30,64,Morning,Sat,Sunny,71.5,ICE,114,8.1,1
+20124,8,6,Tourist Attraction,142,61,Afternoon,Sat,Sunny,81.0,ICE,67,6.6,1
+20124,8,7,Tourist Attraction,57,101,Evening,Sat,Sunny,115.25,ICE,136,11.2,1
+20125,1,1,Restaurant,56,45,Evening,Sat,Sunny,59.0,EV,57,10.6,0
+20125,1,2,Gas Station,15,78,Night,Sat,Sunny,81.75,ICE,76,4.4,1
+20125,1,3,Rest Area,24,16,Morning,Sat,Sunny,22.0,ICE,54,6.8,1
+20125,1,4,Rest Area,28,55,Afternoon,Sat,Sunny,62.0,ICE,63,4.7,1
+20125,1,5,Hotel,543,152,Evening,Sat,Sunny,172.0,EV,62,10.2,0
+20125,1,6,Hotel,189,79,Night,Sat,Sunny,99.0,EV,126,26.1,0
+20125,1,7,Gas Station,7,60,Morning,Sat,Sunny,60.0,ICE,82,4.4,1
+20126,14,1,Rest Area,20,44,Afternoon,Wed,Sunny,49.0,ICE,112,6.6,1
+20126,14,2,Rest Area,25,19,Evening,Wed,Sunny,25.25,EV,123,24.0,0
+20126,14,3,Rest Area,27,73,Night,Wed,Sunny,79.75,ICE,79,5.4,1
+20127,12,1,Restaurant,65,100,Evening,Fri,Sunny,120.0,ICE,93,5.0,1
+20127,12,2,Rest Area,21,34,Night,Fri,Sunny,39.25,EV,104,18.1,0
+20127,12,3,Rest Area,12,18,Morning,Fri,Sunny,21.0,ICE,107,9.7,1
+20127,12,4,Restaurant,64,104,Afternoon,Fri,Sunny,124.0,ICE,121,9.7,1
+20127,12,5,Shopping,43,73,Evening,Fri,Sunny,83.75,EV,89,15.2,0
+20127,12,6,Rest Area,15,35,Night,Fri,Sunny,38.75,EV,113,19.9,0
+20128,1,1,Tourist Attraction,57,141,Afternoon,Wed,Cloudy,155.25,ICE,111,10.4,1
+20128,1,2,Tourist Attraction,79,118,Evening,Wed,Cloudy,138.0,EV,73,12.8,0
+20128,1,3,Hotel,193,73,Night,Wed,Cloudy,93.0,ICE,125,12.3,1
+20128,1,4,Gas Station,17,59,Morning,Wed,Cloudy,63.25,ICE,80,4.7,1
+20128,1,5,Restaurant,54,92,Afternoon,Wed,Cloudy,105.5,ICE,96,4.2,1
+20128,1,6,Tourist Attraction,110,88,Evening,Wed,Cloudy,108.0,EV,45,7.1,0
+20128,1,7,Hotel,314,150,Night,Wed,Cloudy,170.0,EV,140,27.8,0
+20129,8,1,Shopping,58,103,Evening,Tue,Sunny,117.5,ICE,110,8.2,1
+20129,8,2,Shopping,40,101,Night,Tue,Sunny,111.0,ICE,127,6.7,1
+20129,8,3,Shopping,37,78,Morning,Tue,Sunny,87.25,EV,93,16.9,0
+20129,8,4,Restaurant,30,102,Afternoon,Tue,Sunny,109.5,EV,117,21.3,0
+20129,8,5,Restaurant,73,118,Evening,Tue,Sunny,138.0,EV,120,22.6,0
+20129,8,6,Hotel,206,160,Night,Tue,Sunny,180.0,ICE,107,7.4,1
+20129,8,7,Rest Area,21,20,Morning,Tue,Sunny,25.25,EV,59,10.7,0
+20129,8,8,Restaurant,85,57,Afternoon,Tue,Sunny,77.0,EV,109,21.1,0
+20129,8,9,Shopping,34,59,Evening,Tue,Sunny,67.5,ICE,80,4.0,1
+20130,5,1,Gas Station,19,65,Evening,Wed,Sunny,69.75,ICE,132,13.0,1
+20130,5,2,Gas Station,17,57,Night,Wed,Sunny,61.25,ICE,57,6.5,1
+20130,5,3,Restaurant,42,120,Morning,Wed,Sunny,130.5,EV,127,25.8,0
+20130,5,4,Restaurant,62,116,Afternoon,Wed,Sunny,136.0,ICE,53,6.4,1
+20131,19,1,Shopping,60,48,Morning,Thu,Rainy,63.0,ICE,94,4.7,1
+20131,19,2,Restaurant,61,57,Afternoon,Thu,Rainy,77.0,ICE,70,6.7,1
+20131,19,3,Hotel,271,88,Evening,Thu,Rainy,108.0,ICE,72,5.4,1
+20131,19,4,Hotel,557,129,Night,Thu,Rainy,149.0,EV,72,12.4,0
+20132,4,1,Hotel,290,88,Night,Fri,Sunny,108.0,ICE,135,14.0,1
+20132,4,2,Rest Area,15,16,Morning,Fri,Sunny,19.75,EV,101,21.1,0
+20132,4,3,Restaurant,32,65,Afternoon,Fri,Sunny,73.0,EV,133,26.4,0
+20132,4,4,Restaurant,80,111,Evening,Fri,Sunny,131.0,EV,50,9.5,0
+20132,4,5,Hotel,346,148,Night,Fri,Sunny,168.0,ICE,116,9.1,1
+20132,4,6,Restaurant,64,76,Morning,Fri,Sunny,96.0,EV,75,12.7,0
+20132,4,7,Restaurant,56,74,Afternoon,Fri,Sunny,88.0,ICE,135,9.8,1
+20132,4,8,Hotel,456,113,Evening,Fri,Sunny,133.0,ICE,100,5.0,1
+20133,5,1,Restaurant,70,40,Night,Thu,Cloudy,60.0,ICE,135,12.9,1
+20133,5,2,Restaurant,89,72,Morning,Thu,Cloudy,92.0,EV,109,21.9,0
+20133,5,3,Restaurant,72,54,Afternoon,Thu,Cloudy,74.0,ICE,58,7.3,1
+20133,5,4,Rest Area,11,21,Evening,Thu,Cloudy,23.75,ICE,67,7.9,1
+20133,5,5,Rest Area,20,71,Night,Thu,Cloudy,76.0,ICE,91,6.1,1
+20133,5,6,Restaurant,59,113,Morning,Thu,Cloudy,127.75,EV,96,18.0,0
+20133,5,7,Tourist Attraction,112,120,Afternoon,Thu,Cloudy,140.0,EV,56,10.8,0
+20133,5,8,Restaurant,64,88,Evening,Thu,Cloudy,108.0,EV,51,10.9,0
+20134,13,1,Hotel,517,146,Night,Wed,Rainy,166.0,ICE,96,4.7,1
+20134,13,2,Gas Station,12,48,Morning,Wed,Rainy,51.0,EV,53,11.1,0
+20134,13,3,Rest Area,25,59,Afternoon,Wed,Rainy,65.25,ICE,101,8.4,1
+20134,13,4,Shopping,93,68,Evening,Wed,Rainy,88.0,ICE,59,5.9,1
+20135,3,1,Restaurant,53,70,Afternoon,Sun,Sunny,83.25,EV,53,10.7,0
+20135,3,2,Restaurant,72,98,Evening,Sun,Sunny,118.0,ICE,63,8.0,1
+20135,3,3,Gas Station,6,56,Night,Sun,Sunny,56.0,EV,48,8.6,0
+20135,3,4,Rest Area,23,30,Morning,Sun,Sunny,35.75,ICE,119,9.0,1
+20135,3,5,Restaurant,46,88,Afternoon,Sun,Sunny,99.5,EV,93,16.2,0
+20136,12,1,Shopping,55,90,Evening,Wed,Rainy,103.75,ICE,125,10.8,1
+20136,12,2,Shopping,108,54,Night,Wed,Rainy,74.0,ICE,98,5.1,1
+20136,12,3,Restaurant,76,62,Morning,Wed,Rainy,82.0,ICE,59,7.6,1
+20136,12,4,Restaurant,73,56,Afternoon,Wed,Rainy,76.0,ICE,112,7.4,1
+20136,12,5,Hotel,518,90,Evening,Wed,Rainy,110.0,ICE,90,6.1,1
+20136,12,6,Gas Station,17,47,Night,Wed,Rainy,51.25,EV,92,18.9,0
+20137,18,1,Shopping,59,109,Evening,Tue,Sunny,123.75,ICE,75,4.9,1
+20137,18,2,Restaurant,46,70,Night,Tue,Sunny,81.5,EV,106,20.0,0
+20137,18,3,Tourist Attraction,41,127,Morning,Tue,Sunny,137.25,EV,81,14.8,0
+20137,18,4,Rest Area,16,31,Afternoon,Tue,Sunny,35.0,EV,106,18.9,0
+20137,18,5,Tourist Attraction,67,139,Evening,Tue,Sunny,159.0,ICE,135,8.5,1
+20137,18,6,Restaurant,75,96,Night,Tue,Sunny,116.0,ICE,91,5.1,1
+20137,18,7,Rest Area,19,67,Morning,Tue,Sunny,71.75,ICE,101,5.0,1
+20138,20,1,Gas Station,9,39,Afternoon,Sun,Sunny,39.0,EV,79,16.7,0
+20138,20,2,Restaurant,43,82,Evening,Sun,Sunny,92.75,ICE,122,8.6,1
+20138,20,3,Hotel,408,108,Night,Sun,Sunny,128.0,ICE,69,6.9,1
+20138,20,4,Restaurant,61,122,Morning,Sun,Sunny,142.0,EV,52,10.9,0
+20139,4,1,Rest Area,23,75,Night,Fri,Sunny,80.75,EV,111,22.8,0
+20139,4,2,Tourist Attraction,80,122,Morning,Fri,Sunny,142.0,EV,84,15.1,0
+20139,4,3,Tourist Attraction,135,61,Afternoon,Fri,Sunny,81.0,EV,123,24.0,0
+20139,4,4,Gas Station,17,84,Evening,Fri,Sunny,88.25,EV,87,16.8,0
+20139,4,5,Restaurant,48,110,Night,Fri,Sunny,122.0,EV,45,7.1,0
+20139,4,6,Tourist Attraction,128,118,Morning,Fri,Sunny,138.0,ICE,83,4.6,1
+20140,3,1,Rest Area,16,73,Morning,Tue,Cloudy,77.0,EV,52,7.9,0
+20140,3,2,Gas Station,11,57,Afternoon,Tue,Cloudy,59.75,ICE,136,11.0,1
+20140,3,3,Rest Area,27,68,Evening,Tue,Cloudy,74.75,ICE,112,10.8,1
+20140,3,4,Shopping,26,120,Night,Tue,Cloudy,126.5,ICE,109,10.1,1
+20140,3,5,Rest Area,16,81,Morning,Tue,Cloudy,85.0,EV,86,15.5,0
+20140,3,6,Restaurant,64,75,Afternoon,Tue,Cloudy,95.0,ICE,74,5.9,1
+20140,3,7,Restaurant,50,89,Evening,Tue,Cloudy,101.5,EV,108,20.4,0
+20141,10,1,Hotel,335,91,Night,Fri,Sunny,111.0,EV,52,9.6,0
+20141,10,2,Tourist Attraction,139,129,Morning,Fri,Sunny,149.0,ICE,58,4.9,1
+20141,10,3,Restaurant,38,46,Afternoon,Fri,Sunny,55.5,EV,44,9.3,0
+20141,10,4,Hotel,371,119,Evening,Fri,Sunny,139.0,ICE,105,9.0,1
+20141,10,5,Rest Area,14,61,Night,Fri,Sunny,64.5,ICE,72,4.0,1
+20141,10,6,Gas Station,6,55,Morning,Fri,Sunny,55.0,EV,116,24.1,0
+20142,18,1,Restaurant,80,96,Evening,Mon,Sunny,116.0,ICE,78,5.8,1
+20142,18,2,Hotel,287,135,Night,Mon,Sunny,155.0,ICE,62,5.0,1
+20142,18,3,Rest Area,24,41,Morning,Mon,Sunny,47.0,ICE,110,8.1,1
+20142,18,4,Restaurant,57,121,Afternoon,Mon,Sunny,135.25,EV,118,22.2,0
+20143,2,1,Rest Area,10,36,Morning,Tue,Cloudy,38.5,ICE,68,6.1,1
+20143,2,2,Restaurant,76,126,Afternoon,Tue,Cloudy,146.0,EV,56,8.9,0
+20143,2,3,Rest Area,27,35,Evening,Tue,Cloudy,41.75,EV,107,22.2,0
+20144,7,1,Tourist Attraction,36,113,Morning,Fri,Sunny,122.0,ICE,98,4.6,1
+20144,7,2,Shopping,52,130,Afternoon,Fri,Sunny,143.0,ICE,71,7.2,1
+20144,7,3,Shopping,39,47,Evening,Fri,Sunny,56.75,EV,85,17.0,0
+20144,7,4,Hotel,408,97,Night,Fri,Sunny,117.0,EV,122,24.0,0
+20144,7,5,Tourist Attraction,120,131,Morning,Fri,Sunny,151.0,ICE,124,8.1,1
+20145,10,1,Rest Area,17,65,Afternoon,Wed,Sunny,69.25,ICE,44,11.2,1
+20145,10,2,Restaurant,39,122,Evening,Wed,Sunny,131.75,EV,101,19.8,0
+20145,10,3,Hotel,459,148,Night,Wed,Sunny,168.0,EV,76,12.9,0
+20145,10,4,Gas Station,9,38,Morning,Wed,Sunny,38.0,EV,106,22.0,0
+20145,10,5,Restaurant,55,54,Afternoon,Wed,Sunny,67.75,EV,111,20.4,0
+20145,10,6,Rest Area,13,41,Evening,Wed,Sunny,44.25,EV,120,22.0,0
+20145,10,7,Gas Station,14,77,Night,Wed,Sunny,80.5,ICE,95,7.6,1
+20146,1,1,Rest Area,19,84,Morning,Sun,Cloudy,88.75,EV,85,16.6,0
+20146,1,2,Restaurant,60,74,Afternoon,Sun,Cloudy,89.0,EV,71,13.0,0
+20146,1,3,Shopping,58,44,Evening,Sun,Cloudy,58.5,ICE,139,13.3,1
+20147,1,1,Restaurant,41,82,Afternoon,Wed,Sunny,92.25,ICE,45,8.7,1
+20147,1,2,Hotel,306,102,Evening,Wed,Sunny,122.0,EV,86,16.9,0
+20147,1,3,Hotel,583,98,Night,Wed,Sunny,118.0,EV,116,21.3,0
+20148,18,1,Restaurant,59,44,Morning,Thu,Sunny,58.75,ICE,54,9.8,1
+20148,18,2,Restaurant,67,52,Afternoon,Thu,Sunny,72.0,EV,104,18.4,0
+20148,18,3,Shopping,36,93,Evening,Thu,Sunny,102.0,EV,48,7.9,0
+20148,18,4,Hotel,552,144,Night,Thu,Sunny,164.0,ICE,56,7.0,1
+20148,18,5,Rest Area,12,57,Morning,Thu,Sunny,60.0,EV,113,21.4,0
+20149,16,1,Restaurant,39,103,Morning,Wed,Sunny,112.75,ICE,123,8.5,1
+20149,16,2,Tourist Attraction,45,101,Afternoon,Wed,Sunny,112.25,ICE,49,7.4,1
+20149,16,3,Restaurant,66,108,Evening,Wed,Sunny,128.0,ICE,108,5.6,1
+20150,17,1,Tourist Attraction,56,76,Afternoon,Wed,Sunny,90.0,ICE,76,3.6,1
+20150,17,2,Gas Station,12,27,Evening,Wed,Sunny,30.0,EV,127,25.2,0
+20150,17,3,Hotel,207,122,Night,Wed,Sunny,142.0,ICE,51,7.5,1
+20150,17,4,Restaurant,44,51,Morning,Wed,Sunny,62.0,EV,70,12.7,0
+20151,5,1,Rest Area,26,29,Morning,Sun,Sunny,35.5,EV,138,28.2,0
+20151,5,2,Tourist Attraction,45,70,Afternoon,Sun,Sunny,81.25,EV,68,11.0,0
+20151,5,3,Restaurant,68,105,Evening,Sun,Sunny,125.0,EV,120,21.2,0
+20152,8,1,Gas Station,10,53,Morning,Mon,Rainy,55.5,EV,62,12.3,0
+20152,8,2,Restaurant,78,99,Afternoon,Mon,Rainy,119.0,ICE,75,6.7,1
+20152,8,3,Restaurant,90,92,Evening,Mon,Rainy,112.0,ICE,96,5.1,1
+20152,8,4,Hotel,583,91,Night,Mon,Rainy,111.0,ICE,56,7.3,1
+20152,8,5,Restaurant,73,61,Morning,Mon,Rainy,81.0,ICE,84,6.4,1
+20152,8,6,Gas Station,9,41,Afternoon,Mon,Rainy,41.0,EV,72,12.9,0
+20153,8,1,Tourist Attraction,91,64,Morning,Sat,Sunny,84.0,ICE,101,5.7,1
+20153,8,2,Tourist Attraction,72,68,Afternoon,Sat,Sunny,88.0,EV,99,17.5,0
+20153,8,3,Restaurant,70,46,Evening,Sat,Sunny,66.0,EV,57,12.4,0
+20153,8,4,Rest Area,12,59,Night,Sat,Sunny,62.0,ICE,72,3.8,1
+20153,8,5,Tourist Attraction,93,146,Morning,Sat,Sunny,166.0,ICE,43,6.9,1
+20153,8,6,Restaurant,83,128,Afternoon,Sat,Sunny,148.0,ICE,91,6.0,1
+20154,2,1,Tourist Attraction,111,160,Afternoon,Sat,Sunny,180.0,ICE,104,9.2,1
+20154,2,2,Restaurant,67,108,Evening,Sat,Sunny,128.0,EV,41,8.0,0
+20154,2,3,Hotel,580,160,Night,Sat,Sunny,180.0,EV,43,9.0,0
+20154,2,4,Tourist Attraction,138,89,Morning,Sat,Sunny,109.0,ICE,126,7.8,1
+20154,2,5,Restaurant,59,111,Afternoon,Sat,Sunny,125.75,EV,124,21.8,0
+20155,16,1,Restaurant,55,120,Morning,Fri,Cloudy,133.75,EV,91,17.6,0
+20155,16,2,Gas Station,17,26,Afternoon,Fri,Cloudy,30.25,EV,95,17.4,0
+20155,16,3,Shopping,63,124,Evening,Fri,Cloudy,144.0,ICE,135,13.9,1
+20155,16,4,Rest Area,10,53,Night,Fri,Cloudy,55.5,EV,103,18.3,0
+20156,20,1,Gas Station,14,73,Night,Mon,Cloudy,76.5,ICE,89,4.0,1
+20156,20,2,Rest Area,16,25,Morning,Mon,Cloudy,29.0,ICE,111,6.5,1
+20156,20,3,Tourist Attraction,89,139,Afternoon,Mon,Cloudy,159.0,EV,131,23.4,0
+20156,20,4,Restaurant,35,74,Evening,Mon,Cloudy,82.75,EV,136,27.9,0
+20156,20,5,Rest Area,24,67,Night,Mon,Cloudy,73.0,ICE,82,4.3,1
+20157,8,1,Tourist Attraction,53,109,Morning,Mon,Sunny,122.25,EV,53,11.5,0
+20157,8,2,Restaurant,39,86,Afternoon,Mon,Sunny,95.75,EV,60,12.9,0
+20157,8,3,Restaurant,86,118,Evening,Mon,Sunny,138.0,ICE,130,8.0,1
+20157,8,4,Hotel,343,124,Night,Mon,Sunny,144.0,ICE,132,9.1,1
+20157,8,5,Restaurant,55,107,Morning,Mon,Sunny,120.75,ICE,70,6.2,1
+20157,8,6,Restaurant,41,53,Afternoon,Mon,Sunny,63.25,ICE,134,11.8,1
+20158,15,1,Shopping,90,105,Evening,Fri,Cloudy,125.0,EV,49,7.2,0
+20158,15,2,Hotel,565,92,Night,Fri,Cloudy,112.0,EV,137,25.2,0
+20158,15,3,Gas Station,15,71,Morning,Fri,Cloudy,74.75,ICE,81,5.3,1
+20158,15,4,Tourist Attraction,69,144,Afternoon,Fri,Cloudy,164.0,ICE,102,5.4,1
+20158,15,5,Tourist Attraction,133,146,Evening,Fri,Cloudy,166.0,ICE,60,8.7,1
+20158,15,6,Restaurant,61,103,Night,Fri,Cloudy,123.0,EV,93,18.3,0
+20158,15,7,Restaurant,31,47,Morning,Fri,Cloudy,54.75,ICE,114,6.1,1
+20158,15,8,Tourist Attraction,87,99,Afternoon,Fri,Cloudy,119.0,EV,49,10.7,0
+20159,5,1,Restaurant,60,57,Night,Sat,Rainy,72.0,ICE,129,10.1,1
+20159,5,2,Shopping,54,58,Morning,Sat,Rainy,71.5,ICE,121,9.2,1
+20159,5,3,Tourist Attraction,103,125,Afternoon,Sat,Rainy,145.0,ICE,85,4.8,1
+20159,5,4,Tourist Attraction,52,155,Evening,Sat,Rainy,168.0,EV,131,24.7,0
+20159,5,5,Gas Station,12,52,Night,Sat,Rainy,55.0,EV,89,14.8,0
+20159,5,6,Gas Station,18,25,Morning,Sat,Rainy,29.5,EV,105,20.0,0
+20159,5,7,Tourist Attraction,120,106,Afternoon,Sat,Rainy,126.0,ICE,93,5.7,1
+20159,5,8,Restaurant,83,113,Evening,Sat,Rainy,133.0,EV,72,12.4,0
+20159,5,9,Rest Area,27,59,Night,Sat,Rainy,65.75,EV,100,19.0,0
+20160,7,1,Rest Area,26,36,Morning,Fri,Cloudy,42.5,ICE,55,6.0,1
+20160,7,2,Rest Area,28,53,Afternoon,Fri,Cloudy,60.0,ICE,120,9.8,1
+20160,7,3,Gas Station,16,38,Evening,Fri,Cloudy,42.0,EV,138,24.9,0
+20160,7,4,Hotel,423,85,Night,Fri,Cloudy,105.0,EV,57,11.3,0
+20161,15,1,Hotel,377,120,Evening,Thu,Sunny,140.0,EV,43,9.1,0
+20161,15,2,Hotel,498,117,Night,Thu,Sunny,137.0,EV,137,25.0,0
+20161,15,3,Tourist Attraction,111,80,Morning,Thu,Sunny,100.0,ICE,42,8.6,1
+20162,2,1,Gas Station,18,24,Night,Tue,Sunny,28.5,ICE,124,6.7,1
+20162,2,2,Rest Area,22,82,Morning,Tue,Sunny,87.5,ICE,77,5.9,1
+20162,2,3,Rest Area,13,48,Afternoon,Tue,Sunny,51.25,EV,46,8.4,0
+20162,2,4,Gas Station,6,83,Evening,Tue,Sunny,83.0,EV,60,11.8,0
+20162,2,5,Hotel,364,93,Night,Tue,Sunny,113.0,ICE,132,9.9,1
+20162,2,6,Rest Area,13,67,Morning,Tue,Sunny,70.25,ICE,47,9.0,1
+20162,2,7,Rest Area,15,37,Afternoon,Tue,Sunny,40.75,EV,57,10.6,0
+20163,13,1,Hotel,592,103,Evening,Thu,Cloudy,123.0,EV,106,18.6,0
+20163,13,2,Restaurant,75,58,Night,Thu,Cloudy,78.0,ICE,71,5.0,1
+20163,13,3,Restaurant,56,125,Morning,Thu,Cloudy,139.0,ICE,46,9.2,1
+20163,13,4,Restaurant,51,127,Afternoon,Thu,Cloudy,139.75,ICE,54,8.3,1
+20163,13,5,Tourist Attraction,38,124,Evening,Thu,Cloudy,133.5,EV,78,16.3,0
+20163,13,6,Restaurant,72,70,Night,Thu,Cloudy,90.0,EV,121,24.9,0
+20163,13,7,Rest Area,28,50,Morning,Thu,Cloudy,57.0,EV,78,15.2,0
+20163,13,8,Restaurant,72,70,Afternoon,Thu,Cloudy,90.0,EV,60,12.7,0
+20164,4,1,Hotel,540,150,Night,Wed,Cloudy,170.0,EV,139,26.5,0
+20164,4,2,Restaurant,47,48,Morning,Wed,Cloudy,59.75,EV,134,23.8,0
+20164,4,3,Restaurant,43,68,Afternoon,Wed,Cloudy,78.75,ICE,103,6.9,1
+20164,4,4,Restaurant,73,112,Evening,Wed,Cloudy,132.0,ICE,108,6.2,1
+20164,4,5,Hotel,538,126,Night,Wed,Cloudy,146.0,EV,80,13.4,0
+20165,4,1,Tourist Attraction,127,77,Afternoon,Sun,Cloudy,97.0,ICE,66,4.6,1
+20165,4,2,Restaurant,33,97,Evening,Sun,Cloudy,105.25,EV,80,15.8,0
+20165,4,3,Hotel,419,74,Night,Sun,Cloudy,94.0,ICE,118,9.5,1
+20165,4,4,Gas Station,15,57,Morning,Sun,Cloudy,60.75,EV,105,20.4,0
+20165,4,5,Tourist Attraction,57,131,Afternoon,Sun,Cloudy,145.25,ICE,128,12.5,1
+20165,4,6,Restaurant,81,113,Evening,Sun,Cloudy,133.0,ICE,95,5.2,1
+20165,4,7,Rest Area,17,37,Night,Sun,Cloudy,41.25,EV,134,25.2,0
+20166,17,1,Rest Area,12,29,Morning,Wed,Sunny,32.0,EV,132,23.5,0
+20166,17,2,Tourist Attraction,105,112,Afternoon,Wed,Sunny,132.0,ICE,76,3.8,1
+20166,17,3,Shopping,27,87,Evening,Wed,Sunny,93.75,ICE,58,5.6,1
+20166,17,4,Hotel,308,69,Night,Wed,Sunny,89.0,EV,113,20.7,0
+20166,17,5,Restaurant,57,98,Morning,Wed,Sunny,112.25,ICE,127,10.0,1
+20166,17,6,Restaurant,69,64,Afternoon,Wed,Sunny,84.0,EV,69,13.8,0
+20166,17,7,Hotel,324,157,Evening,Wed,Sunny,177.0,EV,110,21.8,0
+20167,3,1,Tourist Attraction,131,150,Morning,Sat,Cloudy,170.0,ICE,121,10.4,1
+20167,3,2,Gas Station,11,52,Afternoon,Sat,Cloudy,54.75,EV,94,19.0,0
+20167,3,3,Tourist Attraction,122,138,Evening,Sat,Cloudy,158.0,ICE,132,9.4,1
+20167,3,4,Hotel,285,113,Night,Sat,Cloudy,133.0,ICE,131,10.1,1
+20167,3,5,Tourist Attraction,112,152,Morning,Sat,Cloudy,172.0,EV,44,8.4,0
+20167,3,6,Restaurant,52,120,Afternoon,Sat,Cloudy,133.0,ICE,77,4.1,1
+20168,19,1,Restaurant,77,62,Evening,Sat,Sunny,82.0,EV,79,14.6,0
+20168,19,2,Gas Station,5,73,Night,Sat,Sunny,73.0,EV,44,6.2,0
+20168,19,3,Rest Area,14,61,Morning,Sat,Sunny,64.5,EV,129,24.9,0
+20168,19,4,Tourist Attraction,40,103,Afternoon,Sat,Sunny,113.0,ICE,130,11.5,1
+20168,19,5,Hotel,600,76,Evening,Sat,Sunny,96.0,EV,87,15.1,0
+20168,19,6,Gas Station,13,80,Night,Sat,Sunny,83.25,ICE,45,8.3,1
+20168,19,7,Gas Station,13,17,Morning,Sat,Sunny,20.25,EV,53,11.4,0
+20168,19,8,Shopping,86,95,Afternoon,Sat,Sunny,115.0,EV,133,24.7,0
+20169,6,1,Hotel,236,87,Night,Sun,Cloudy,107.0,EV,54,9.2,0
+20169,6,2,Rest Area,10,26,Morning,Sun,Cloudy,28.5,ICE,89,5.3,1
+20169,6,3,Gas Station,11,83,Afternoon,Sun,Cloudy,85.75,ICE,80,5.5,1
+20170,11,1,Rest Area,16,15,Night,Wed,Rainy,19.0,EV,66,12.5,0
+20170,11,2,Gas Station,16,63,Morning,Wed,Rainy,67.0,EV,65,13.7,0
+20170,11,3,Restaurant,86,56,Afternoon,Wed,Rainy,76.0,ICE,72,4.2,1
+20170,11,4,Hotel,472,134,Evening,Wed,Rainy,154.0,ICE,71,5.4,1
+20171,3,1,Gas Station,12,75,Morning,Fri,Rainy,78.0,ICE,79,4.3,1
+20171,3,2,Shopping,35,103,Afternoon,Fri,Rainy,111.75,EV,58,10.0,0
+20171,3,3,Restaurant,45,69,Evening,Fri,Rainy,80.25,ICE,100,7.9,1
+20171,3,4,Hotel,583,155,Night,Fri,Rainy,175.0,EV,120,24.5,0
+20172,2,1,Restaurant,33,91,Afternoon,Tue,Sunny,99.25,ICE,57,6.0,1
+20172,2,2,Tourist Attraction,58,159,Evening,Tue,Sunny,173.5,EV,75,15.9,0
+20172,2,3,Restaurant,70,113,Night,Tue,Sunny,133.0,EV,110,21.2,0
+20172,2,4,Rest Area,14,74,Morning,Tue,Sunny,77.5,EV,129,23.9,0
+20173,16,1,Gas Station,10,80,Morning,Sun,Cloudy,82.5,ICE,47,7.5,1
+20173,16,2,Restaurant,80,88,Afternoon,Sun,Cloudy,108.0,ICE,64,5.2,1
+20173,16,3,Restaurant,31,111,Evening,Sun,Cloudy,118.75,ICE,102,8.2,1
+20173,16,4,Gas Station,7,21,Night,Sun,Cloudy,21.0,EV,111,19.6,0
+20173,16,5,Restaurant,59,90,Morning,Sun,Cloudy,104.75,EV,108,19.8,0
+20173,16,6,Tourist Attraction,56,63,Afternoon,Sun,Cloudy,77.0,ICE,55,8.0,1
+20173,16,7,Rest Area,24,41,Evening,Sun,Cloudy,47.0,EV,81,13.4,0
+20173,16,8,Rest Area,16,69,Night,Sun,Cloudy,73.0,EV,92,15.7,0
+20174,20,1,Restaurant,76,70,Evening,Mon,Sunny,90.0,EV,94,18.6,0
+20174,20,2,Hotel,320,98,Night,Mon,Sunny,118.0,ICE,117,10.9,1
+20174,20,3,Tourist Attraction,48,123,Morning,Mon,Sunny,135.0,EV,81,15.1,0
+20175,7,1,Restaurant,79,116,Morning,Mon,Sunny,136.0,ICE,66,7.3,1
+20175,7,2,Tourist Attraction,88,112,Afternoon,Mon,Sunny,132.0,ICE,44,8.3,1
+20175,7,3,Tourist Attraction,123,156,Evening,Mon,Sunny,176.0,ICE,116,6.2,1
+20175,7,4,Restaurant,83,47,Night,Mon,Sunny,67.0,ICE,130,6.9,1
+20175,7,5,Restaurant,38,95,Morning,Mon,Sunny,104.5,ICE,126,9.5,1
+20175,7,6,Restaurant,90,77,Afternoon,Mon,Sunny,97.0,EV,83,14.2,0
+20176,9,1,Restaurant,54,52,Evening,Sat,Sunny,65.5,ICE,92,5.5,1
+20176,9,2,Gas Station,20,56,Night,Sat,Sunny,61.0,ICE,95,6.5,1
+20176,9,3,Tourist Attraction,31,112,Morning,Sat,Sunny,119.75,ICE,73,5.5,1
+20177,1,1,Restaurant,79,70,Evening,Wed,Sunny,90.0,EV,81,16.0,0
+20177,1,2,Rest Area,27,35,Night,Wed,Sunny,41.75,EV,54,10.6,0
+20177,1,3,Gas Station,15,69,Morning,Wed,Sunny,72.75,EV,137,27.7,0
+20177,1,4,Tourist Attraction,98,75,Afternoon,Wed,Sunny,95.0,EV,138,26.5,0
+20177,1,5,Restaurant,63,46,Evening,Wed,Sunny,66.0,ICE,62,8.0,1
+20178,8,1,Gas Station,14,16,Morning,Thu,Cloudy,19.5,ICE,101,9.1,1
+20178,8,2,Tourist Attraction,45,82,Afternoon,Thu,Cloudy,93.25,EV,84,14.2,0
+20178,8,3,Shopping,41,128,Evening,Thu,Cloudy,138.25,EV,72,14.1,0
+20178,8,4,Rest Area,17,58,Night,Thu,Cloudy,62.25,EV,118,20.7,0
+20178,8,5,Shopping,31,128,Morning,Thu,Cloudy,135.75,EV,99,17.9,0
+20179,9,1,Restaurant,34,128,Afternoon,Fri,Cloudy,136.5,ICE,139,9.4,1
+20179,9,2,Restaurant,34,48,Evening,Fri,Cloudy,56.5,EV,139,25.6,0
+20179,9,3,Hotel,365,69,Night,Fri,Cloudy,89.0,EV,126,24.8,0
+20179,9,4,Restaurant,76,103,Morning,Fri,Cloudy,123.0,EV,107,20.9,0
+20180,9,1,Rest Area,23,37,Morning,Sun,Sunny,42.75,EV,107,20.1,0
+20180,9,2,Restaurant,85,98,Afternoon,Sun,Sunny,118.0,EV,97,16.8,0
+20180,9,3,Restaurant,43,43,Evening,Sun,Sunny,53.75,EV,69,12.5,0
+20180,9,4,Rest Area,17,28,Night,Sun,Sunny,32.25,EV,75,13.4,0
+20180,9,5,Tourist Attraction,115,102,Morning,Sun,Sunny,122.0,ICE,139,7.9,1
+20180,9,6,Shopping,44,49,Afternoon,Sun,Sunny,60.0,ICE,122,12.0,1
+20181,6,1,Restaurant,32,58,Evening,Sun,Rainy,66.0,ICE,88,5.1,1
+20181,6,2,Hotel,209,109,Night,Sun,Rainy,129.0,ICE,104,8.8,1
+20181,6,3,Restaurant,66,114,Morning,Sun,Rainy,134.0,ICE,134,11.9,1
+20181,6,4,Restaurant,48,41,Afternoon,Sun,Rainy,53.0,ICE,62,5.2,1
+20181,6,5,Rest Area,14,60,Evening,Sun,Rainy,63.5,EV,90,17.0,0
+20181,6,6,Gas Station,10,32,Night,Sun,Rainy,34.5,EV,107,20.3,0
+20182,9,1,Shopping,41,76,Morning,Wed,Sunny,86.25,ICE,49,6.7,1
+20182,9,2,Rest Area,10,43,Afternoon,Wed,Sunny,45.5,EV,132,27.2,0
+20182,9,3,Rest Area,22,61,Evening,Wed,Sunny,66.5,ICE,116,6.5,1
+20182,9,4,Gas Station,20,48,Night,Wed,Sunny,53.0,EV,65,11.0,0
+20182,9,5,Gas Station,17,62,Morning,Wed,Sunny,66.25,EV,76,16.2,0
+20183,10,1,Hotel,464,151,Night,Mon,Sunny,171.0,EV,129,25.7,0
+20183,10,2,Gas Station,8,77,Morning,Mon,Sunny,77.0,EV,126,22.4,0
+20183,10,3,Rest Area,17,69,Afternoon,Mon,Sunny,73.25,EV,139,25.0,0
+20183,10,4,Restaurant,42,48,Evening,Mon,Sunny,58.5,EV,139,24.9,0
+20183,10,5,Hotel,420,90,Night,Mon,Sunny,110.0,ICE,94,5.8,1
+20183,10,6,Restaurant,34,105,Morning,Mon,Sunny,113.5,ICE,59,6.6,1
+20183,10,7,Tourist Attraction,57,132,Afternoon,Mon,Sunny,146.25,EV,98,20.3,0
+20184,4,1,Restaurant,62,80,Morning,Mon,Cloudy,100.0,ICE,115,10.0,1
+20184,4,2,Restaurant,60,73,Afternoon,Mon,Cloudy,88.0,EV,88,16.8,0
+20184,4,3,Tourist Attraction,88,160,Evening,Mon,Cloudy,180.0,ICE,104,6.6,1
+20184,4,4,Hotel,411,140,Night,Mon,Cloudy,160.0,EV,68,11.8,0
+20185,4,1,Restaurant,60,101,Evening,Tue,Sunny,116.0,ICE,83,3.9,1
+20185,4,2,Hotel,185,140,Night,Tue,Sunny,160.0,EV,67,13.3,0
+20185,4,3,Shopping,102,100,Morning,Tue,Sunny,120.0,ICE,98,6.8,1
+20185,4,4,Tourist Attraction,59,158,Afternoon,Tue,Sunny,172.75,EV,54,8.1,0
+20186,20,1,Gas Station,15,20,Afternoon,Tue,Rainy,23.75,ICE,48,5.6,1
+20186,20,2,Shopping,103,63,Evening,Tue,Rainy,83.0,EV,46,6.2,0
+20186,20,3,Hotel,414,152,Night,Tue,Rainy,172.0,EV,109,20.5,0
+20186,20,4,Rest Area,11,51,Morning,Tue,Rainy,53.75,EV,104,20.6,0
+20186,20,5,Restaurant,49,80,Afternoon,Tue,Rainy,92.25,ICE,50,5.7,1
+20187,3,1,Tourist Attraction,91,89,Afternoon,Thu,Sunny,109.0,ICE,106,6.9,1
+20187,3,2,Hotel,441,155,Evening,Thu,Sunny,175.0,ICE,126,11.3,1
+20187,3,3,Rest Area,16,42,Night,Thu,Sunny,46.0,EV,119,22.4,0
+20187,3,4,Tourist Attraction,55,99,Morning,Thu,Sunny,112.75,ICE,126,7.7,1
+20187,3,5,Restaurant,78,81,Afternoon,Thu,Sunny,101.0,EV,119,22.8,0
+20188,14,1,Rest Area,15,45,Morning,Tue,Sunny,48.75,ICE,79,4.3,1
+20188,14,2,Restaurant,81,73,Afternoon,Tue,Sunny,93.0,ICE,133,10.3,1
+20188,14,3,Hotel,460,151,Evening,Tue,Sunny,171.0,ICE,109,9.6,1
+20188,14,4,Hotel,303,131,Night,Tue,Sunny,151.0,ICE,111,8.7,1
+20189,9,1,Restaurant,50,47,Afternoon,Thu,Sunny,59.5,EV,131,24.2,0
+20189,9,2,Restaurant,40,50,Evening,Thu,Sunny,60.0,ICE,102,9.2,1
+20189,9,3,Rest Area,18,43,Night,Thu,Sunny,47.5,ICE,125,9.0,1
+20189,9,4,Shopping,54,92,Morning,Thu,Sunny,105.5,EV,97,18.5,0
+20189,9,5,Restaurant,88,53,Afternoon,Thu,Sunny,73.0,EV,48,10.1,0
+20189,9,6,Tourist Attraction,39,96,Evening,Thu,Sunny,105.75,ICE,50,6.5,1
+20189,9,7,Restaurant,56,49,Night,Thu,Sunny,63.0,ICE,92,6.7,1
+20189,9,8,Rest Area,19,80,Morning,Thu,Sunny,84.75,EV,65,11.4,0
+20190,15,1,Tourist Attraction,54,115,Evening,Tue,Sunny,128.5,EV,95,19.3,0
+20190,15,2,Gas Station,13,63,Night,Tue,Sunny,66.25,EV,122,22.0,0
+20190,15,3,Tourist Attraction,112,90,Morning,Tue,Sunny,110.0,ICE,129,8.0,1
+20190,15,4,Tourist Attraction,97,92,Afternoon,Tue,Sunny,112.0,ICE,128,7.8,1
+20190,15,5,Gas Station,6,75,Evening,Tue,Sunny,75.0,ICE,121,8.9,1
+20190,15,6,Rest Area,10,71,Night,Tue,Sunny,73.5,EV,41,8.4,0
+20190,15,7,Rest Area,30,38,Morning,Tue,Sunny,45.5,EV,58,11.0,0
+20191,11,1,Tourist Attraction,56,129,Night,Sun,Snowy,143.0,EV,122,24.5,0
+20191,11,2,Rest Area,14,44,Morning,Sun,Snowy,47.5,ICE,96,7.6,1
+20191,11,3,Shopping,66,88,Afternoon,Sun,Snowy,108.0,EV,137,24.5,0
+20191,11,4,Gas Station,9,43,Evening,Sun,Snowy,43.0,ICE,112,6.9,1
+20192,9,1,Shopping,102,49,Afternoon,Mon,Sunny,69.0,EV,129,23.0,0
+20192,9,2,Shopping,62,113,Evening,Mon,Sunny,133.0,ICE,56,5.4,1
+20192,9,3,Hotel,540,157,Night,Mon,Sunny,177.0,ICE,40,11.7,1
+20192,9,4,Rest Area,25,17,Morning,Mon,Sunny,23.25,EV,125,23.4,0
+20192,9,5,Tourist Attraction,44,140,Afternoon,Mon,Sunny,151.0,ICE,47,6.7,1
+20193,18,1,Tourist Attraction,128,85,Afternoon,Sat,Sunny,105.0,EV,124,23.7,0
+20193,18,2,Gas Station,14,47,Evening,Sat,Sunny,50.5,ICE,125,8.9,1
+20193,18,3,Rest Area,29,73,Night,Sat,Sunny,80.25,EV,53,10.3,0
+20193,18,4,Gas Station,5,83,Morning,Sat,Sunny,83.0,EV,136,25.5,0
+20194,18,1,Gas Station,12,15,Morning,Wed,Sunny,18.0,ICE,89,6.0,1
+20194,18,2,Restaurant,46,70,Afternoon,Wed,Sunny,81.5,EV,41,7.5,0
+20194,18,3,Restaurant,35,51,Evening,Wed,Sunny,59.75,ICE,59,5.5,1
+20194,18,4,Hotel,351,69,Night,Wed,Sunny,89.0,EV,100,18.3,0
+20194,18,5,Rest Area,19,68,Morning,Wed,Sunny,72.75,EV,138,25.9,0
+20195,9,1,Gas Station,7,23,Morning,Wed,Sunny,23.0,EV,60,11.8,0
+20195,9,2,Shopping,53,56,Afternoon,Wed,Sunny,69.25,EV,40,7.6,0
+20195,9,3,Restaurant,61,58,Evening,Wed,Sunny,78.0,ICE,129,7.0,1
+20195,9,4,Gas Station,6,34,Night,Wed,Sunny,34.0,EV,112,21.2,0
+20196,13,1,Gas Station,20,27,Afternoon,Wed,Rainy,32.0,EV,120,24.6,0
+20196,13,2,Shopping,44,130,Evening,Wed,Rainy,141.0,ICE,101,7.4,1
+20196,13,3,Rest Area,17,26,Night,Wed,Rainy,30.25,ICE,108,9.0,1
+20196,13,4,Restaurant,38,41,Morning,Wed,Rainy,50.5,ICE,73,4.0,1
+20196,13,5,Rest Area,16,28,Afternoon,Wed,Rainy,32.0,ICE,66,7.2,1
+20197,8,1,Gas Station,6,18,Night,Sun,Sunny,18.0,ICE,75,6.5,1
+20197,8,2,Restaurant,44,105,Morning,Sun,Sunny,116.0,ICE,50,9.1,1
+20197,8,3,Restaurant,75,128,Afternoon,Sun,Sunny,148.0,EV,60,12.7,0
+20197,8,4,Shopping,43,66,Evening,Sun,Sunny,76.75,ICE,47,10.3,1
+20197,8,5,Shopping,53,56,Night,Sun,Sunny,69.25,EV,71,15.0,0
+20197,8,6,Gas Station,19,58,Morning,Sun,Sunny,62.75,ICE,93,6.9,1
+20197,8,7,Tourist Attraction,96,152,Afternoon,Sun,Sunny,172.0,EV,104,21.3,0
+20197,8,8,Restaurant,68,80,Evening,Sun,Sunny,100.0,EV,109,22.5,0
+20198,10,1,Restaurant,70,71,Afternoon,Mon,Sunny,91.0,EV,121,23.4,0
+20198,10,2,Restaurant,50,55,Evening,Mon,Sunny,67.5,ICE,75,3.8,1
+20198,10,3,Rest Area,21,75,Night,Mon,Sunny,80.25,ICE,118,7.2,1
+20198,10,4,Rest Area,12,28,Morning,Mon,Sunny,31.0,ICE,77,4.8,1
+20198,10,5,Shopping,75,101,Afternoon,Mon,Sunny,121.0,ICE,124,9.5,1
+20199,9,1,Restaurant,60,93,Afternoon,Sun,Rainy,108.0,EV,131,25.0,0
+20199,9,2,Hotel,579,152,Evening,Sun,Rainy,172.0,ICE,42,8.2,1
+20199,9,3,Gas Station,8,73,Night,Sun,Rainy,73.0,EV,97,17.0,0
+20199,9,4,Restaurant,47,57,Morning,Sun,Rainy,68.75,EV,42,8.2,0
+20199,9,5,Rest Area,27,31,Afternoon,Sun,Rainy,37.75,ICE,60,5.6,1
+20199,9,6,Hotel,497,64,Evening,Sun,Rainy,84.0,ICE,86,6.0,1
+20200,3,1,Hotel,254,110,Evening,Sun,Cloudy,130.0,ICE,120,10.1,1
+20200,3,2,Rest Area,11,19,Night,Sun,Cloudy,21.75,EV,123,25.3,0
+20200,3,3,Shopping,105,57,Morning,Sun,Cloudy,77.0,ICE,47,6.5,1
+20200,3,4,Restaurant,34,80,Afternoon,Sun,Cloudy,88.5,EV,94,16.2,0
+20200,3,5,Rest Area,29,67,Evening,Sun,Cloudy,74.25,ICE,92,7.6,1
+20200,3,6,Hotel,378,157,Night,Sun,Cloudy,177.0,EV,115,22.6,0

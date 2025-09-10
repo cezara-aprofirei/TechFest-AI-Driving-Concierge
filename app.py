@@ -22,8 +22,10 @@ import streamlit as st
 import hashlib, uuid
 import streamlit.components.v1 as components
 from pathlib import Path
+from utils.helper import find_data_file
 from audio_recorder_streamlit import audio_recorder
 from utils.ai_utils import do_the_action
+from services.controller import build_route_map
 
 # Pull configuration and helper functions from our modules
 from utils.settings import GOOGLE_MAPS_API_KEY
@@ -65,8 +67,8 @@ if st.session_state.pending_user_query is not None:
 
 # --- Session States for Cornelia's Part ---
 # Initialize session state
-st.session_state.setdefault("temperature", 0)
-st.session_state.setdefault("fan_speed", 50)
+st.session_state.setdefault("temperature", 22)
+st.session_state.setdefault("fan_speed", 1)
 st.session_state.setdefault("steering_wheel_heating", "Off")
 st.session_state.setdefault("seat_heating", {"L": 0, "R": 0, "Back": 0})
 st.session_state.setdefault("audio_bytes", None)
@@ -236,9 +238,36 @@ with main_col:
         if st.session_state.mode == "map":
             map_box = st.container()
             with map_box:
+            
                 st.markdown('<span class="map-hook"></span>', unsafe_allow_html=True)
-                html = Path("my_trip_map.html").read_text(encoding="utf-8")
-                components.html(html, height=450, scrolling=False)  # width auto-fits the column
+                st.info("Enter origin and destination, then press 'Compute route'.")
+                compute_route_button = st.button(
+                    "Compute route",
+                    type="primary",
+                    use_container_width=True,
+                    disabled=False
+                )
+                car_type = st.checkbox("Electric", value=True, key="electric")
+                car_type_value = "ELECTRIC" if car_type else "GASOLINE"
+
+                if compute_route_button and origin.strip() and destination.strip():
+
+                    html_path = build_route_map(
+                        origin=origin,
+                        destination=destination,
+                        vehicle_emission_type=car_type_value, #GASOLINE or ELECTRIC
+                        search_radius=12000,
+                        prefer_open_now=True,
+                        corridor_width_m=6000,
+                        samples_per_chunk=3,
+                        min_user_ratings=50,
+                        output_html="my_trip_map.html"
+                    )
+                    html = find_data_file(html_path).read_text(encoding="utf-8")
+                    components.html(html, height=450, scrolling=False)  # width auto-fits the column
+                else:
+                    html = find_data_file("default_map.html").read_text(encoding="utf-8")
+                    components.html(html, height=450, scrolling=False)  # width auto-fits the column
                 
         else:
             params_box = st.container()
@@ -316,10 +345,10 @@ with main_col:
 
                 # Primary action button. When pressed, we read the final text and start the pipeline.
                 go = st.button(
-                    "Go",
+                    "Compute route",
                     type="primary",
                     use_container_width=True,
-                    disabled=set_route_loading(False)  # disable if loading
+                    disabled=False  # disable if loading
                 )
 
             # ------------------------------
@@ -485,7 +514,7 @@ with bottom_row:
             f"""
             <div style="{compact_style}">
                 <div style="font-size: 16px;">🌪️ Fan Speed</div>
-                <div style="font-size: 24px; font-weight: bold;">{st.session_state.fan_speed} RPM</div>
+                <div style="font-size: 24px; font-weight: bold;">{st.session_state.fan_speed}</div>
             </div>
             """, unsafe_allow_html=True
         )
@@ -495,7 +524,7 @@ with bottom_row:
         st.markdown(
             f"""
             <div style="{compact_style}">
-                <div style="font-size: 16px;">🛞 Wheel Heat</div>
+                <div style="font-size: 16px;">🛞 Steering Wheel Heating</div>
                 <div style="font-size: 24px; font-weight: bold;">{st.session_state.steering_wheel_heating}</div>
             </div>
             """, unsafe_allow_html=True

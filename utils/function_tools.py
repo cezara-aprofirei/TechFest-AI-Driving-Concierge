@@ -17,7 +17,7 @@ def change_temperature(delta: int):
         return False
 
     try:
-        st.session_state.temperature += delta
+        st.session_state.temperature = delta
         return True
     except Exception as e:
         print("Error changing temperature:", e)
