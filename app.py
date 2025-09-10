@@ -58,6 +58,10 @@ if "speak_queue" not in st.session_state:
 if "speak_nonce" not in st.session_state:
     st.session_state.speak_nonce = None
 
+if "last_audio_hash" not in st.session_state:
+    # Hash of the last audio blob we processed (so we don’t re-transcribe the same clip)
+    st.session_state.last_audio_hash = None
+
 # If a previous run prepared a new text value (from voice), apply it now
 # Doing this BEFORE creating the text_input widget avoids the
 # “cannot modify session_state after widget is instantiated” error.
