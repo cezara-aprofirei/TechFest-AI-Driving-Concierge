@@ -3,11 +3,10 @@ import train_ev_ice
 import wear_estimation
 import find_route
 import os
-from typing import Any, Tuple, List, Dict, Optional
+from typing import Dict, Optional
 
 OUTPUT_HTML_DEFAULT = "route_pois_map.html"
 API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
-
 
 
 def build_route_map(
@@ -16,7 +15,7 @@ def build_route_map(
     *,
     vehicle_emission_type: str = "GASOLINE",
     requested_recos: Optional[Dict[str,int]] = None,
-    # search/selection knobs
+    # search/selection
     search_radius: float = 3000,         # initial radius (m), expands x2 & x3 if needed
     prefer_open_now: bool = False,
     corridor_width_m: float = 5000,      # accept POIs within this distance (m) from route
@@ -109,23 +108,22 @@ def build_route_map(
     except Exception as e:
         print("CSV write skipped:", e)
 
-    
 
-    ##call the wear function to get the wear value
+    #--- Call the wear function to get the wear value ---#
     wear = wear_estimation.return_wear()
 
     # 3) Render & save
     origin_ll = find_route.get_location_coordinates(origin)
     destination_ll = find_route.get_location_coordinates(destination)
 
-    m = find_route._build_map(path, origin_ll, destination_ll, recos, requested_recos)
+    m = find_route.build_map(path, origin_ll, destination_ll, recos, requested_recos)
 
-    find_route._annotate_distances_on_map(m, poi_ann, total_route_km, total_time, str(wear))
+    find_route.annotate_distances_on_map(m, poi_ann, total_route_km, total_time, str(wear))
     m.save(output_html)
     return output_html
 
 
-##call the function
+#--- Call the route builder ---#
 html_path = build_route_map(
     origin="Iasi",
     destination="Paris",

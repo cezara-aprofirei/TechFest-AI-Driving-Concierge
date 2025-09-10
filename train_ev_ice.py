@@ -20,7 +20,6 @@ Outputs:
 
 import random
 import csv
-import argparse
 import json
 from pathlib import Path
 

@@ -27,12 +27,78 @@ ICON_MAP: Dict[str, Dict[str, Any]] = {
     "electric_vehicle_charging_station": dict(color="purple", icon="bolt", prefix="fa"),
     "gas_station": dict(color="green", icon="tint", prefix="fa"),
     "restaurant": dict(color="red", icon="cutlery", prefix="fa"),
-    "tourist_attraction": dict(color="blue", icon="info-sign"),
-    "hotel": dict(color="blue", icon="info-sign"),
-    "rest_stop": dict(color="blue", icon="info-sign"),
-    "shopping_mall": dict(color="blue", icon="info-sign"),
-    "point_of_interest": dict(color="cadetblue", icon="info-sign"),
+    "tourist_attraction": dict(color="orange", icon="camera", prefix="fa"),
+    "hotel": dict(color="darkblue", icon="bed", prefix="fa"),
+    "rest_stop": dict(color="beige", icon="coffee", prefix="fa"),
+    "shopping_mall": dict(color="pink", icon="shopping-bag", prefix="fa"),
+    "point_of_interest": dict(color="cadetblue", icon="map=pin", prefix="fa"),
 }
+
+
+def style_layer_control_compact(m):
+    css = """
+    {% macro html(this, kwargs) %}
+    <style>
+      /* Panel */
+      .leaflet-control-layers {
+        background: rgba(20,22,26,.92);
+        color: #e9edf3;
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.35);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-size: 11px;                 /* smaller text */
+        line-height: 1.2;
+        max-width: 220px;                 /* keep it narrow */
+      }
+      .leaflet-control-layers-expanded { padding: 6px 8px; }
+      .leaflet-control-layers-list { margin: 0; }
+
+      /* Rows */
+      .leaflet-control-layers label{
+        display: flex; align-items: center; gap: .35rem;  /* tighter gap */
+        padding: 4px 2px; border-radius: 6px; cursor: pointer;
+      }
+      .leaflet-control-layers label:hover{ background: rgba(255,255,255,.06); }
+      .leaflet-control-layers-separator{
+        border-top: 1px solid rgba(255,255,255,.14); margin: 4px 0;
+      }
+
+      /* Radios */
+      .leaflet-control-layers input[type="radio"]{
+        accent-color:#2f81f7; width:14px; height:14px; margin:0;
+      }
+
+      /* Compact switch-style checkboxes */
+      .leaflet-control-layers input[type="checkbox"]{
+        appearance:none; -webkit-appearance:none;
+        width:26px; height:14px; margin:0;
+        border-radius:999px; border:1px solid rgba(255,255,255,.35);
+        background: rgba(255,255,255,.18); position:relative; outline:none;
+      }
+      .leaflet-control-layers input[type="checkbox"]::after{
+        content:''; position:absolute; top:1px; left:1px;
+        width:10px; height:10px; border-radius:50%; background:#fff;
+        transition: transform .12s ease;
+      }
+      .leaflet-control-layers input[type="checkbox"]:checked{
+        background:#10b981; border-color:#10b981;
+      }
+      .leaflet-control-layers input[type="checkbox"]:checked::after{
+        transform: translateX(12px);
+      }
+
+      /* Small count badge */
+      .leaflet-control-layers .layer-badge{
+        margin-left:auto; font-size:10px; background:#2f81f7; color:#fff;
+        padding:0 .3rem; border-radius:.3rem; line-height:1.2;
+      }
+    </style>
+    {% endmacro %}
+    """
+    macro = MacroElement()
+    macro._template = Template(css)
+    m.get_root().add_child(macro)
 
 
 def _parse_duration_s(duration_str: str) -> float:
@@ -43,7 +109,7 @@ def _parse_duration_s(duration_str: str) -> float:
     return float(m.group(1)) if m else 0.0
 
 
-def _annotate_distances_on_map(m, poi_list, total_route_km, total_time, service_message):
+def annotate_distances_on_map(m, poi_list, total_route_km, total_time, service_message):
     # Unified style for POIs and total badge
     label_style = (
         "display:inline-block;"
@@ -97,9 +163,9 @@ def _annotate_distances_on_map(m, poi_list, total_route_km, total_time, service_
             "padding:10px 14px;background:rgba(0,0,0,0.72);color:#fff;"
             "font-weight:600;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.25);"
             "max-width:320px;line-height:1.2;\">"
-            "<div style=\"font-size:12px;opacity:0.85;margin-bottom:4px;letter-spacing:.02em;\">Service</div>"
+            "<div style=\"font-size:12px;opacity:0.85;margin-bottom:4px;letter-spacing:.02em;\">Estimated Wear for Route</div>"
             "<div style=\"font-size:13px;white-space:pre-wrap;\">"
-            + service_text +
+            + service_text + " km"
             "</div>"
             "</div>"
             "{% endmacro %}"
@@ -545,7 +611,7 @@ def _format_opening_hours_html(place: dict) -> str:
     return badge + "<div>" + "<br>".join(wd) + "</div>"
 
 
-def _build_map(path: List[Tuple[float,float]],
+def build_map(path: List[Tuple[float,float]],
                origin_ll: Tuple[float,float],
                destination_ll: Tuple[float,float],
                recos: Dict[str, List[dict]],
@@ -631,7 +697,8 @@ def _build_map(path: List[Tuple[float,float]],
                 icon=_icon_for_place(p, fallback=typ),
             ).add_to(cluster)
 
-    folium.LayerControl(collapsed=False).add_to(m)
+    folium.LayerControl(position='topright', collapsed=True).add_to(m)
+    style_layer_control_compact(m)
 
     # Fit bounds
     all_pts = path + [
@@ -642,95 +709,3 @@ def _build_map(path: List[Tuple[float,float]],
         lats = [pt[0] for pt in all_pts]; lngs = [pt[1] for pt in all_pts]
         m.fit_bounds([[min(lats), min(lngs)], [max(lats), max(lngs)]])
     return m
-
-
-def send_intermediate_distances():
-    _, poi_ann = summarize_poi_distances_along_route(path, recos, requested_recos)
-
-# --------------------------- Public method --------------------------- #
-
-def build_route_maps(
-    origin: str,
-    destination: str,
-    *,
-    vehicle_emission_type: str = "GASOLINE",
-    requested_recos: Optional[Dict[str,int]] = None,
-    # search/selection knobs
-    search_radius: float = 3000,         # initial radius (m), expands x2 & x3 if needed
-    prefer_open_now: bool = False,
-    corridor_width_m: float = 5000,      # accept POIs within this distance (m) from route
-    samples_per_chunk: int = 3,          # probe points per chunk
-    min_user_ratings: int = 50,          # filter by number of reviews
-    # output
-    output_html: str = OUTPUT_HTML_DEFAULT
-) -> str:
-    """
-    Returns: path to the saved HTML map.
-    """
-    if not API_KEY:
-        raise RuntimeError("Set GOOGLE_MAPS_API_KEY environment variable.")
-
-
-    # 1) Route
-    route = get_route_info(origin, destination, vehicle_emission_type)
-    path = compute_path_from_polyline(route)
-    total_time = get_route_duration(route)
-    if len(path) < 2:
-        raise RuntimeError("Route too short to render")
-
-    # 2) Per-type recommendations with corridor filtering and global deduplication
-    requested_recos = requested_recos or {}
-    recos = collect_recommendations_by_type(
-        path,
-        requested_recos,
-        base_radius_m=search_radius,
-        max_results_per_query=20,
-        prefer_open_now=prefer_open_now,
-        corridor_width_m=corridor_width_m,
-        samples_per_chunk=samples_per_chunk,
-        min_user_ratings=min_user_ratings
-    )
-
-    total_route_km, poi_ann = summarize_poi_distances_along_route(path, recos, requested_recos)
-    try:
-        import csv
-        with open("poi_consecutive_distances.csv", "w", newline="", encoding="utf-8") as f:
-            w = csv.writer(f)
-            w.writerow(["index", "name", "type", "gap_km", "along_km", "total_route_km"])
-            for i, p in enumerate(poi_ann, 1):
-                gap_km = float(p.get("gap_km", 0.0))
-                along_km = float(p.get("along_m", 0.0)) / 1000.0
-                w.writerow([i,
-                            p.get("name", ""),
-                            p.get("type", "point_of_interest"),
-                            f"{gap_km:.3f}",
-                            f"{along_km:.3f}",
-                            f"{total_route_km:.3f}"])
-        print("Saved: poi_consecutive_distances.csv")
-    except Exception as e:
-        print("CSV write skipped:", e)
-
-
-    # 3) Render & save
-    origin_ll = get_location_coordinates(origin)
-    destination_ll = get_location_coordinates(destination)
-
-    m = _build_map(path, origin_ll, destination_ll, recos, requested_recos)
-
-    _annotate_distances_on_map(m, poi_ann, total_route_km, total_time, "Errors")
-    m.save(output_html)
-    return output_html
-
-# html_path = build_route_map(
-#     origin="Iasi",
-#     destination="Paris",
-#     vehicle_emission_type="ELECTRIC",
-#     requested_recos={"restaurant": 6, "gas_station": 4, "electric_vehicle_charging_station": 3, "tourist_attraction": 4},
-#     search_radius=12000,
-#     prefer_open_now=True,
-#     corridor_width_m=6000,
-#     samples_per_chunk=3,
-#     min_user_ratings=50,
-#     output_html="my_trip_map.html"
-# )
-#print("Saved:", html_path)

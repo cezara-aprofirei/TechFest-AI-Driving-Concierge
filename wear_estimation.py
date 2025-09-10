@@ -78,7 +78,7 @@ mapping = {
     "shopping_mall": "Shopping",
     "tourist_attraction": "Tourist Attraction",
     "hotel": "Hotel",
-    "rest_stop": "Rest Area", 
+    "rest_stop": "Rest Area",
     "electric_vehicle_charging_station":"Restaurant"
 }
 
@@ -96,16 +96,12 @@ with open("poi_consecutive_distances.csv", "r") as f:
 
 test_data = pd.DataFrame(rows)
 
-for row in test_data.itertuples():
-    if pd.isna(row.stop_duration_minutes):
-        if row.stop_category == "Restaurant":
-            test_data.at[row.Index, "stop_duration_minutes"] = 55
-        elif row.stop_category == "Shopping":
-            test_data.at[row.Index, "stop_duration_minutes"] = 120
-        elif row.stop_category == "Hotel":
-            test_data.at[row.Index, "stop_duration_minutes"] = 600
-        else:
-            test_data.at[row.Index, "stop_duration_minutes"] = 30  # Default
+# map categories to durations, default 30
+dur_map = {"Restaurant": 55, "Shopping": 120, "Hotel": 600}
+test_data["stop_duration_minutes"] = (
+    test_data["stop_duration_minutes"]
+    .fillna(test_data["stop_category"].map(dur_map).fillna(30))
+)
 
 predictions = model.predict(test_data)
 print("\n=== Mock Predictions ===")
@@ -116,13 +112,14 @@ print(pd.DataFrame({
     "predicted_wear": predictions.round(2)
 }))
 
-sum = 0
+sum_km = 0
 for pred in predictions:
-    sum += pred
+    sum_km += pred
 
 def return_wear():
     print("\n=== Total Wear Prediction ===")
-    print(f"Total predicted wear: {int(sum.round(0))}")
-    return int(sum.round(0))
+    total = round(sum_km, 0)    # round to nearest integer
+    print(f"Total predicted wear: {int(total)}")
+    return int(total)
 
 return_wear()
