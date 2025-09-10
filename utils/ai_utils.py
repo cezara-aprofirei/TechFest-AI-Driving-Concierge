@@ -4,7 +4,7 @@ from openai import OpenAI  # OpenAI API client for GPT and Whisper
 from utils.settings import OPENAI_API_KEY_IS
 import io  # For handling byte streams (audio data)
 import json  # For parsing JSON responses from OpenAI
-from utils.function_tools import change_temperature, change_fan_speed, change_steering_wheel_heating  # Custom function to change car temperature
+from utils.function_tools import change_temperature, change_fan_speed, change_steering_wheel_heating, set_seat_heating_back, set_seat_heating_left, set_seat_heating_right # Custom function to change car temperature
 
 # Initialize OpenAI client with API key
 client = OpenAI(api_key=OPENAI_API_KEY_IS)
@@ -47,7 +47,11 @@ def generate_response(user_message: str) -> str:
     tool_functions = {
     "change_temperature": change_temperature,
     "change_fan_speed": change_fan_speed,
-    "change_steering_wheel_heating": change_steering_wheel_heating
+    "change_steering_wheel_heating": change_steering_wheel_heating,
+    "change_steering_wheel_heating": change_steering_wheel_heating,
+    "set_seat_heating_left": set_seat_heating_left,
+    "set_seat_heating_right": set_seat_heating_right,
+    "set_seat_heating_back": set_seat_heating_back
 }
 
     tools = [
@@ -84,7 +88,79 @@ def generate_response(user_message: str) -> str:
                     "required": ["delta"]
                 }
             }         
-    }
+        },
+        {
+                "type": "function",
+                "function": {
+                    "name": "change_steering_wheel_heating",
+                    "description": change_steering_wheel_heating.__doc__,
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "state": {
+                                "type": "string",
+                                "enum": ["On", "Off"],
+                                "description": 'Set steering wheel heating to "On" or "Off"'
+                            }
+                        },
+                        "required": ["state"]
+                    }
+                }         
+        },
+        {
+                "type": "function",
+                "function": {
+                    "name": "set_seat_heating_left",
+                    "description": set_seat_heating_left.__doc__,
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "level": {
+                                "type": "integer",
+                                "enum": [0, 1, 2, 3],
+                                "description": 'Set left seat heating level (0-3). 0 is Off, 3 is max'
+                            }
+                        },
+                        "required": ["level"]
+                    }
+                }         
+        },
+        {
+                "type": "function",
+                "function": {
+                    "name": "set_seat_heating_right",
+                    "description": set_seat_heating_right.__doc__,
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "level": {
+                                "type": "integer",
+                                "enum": [0, 1, 2, 3],
+                                "description": 'Set right seat heating level (0-3). 0 is Off, 3 is max'
+                            }
+                        },
+                        "required": ["level"]
+                    }
+                }         
+        },
+        {
+                "type": "function",
+                "function": {
+                    "name": "set_seat_heating_back",
+                    "description": set_seat_heating_back.__doc__,
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "level": {
+                                "type": "integer",
+                                "enum": [0, 1, 2, 3],
+                                "description": 'Set back seat heating level (0-3). 0 is Off, 3 is max'
+                            }
+                        },
+                        "required": ["level"]
+                    }
+                }
+        }
 ]
 
     while True:

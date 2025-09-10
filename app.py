@@ -319,7 +319,7 @@ with main_col:
                     "Go",
                     type="primary",
                     use_container_width=True,
-                    disabled=st.session_state.is_loading  # disable if loading
+                    disabled=set_route_loading(False)  # disable if loading
                 )
 
             # ------------------------------

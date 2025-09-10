@@ -68,4 +68,68 @@ def change_steering_wheel_heating(state: str) -> bool:
         print("Error changing steering wheel heating:", e)
         return False
 
+def set_seat_heating_left(level: int) -> bool:
+    """
+    Set the left seat heating level.
 
+    Args:
+        level (int): Heating level (0-3), where 0 is Off and 3 is maximum heat.
+
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    import streamlit as st
+
+    if level not in {0, 1, 2, 3}:
+        return False
+
+    try:
+        st.session_state.seat_heating["L"] = level
+        return True
+    except Exception as e:
+        print("Error changing left seat heating:", e)
+        return False
+    
+def set_seat_heating_right(level: int) -> bool:
+    """
+    Set the right seat heating level.
+
+    Args:
+        level (int): Heating level (0-3), where 0 is Off and 3 is maximum heat.
+
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    import streamlit as st
+
+    if level not in {0, 1, 2, 3}:
+        return False
+
+    try:
+        st.session_state.seat_heating["R"] = level
+        return True
+    except Exception as e:
+        print("Error changing right seat heating:", e)
+        return False
+    
+def set_seat_heating_back(level: int) -> bool:
+    """
+    Set the back seat heating level.
+
+    Args:
+        level (int): Heating level (0-3), where 0 is Off and 3 is maximum heat.
+
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    import streamlit as st
+
+    if level not in {0, 1, 2, 3}:
+        return False
+
+    try:
+        st.session_state.seat_heating["Back"] = level
+        return True
+    except Exception as e:
+        print("Error changing back seat heating:", e)
+        return False
