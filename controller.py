@@ -38,15 +38,12 @@ def build_route_map(
     if len(path) < 2:
         raise RuntimeError("Route too short to render")
     
-    #AICI AM FACUT MODIFICARI!!!!!!
-    #
-    #
-    #
+
     total_distance = find_route.get_route_distance_km(route)
     stop_recommendations_dict = auto_features_recommend.main() #returns a str-int dict with place type and number
     print(total_distance)
     print(stop_recommendations_dict)
-    #exit()
+    
     fuel_recommendation_dict = train_ev_ice.main(total_distance//1000) 
 
     print(total_distance)
@@ -71,10 +68,10 @@ def build_route_map(
     for k, v, in requested_recos.items():
         if k not in ["gas_station", "electric_vehicle_charging_station"]:
             requested_recos[k] = int(v*ratio)
-        # if vehicle_emission_type == "ELECTRIC":
-        #     requested_recos["gas_station"] = 0
-        # if vehicle_emission_type == "GASOLINE":
-        #     requested_recos["electric_vehicle_charging_station"] = 0
+        if vehicle_emission_type == "ELECTRIC":
+            requested_recos["gas_station"] = 0
+        if vehicle_emission_type == "GASOLINE":
+            requested_recos["electric_vehicle_charging_station"] = 0
 
     # 2) Per-type recommendations with corridor filtering and global deduplication
 
@@ -93,30 +90,38 @@ def build_route_map(
 
     sum_of_km_in_gaps = 0 
 
-    try:
-        import csv
-        with open("poi_consecutive_distances.csv", "w", newline="", encoding="utf-8") as f:
-            w = csv.writer(f)
-            w.writerow([ "kilometers_since_last_stop", "stop_category"])
-            for i, p in enumerate(poi_ann, 1):
-                gap_km = float(p.get("gap_km", 0.0))
-                sum_of_km_in_gaps += gap_km
-                w.writerow([f"{gap_km:.3f}", p.get("type", "point_of_interest")])
-            last_row_of_csv_gaps = total_distance/1000 - sum_of_km_in_gaps
-            w.writerow([f"{last_row_of_csv_gaps:.3f}", "restaurant"])
-        print("Saved: poi_consecutive_distances.csv")
-    except Exception as e:
-        print("CSV write skipped:", e)
+    results = {
+        "kilometers_since_last_stop": [],
+        "stop_category": []
+    }
 
+    sum_of_km_in_gaps = 0.0
+
+    for i, p in enumerate(poi_ann, 1):
+        gap_km = float(p.get("gap_km", 0.0))
+        sum_of_km_in_gaps += gap_km
+        results["kilometers_since_last_stop"].append(round(gap_km, 3))
+        results["stop_category"].append(p.get("type", "point_of_interest"))
+
+    # Add the final "restaurant" row
+    last_row_of_csv_gaps = total_distance / 1000 - sum_of_km_in_gaps
+    results["kilometers_since_last_stop"].append(round(last_row_of_csv_gaps, 3))
+    results["stop_category"].append("restaurant")
+
+    print("Dictionary created successfully!")
+    print(results)
+
+    wear = wear_estimation.return_wear(results)
+    
 
     #--- Call the wear function to get the wear value ---#
-    wear = wear_estimation.return_wear()
-
+    
     # 3) Render & save
     origin_ll = find_route.get_location_coordinates(origin)
     destination_ll = find_route.get_location_coordinates(destination)
 
     m = find_route.build_map(path, origin_ll, destination_ll, recos, requested_recos)
+
 
     find_route.annotate_distances_on_map(m, poi_ann, total_route_km, total_time, str(wear))
     m.save(output_html)
@@ -126,8 +131,8 @@ def build_route_map(
 #--- Call the route builder ---#
 html_path = build_route_map(
     origin="Iasi",
-    destination="Paris",
-    vehicle_emission_type="GASOLINE", #GASOLINE or ELECTRIC
+    destination="Cluj-Napoca",
+    vehicle_emission_type="ELECTRIC", #GASOLINE or ELECTRIC
     search_radius=12000,
     prefer_open_now=True,
     corridor_width_m=6000,

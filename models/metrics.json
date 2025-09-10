@@ -4,7 +4,7 @@
     "n_samples_total": 874,
     "n_samples_train": 699,
     "n_samples_test": 175,
-    "mae": 1.0983327921390829,
+    "mae": 1.098332792139083,
     "r2": 0.9565886385860821,
     "feature_importances": {
       "avg_speed_kmh": 0.9725286519621718,
